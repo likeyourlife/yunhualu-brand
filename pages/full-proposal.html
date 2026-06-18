@@ -61,17 +61,15 @@
   </div>
 
   <!-- ==========================================================================
-       页面主体
+       页面主体（单一 main 容器）
        ========================================================================== -->
-  <main class="site-main">
+  <main class="page-main">
 
-    <!-- ===================== Hero 区 ===================== -->
-    <section class="home-hero">
-      <!-- 茶典格线竖线背景（上下淡出） -->
+    <!-- ===================== 首屏 Hero ===================== -->
+    <section class="chapter-hero">
       <div class="tea-grid-bg-fade" aria-hidden="true"></div>
-
       <div class="home-hero-inner">
-        <div class="hero-content reveal">
+        <div class="hero-content">
           <div class="hero-eyebrow">品牌全案策划提案 · 2026</div>
 
           <h1 class="hero-title">云华录</h1>
@@ -81,8 +79,8 @@
           <p class="hero-positioning">记录中国山河风物的国风原叶茶集合品牌</p>
 
           <div class="hero-actions">
-            <a href="full-proposal.html" class="btn btn-primary btn-lg btn-arrow">阅读完整提案</a>
-            <a href="#chapters" class="btn btn-outline btn-lg">浏览各篇章</a>
+            <a href="#part-1" class="btn btn-primary btn-lg btn-arrow">阅读完整提案</a>
+            <a href="../index.html" class="btn btn-outline btn-lg">返回首页</a>
           </div>
 
           <div class="hero-stats">
@@ -102,43 +100,6 @@
               <span class="hero-stat-value">14</span>
               <span class="hero-stat-label">首发 SKU</span>
             </div>
-          </div><main class="page-main">
-
-    <!-- ===================== 篇章 Hero ===================== -->
-    <section class="chapter-hero">
-      <div class="tea-grid-bg-fade" aria-hidden="true"></div>
-      <div class="chapter-hero-inner">
-        <div class="chapter-hero-breadcrumb">
-          <a href="../index.html">首页</a>
-          <span class="chapter-hero-sep">/</span>
-          <span>完整策划提案</span>
-        </div>
-        <div class="chapter-hero-title-wrap">
-          <div class="chapter-num-large">
-            <span class="chapter-num-large-cn">捌</span>
-            <span class="chapter-num-large-en">08</span>
-            <span class="chapter-num-large-label">CHAPTER</span>
-          </div>
-          <div>
-            <h1 class="chapter-hero-title">完整策划提案</h1>
-            <p class="chapter-hero-subtitle">
-              7篇22章完整品牌全案——从品牌根基到创意引擎，从产品体系到视觉包装，
-              从内容体系到上市Campaign与国际拓展。精神与创意的化合，让云华录成为有灵魂、有载体、有路径、有预算的完整品牌。
-            </p>
-          </div>
-        </div>
-        <div class="chapter-hero-meta">
-          <div class="chapter-hero-meta-item">
-            <span class="chapter-hero-meta-label">来源</span>
-            <span class="chapter-hero-meta-value">全案策划提案</span>
-          </div>
-          <div class="chapter-hero-meta-item">
-            <span class="chapter-hero-meta-label">编制时间</span>
-            <span class="chapter-hero-meta-value">2026年6月</span>
-          </div>
-          <div class="chapter-hero-meta-item">
-            <span class="chapter-hero-meta-label">篇幅</span>
-            <span class="chapter-hero-meta-value">7篇 22章</span>
           </div>
         </div>
       </div>
@@ -1508,7 +1469,7 @@
     </svg>
   </button>
 
-  <script src="../assets/js/main.js"></script>
-  <script src="../assets/js/scroll.js"></script>
+  <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/scroll.js" defer></script>
 </body>
 </html>
