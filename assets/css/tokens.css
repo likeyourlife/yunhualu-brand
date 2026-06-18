@@ -1,0 +1,474 @@
+/* ==========================================================================
+   云华录品牌全案网站 · 设计令牌（Design Tokens）
+   Design System Expert: 彩格调（Cai）| 2026.06
+
+   基于附件04第九章融合色彩系统 + 需求摘要生成
+   新中式典籍风——「静雅闲韵 + 活力」，考据的浪漫
+
+   使用方式：在 HTML <head> 中引入本文件
+   <link rel="stylesheet" href="assets/css/tokens.css">
+   所有样式引用 var(--token-name)
+   ========================================================================== */
+
+/* ==========================================================================
+   1. 字体加载（Google Fonts CDN）
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ==========================================================================
+   2. 色彩令牌（Color Tokens）
+   ========================================================================== */
+
+:root {
+  /* --- 主色板（融合色彩系统 · 第九章升级版） --- */
+  --color-bg-primary: #F7F2EC;             /* 暖宣白 - 全站主底色 */
+  --color-text-primary: #1C1917;           /* 墨岩深 - 主文字色 */
+  --color-accent-vermilion: #B84A3A;       /* 封泥朱 - 品牌点缀色 */
+  --color-accent-vermilion-hover: #A03D2E; /* 封泥朱 hover 加深 */
+  --color-accent-vermilion-active: #8A3325;/* 封泥朱 active 更深 */
+  --color-accent-pine: #4A7B5C;            /* 松烟青 - 辅助强调色 */
+  --color-accent-brown: #8B7355;           /* 藏经褐 - 线条/边框/格线基色 */
+
+  /* --- 原始色板（附件04基础版 · 兼容备用） --- */
+  --color-yun-yan-white: #F5F0EB;          /* 云砚白 */
+  --color-yun-shan-ink: #2C2C2C;           /* 云山墨 */
+  --color-hua-cai-vermilion: #C45B3E;      /* 华彩朱 */
+  --color-shan-lan-green: #7B9E87;         /* 山岚青 */
+
+  /* --- 功能色 --- */
+  --color-success: #B8D4A3;                /* 新茶绿 - 新品/促销标签 */
+  --color-success-text: #5A7A4A;           /* 茶梗绿 - 成功文字色 */
+  --color-success-bg: rgba(184, 212, 163, 0.15);
+  --color-warning: #D94F4F;                /* 警示红 - 重要提醒 */
+  --color-warning-text: #B83838;           /* 深警红 - 警示文字色 */
+  --color-warning-bg: rgba(217, 79, 79, 0.10);
+  --color-info: #5B8BA0;                   /* 信息蓝 - 链接/可交互 */
+  --color-info-hover: #4A7588;             /* 深信息蓝 - 链接hover */
+  --color-info-bg: rgba(91, 139, 160, 0.10);
+
+  /* --- 印章与典藏色 --- */
+  --color-seal-red: #B91C1C;               /* 赤铁红 - 印章/戳记 */
+  --color-gold-foil: #B8860B;              /* 金箔色 - 典藏点缀 */
+  --color-gold-foil-light: #D4A843;        /* 浅金箔 - hover/渐变 */
+
+  /* --- 三层产品线配色 --- */
+  /* 云游录（探索线） */
+  --color-product-explore-bg: #F7F2EC;
+  --color-product-explore-accent: #B84A3A;
+  --color-product-explore-text: #1C1917;
+  --color-product-explore-highlight: #4A7B5C;
+  /* 云华品鉴（品鉴线） */
+  --color-product-tasting-bg: #1C1917;
+  --color-product-tasting-accent: #4A7B5C;
+  --color-product-tasting-text: #F7F2EC;
+  --color-product-tasting-highlight: #B8860B;
+  /* 云华典藏（典藏线） */
+  --color-product-collection-bg: #1C1917;
+  --color-product-collection-accent: #B91C1C;
+  --color-product-collection-text: #F7F2EC;
+  --color-product-collection-highlight: #B8860B;
+
+  /* --- 语义表面色 --- */
+  --color-surface-page: #F7F2EC;           /* 页面底色 */
+  --color-surface-card: #FDF9F4;           /* 卡片底色（比页面略亮） */
+  --color-surface-card-alt: #EFE9E3;       /* 档案卡片底色（比页面略深） */
+  --color-surface-elevated: #FFFFFF;       /* 弹出层/浮层底色 */
+  --color-surface-dark: #1C1917;           /* 深色区块底色 */
+  --color-surface-dark-alt: #2A2520;       /* 深色区块次级底色 */
+  --color-surface-overlay: rgba(28, 25, 23, 0.60); /* 遮罩层 */
+
+  /* --- 文字色层级 --- */
+  --color-text-primary: #1C1917;           /* 正文主文字 · 15.8:1 AAA */
+  --color-text-secondary: #4A4540;         /* 次要文字 · 10.2:1 AAA */
+  --color-text-tertiary: #8B7355;          /* 辅助文字（藏经褐）· 4.6:1 AA */
+  --color-text-muted: #A89B8A;             /* 弱化文字 · 仅装饰 */
+  --color-text-inverse: #F7F2EC;           /* 深色底文字 · 15.8:1 AAA */
+  --color-text-inverse-secondary: #C4B8A8; /* 深色底次要文字 · 8.5:1 AAA */
+  --color-text-link: #5B8BA0;              /* 链接文字 · 4.8:1 AA */
+  --color-text-link-hover: #B84A3A;        /* 链接hover · 5.2:1 AA */
+
+  /* --- 边框色层级 --- */
+  --color-border-default: rgba(139, 115, 85, 0.25);  /* 默认边框 */
+  --color-border-light: rgba(139, 115, 85, 0.15);    /* 轻边框（格线用） */
+  --color-border-strong: rgba(139, 115, 85, 0.40);   /* 强边框 */
+  --color-border-accent: #B84A3A;                    /* 点缀边框 */
+  --color-border-dark: rgba(247, 242, 236, 0.15);    /* 深色底边框 */
+
+  /* ==========================================================================
+     3. 字体令牌（Typography Tokens）
+     ========================================================================== */
+
+  /* --- 字体栈 --- */
+  --font-cn-heading: "Noto Serif SC", "Source Han Serif SC", "思源宋体", "STSong", serif;
+  --font-cn-body: "Noto Sans SC", "Source Han Sans SC", "思源黑体", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-en-heading: "Playfair Display", "Noto Serif SC", serif;
+  --font-en-body: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", "Courier New", monospace;
+  --font-decorative: "Noto Serif SC", "Playfair Display", serif;
+
+  /* --- 字号层级（clamp 流式响应） --- */
+  --text-xs: 0.75rem;      /* 12px */
+  --text-sm: 0.875rem;     /* 14px */
+  --text-base: 1rem;       /* 16px */
+  --text-md: 1.125rem;     /* 18px */
+  --text-lg: 1.25rem;      /* 20px */
+  --text-xl: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);    /* 20→24px */
+  --text-2xl: clamp(1.5rem, 1.2rem + 1.2vw, 1.875rem);  /* 24→30px */
+  --text-3xl: clamp(1.75rem, 1.3rem + 2vw, 2.375rem);   /* 28→38px */
+  --text-4xl: clamp(2.25rem, 1.6rem + 3vw, 3rem);       /* 36→48px */
+  --text-5xl: clamp(2.75rem, 1.8rem + 4.5vw, 4rem);     /* 44→64px */
+  --text-6xl: clamp(3.5rem, 2.2rem + 6vw, 5rem);        /* 56→80px */
+
+  /* --- 字重 --- */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  /* --- 行高 --- */
+  --leading-none: 1.0;
+  --leading-tight: 1.2;
+  --leading-snug: 1.35;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.75;
+  --leading-loose: 2.0;
+
+  /* --- 字间距 --- */
+  --tracking-tighter: -0.02em;
+  --tracking-tight: -0.01em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.025em;
+  --tracking-wider: 0.05em;
+  --tracking-widest: 0.1em;
+
+  /* ==========================================================================
+     4. 间距令牌（Spacing Tokens） · 4px 基准
+     ========================================================================== */
+
+  --space-0: 0;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-32: 128px;
+
+  /* --- 语义间距 --- */
+  --space-page-x: clamp(16px, 5vw, 80px);  /* 页面左右边距 */
+  --space-content-max: 720px;               /* 正文最大宽度 */
+  --space-content-wide: 1080px;             /* 宽内容最大宽度 */
+  --space-content-full: 1280px;             /* 全宽内容最大宽度 */
+  --space-nav-height: 64px;                 /* 导航栏高度 */
+  --space-nav-height-mobile: 56px;          /* 移动端导航栏高度 */
+
+  /* ==========================================================================
+     5. 圆角令牌（Border Radius Tokens）
+     ========================================================================== */
+
+  --radius-none: 0;        /* 卡片、表格、文档区块（典籍直角） */
+  --radius-sm: 2px;        /* 标签、徽章 */
+  --radius-md: 4px;        /* 按钮、输入框 */
+  --radius-lg: 8px;        /* 浮层卡片、弹窗 */
+  --radius-full: 9999px;   /* 圆形按钮、头像 */
+
+  /* ==========================================================================
+     6. 阴影令牌（Shadow Tokens）
+     ========================================================================== */
+
+  --shadow-none: none;
+  --shadow-xs: 0 1px 2px rgba(28, 25, 23, 0.04);
+  --shadow-sm: 0 2px 8px rgba(28, 25, 23, 0.06);
+  --shadow-md: 0 4px 16px rgba(28, 25, 23, 0.08);
+  --shadow-lg: 0 8px 32px rgba(28, 25, 23, 0.10);
+  --shadow-xl: 0 16px 48px rgba(28, 25, 23, 0.12);
+  --shadow-inset: inset 0 1px 3px rgba(28, 25, 23, 0.06);
+  --shadow-vermilion: 0 2px 12px rgba(184, 74, 58, 0.20);
+
+  /* ==========================================================================
+     7. 布局令牌（Layout Tokens）
+     ========================================================================== */
+
+  /* --- 断点（仅作参考，实际用 @media） --- */
+  --bp-mobile: 0;
+  --bp-tablet: 768px;
+  --bp-desktop: 1200px;
+  --bp-wide: 1440px;
+
+  /* --- 容器 --- */
+  --container-prose: 720px;
+  --container-content: 1080px;
+  --container-wide: 1280px;
+  --container-full: 1440px;
+
+  /* --- 网格 --- */
+  --grid-chapters-desktop: repeat(4, 1fr);
+  --grid-chapters-tablet: repeat(2, 1fr);
+  --grid-chapters-mobile: 1fr;
+  --grid-values-desktop: repeat(4, 1fr);
+  --grid-values-tablet: repeat(2, 1fr);
+  --grid-values-mobile: 1fr;
+  --grid-reading: 1fr 280px;
+  --grid-reading-gap: 64px;
+  --grid-gap-sm: 16px;
+  --grid-gap-md: 24px;
+  --grid-gap-lg: 32px;
+  --grid-gap-xl: 48px;
+
+  /* ==========================================================================
+     8. 茶典格线系统令牌（Tea Classics Grid Tokens）
+     ========================================================================== */
+
+  /* --- 竖线 --- */
+  --grid-line-vertical-width: 0.5px;
+  --grid-line-vertical-width-mobile: 1px;
+  --grid-line-vertical-spacing: 48px;
+  --grid-line-vertical-spacing-tablet: 40px;
+  --grid-line-vertical-color: rgba(139, 115, 85, 0.15);
+
+  /* 竖线背景 pattern（repeating-linear-gradient 实现） */
+  --grid-line-vertical-bg: repeating-linear-gradient(
+    to right,
+    transparent,
+    transparent 47.5px,
+    rgba(139, 115, 85, 0.15) 47.5px,
+    rgba(139, 115, 85, 0.15) 48px
+  );
+
+  /* --- 横线 --- */
+  --grid-line-horizontal-width: 1px;
+  --grid-line-horizontal-color: rgba(139, 115, 85, 0.25);
+  --grid-line-horizontal: 1px solid rgba(139, 115, 85, 0.25);
+  --grid-line-horizontal-short: 48px solid rgba(139, 115, 85, 0.40);
+
+  /* --- 茶语格线变体 --- */
+  --grid-tea-script-opacity: 0.04;
+  --grid-tea-script-color: rgba(28, 25, 23, 0.04);
+  --grid-tea-script-writing-mode: vertical-rl;
+
+  /* --- 卡片装饰竖线 --- */
+  --grid-card-accent-width: 3px;
+  --grid-card-accent-color: var(--color-accent-brown);
+
+  /* ==========================================================================
+     9. 动效令牌（Motion Tokens）
+     ========================================================================== */
+
+  /* --- 过渡时间 --- */
+  --duration-instant: 0ms;
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 400ms;
+  --duration-slower: 600ms;
+  --duration-ink: 2500ms;
+
+  /* --- 缓动函数 --- */
+  --ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.45, 0, 0.55, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-ink: cubic-bezier(0.25, 0.1, 0.25, 1);
+
+  /* ==========================================================================
+     10. Z-Index 层级令牌
+     ========================================================================== */
+
+  --z-base: 0;
+  --z-content: 10;
+  --z-sticky: 100;
+  --z-back-to-top: 900;
+  --z-nav: 1000;
+  --z-dropdown: 1100;
+  --z-overlay: 1200;
+  --z-modal: 1300;
+  --z-toast: 1400;
+}
+
+/* ==========================================================================
+   11. 全局基础样式（Base Styles）
+   ========================================================================== */
+
+/* --- 重置 --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-cn-body);
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+  letter-spacing: var(--tracking-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* --- 标题默认用宋体 --- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-cn-heading);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--leading-tight);
+  color: var(--color-text-primary);
+}
+
+h1 { font-size: var(--text-3xl); }
+h2 { font-size: var(--text-2xl); }
+h3 { font-size: var(--text-xl); }
+h4 { font-size: var(--text-lg); }
+
+/* --- 链接 --- */
+a {
+  color: var(--color-text-link);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-default);
+}
+
+a:hover {
+  color: var(--color-text-link-hover);
+}
+
+/* --- 段落 --- */
+p {
+  line-height: var(--leading-relaxed);
+  max-width: var(--space-content-max);
+}
+
+/* --- 强调 --- */
+strong, b {
+  font-weight: var(--font-weight-semibold);
+}
+
+/* --- 代码 --- */
+code, pre {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+}
+
+/* --- 图片 --- */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- 列表 --- */
+ul, ol {
+  padding-left: var(--space-6);
+  line-height: var(--leading-relaxed);
+}
+
+/* --- 表格基础 --- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-base);
+}
+
+th, td {
+  text-align: left;
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+th {
+  font-family: var(--font-cn-heading);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+}
+
+/* --- 选中文字 --- */
+::selection {
+  background-color: rgba(184, 74, 58, 0.15);
+  color: var(--color-text-primary);
+}
+
+/* --- 滚动条 --- */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-surface-card-alt);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-strong);
+  border-radius: var(--radius-sm);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-brown);
+}
+
+/* ==========================================================================
+   12. 无障碍动效（Reduced Motion）
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ==========================================================================
+   13. 响应式断点（Responsive Breakpoints）
+   ========================================================================== */
+
+/* --- 平板起 (≥768px) --- */
+@media (min-width: 768px) {
+  :root {
+    --space-nav-height: 64px;
+  }
+}
+
+/* --- 桌面起 (≥1200px) --- */
+@media (min-width: 1200px) {
+  :root {
+    --space-page-x: clamp(32px, 5vw, 80px);
+  }
+}
+
+/* --- 移动端 (<768px) 覆盖 --- */
+@media (max-width: 767px) {
+  :root {
+    --space-nav-height: 56px;
+    --grid-line-vertical-spacing: 0; /* 移动端隐藏竖线 */
+  }
+
+  body {
+    font-size: var(--text-base); /* 移动端正文不低于16px */
+  }
+
+  /* 移动端段落最大宽度不限，撑满屏幕 */
+  p {
+    max-width: 100%;
+  }
+}
+
+/* ==========================================================================
+   文件结束 · 云华录设计令牌
+   ========================================================================== */

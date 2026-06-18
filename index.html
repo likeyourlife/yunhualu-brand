@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>云华录 · 云华一盏，尽录山河</title>
+  <meta name="description" content="云华录——记录中国山河风物的国风原叶茶集合品牌。云华一盏，尽录山河。读中国，喝好茶。品牌全案策划提案。">
+  <meta name="author" content="云华录品牌策划组">
+
+  <!-- 设计令牌（tokens → base → layout → components） -->
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+
+  <!-- Favicon（inline SVG · 封泥朱底 + 云字） -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><rect width='36' height='36' rx='2' fill='%23B84A3A'/><text x='18' y='26' font-size='20' font-family='serif' font-weight='bold' fill='%23F7F2EC' text-anchor='middle'>云</text></svg>">
+
+  <!-- 首页专属样式 + JS/CSS 兼容垫片 -->
+  <style>
+    /* ===== 首页区块通用 ===== */
+    .home-section {
+      position: relative;
+      padding: var(--space-24) var(--space-page-x);
+      overflow: hidden;
+    }
+
+    /* ===== Hero 区 ===== */
+    .home-hero {
+      position: relative;
+      min-height: calc(100vh - var(--space-nav-height));
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-20) var(--space-page-x) var(--space-16);
+      overflow: hidden;
+    }
+    .home-hero-inner {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: var(--container-content);
+      margin-inline: auto;
+      text-align: center;
+    }
+    .home-hero .hero-content { margin-inline: auto; text-align: center; }
+    .home-hero .hero-eyebrow { justify-content: center; }
+    .home-hero .hero-title {
+      font-size: clamp(4rem, 2.5rem + 8vw, 7rem);
+      margin-bottom: var(--space-3);
+    }
+    .home-hero .hero-title-en { margin-bottom: var(--space-6); }
+    .home-hero .hero-desc { margin-inline: auto; }
+    .home-hero .hero-actions { justify-content: center; }
+    .home-hero .hero-stats { justify-content: center; }
+
+    /* 主 Slogan（封泥朱大字） */
+    .hero-slogan {
+      font-family: var(--font-cn-heading);
+      font-size: var(--text-3xl);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-accent-vermilion);
+      letter-spacing: var(--tracking-wide);
+      line-height: var(--leading-tight);
+      margin-bottom: var(--space-3);
+    }
+
+    /* 品牌定位语 */
+    .hero-positioning {
+      font-family: var(--font-cn-body);
+      font-size: var(--text-md);
+      color: var(--color-text-secondary);
+      letter-spacing: var(--tracking-wide);
+      margin-bottom: var(--space-10);
+    }
+
+    /* 滚动引导 */
+    .scroll-cue {
+      position: absolute;
+      bottom: var(--space-8);
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-2);
+      z-index: 1;
+      pointer-events: none;
+    }
+    .scroll-cue-text {
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      color: var(--color-text-tertiary);
+      letter-spacing: var(--tracking-wider);
+      text-transform: uppercase;
+    }
+    .scroll-cue-line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, var(--color-text-tertiary), transparent);
+      animation: scroll-cue-pulse 2.4s var(--ease-in-out) infinite;
+      transform-origin: top;
+    }
+    @keyframes scroll-cue-pulse {
+      0%, 100% { opacity: 0.25; transform: scaleY(0.5); }
+      50% { opacity: 1; transform: scaleY(1); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .scroll-cue-line { animation: none; opacity: 0.5; }
+    }
+
+    /* ===== 品牌精髓区引言 ===== */
+    .essence-intro {
+      max-width: var(--container-prose);
+      margin: var(--space-8) auto 0;
+      font-family: var(--font-cn-heading);
+      font-size: var(--text-lg);
+      line-height: var(--leading-loose);
+      color: var(--color-text-secondary);
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .essence-intro::before,
+    .essence-intro::after {
+      content: "";
+      display: block;
+      width: 40px;
+      height: 1px;
+      background: var(--color-accent-vermilion);
+      margin: var(--space-6) auto;
+      opacity: 0.6;
+    }
+
+    /* ===== 产品线区 ===== */
+    .product-line-slogan {
+      font-family: var(--font-cn-heading);
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      opacity: 0.8;
+      margin-bottom: var(--space-4);
+      font-style: italic;
+    }
+    .product-line-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      margin-top: var(--space-4);
+    }
+
+    /* ===== 篇章导航区副标题 ===== */
+    .home-chapters .section-header {
+      margin-bottom: var(--space-4);
+    }
+
+    /* ===== JS/CSS 兼容垫片 ===== */
+    /* scroll.js 添加 .in-view，但 components.css 目标为 .visible —— 垫片桥接 */
+    .reveal.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* scroll.js 添加 .is-visible，但 components.css 目标为 .visible —— 垫片桥接 */
+    .back-to-top.is-visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 阅读进度条 -->
+  <div class="reading-progress" aria-hidden="true"></div>
+
+  <!-- ==========================================================================
+       全局导航（.site-nav · 固定顶部 · 暖宣白底 + 藏经褐细线）
+       ========================================================================== -->
+  <header class="site-nav">
+    <div class="site-nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span>云华录</span>
+        <span class="nav-logo-en">YUNHUA LU</span>
+      </a>
+
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link active">首页</a></li>
+        <li><a href="pages/market-research.html" class="nav-link">市场研究</a></li>
+        <li><a href="pages/brand-foundation.html" class="nav-link">品牌策略</a></li>
+        <li><a href="pages/product-supply.html" class="nav-link">产品供应链</a></li>
+        <li><a href="pages/visual-packaging.html" class="nav-link">视觉包装</a></li>
+        <li><a href="pages/ecommerce-marketing.html" class="nav-link">电商营销</a></li>
+        <li><a href="pages/international.html" class="nav-link">国际拓展</a></li>
+        <li><a href="pages/brand-culture.html" class="nav-link">品牌文化</a></li>
+        <li><a href="pages/full-proposal.html" class="nav-link">完整提案</a></li>
+      </ul>
+
+      <button class="nav-toggle" aria-label="打开菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- 移动端全屏抽屉菜单 -->
+  <div class="nav-drawer">
+    <ul class="nav-drawer-list">
+      <li><a href="index.html" class="nav-drawer-link active">首页</a></li>
+      <li><a href="pages/market-research.html" class="nav-drawer-link">市场研究</a></li>
+      <li><a href="pages/brand-foundation.html" class="nav-drawer-link">品牌策略</a></li>
+      <li><a href="pages/product-supply.html" class="nav-drawer-link">产品供应链</a></li>
+      <li><a href="pages/visual-packaging.html" class="nav-drawer-link">视觉包装</a></li>
+      <li><a href="pages/ecommerce-marketing.html" class="nav-drawer-link">电商营销</a></li>
+      <li><a href="pages/international.html" class="nav-drawer-link">国际拓展</a></li>
+      <li><a href="pages/brand-culture.html" class="nav-drawer-link">品牌文化</a></li>
+      <li><a href="pages/full-proposal.html" class="nav-drawer-link">完整提案</a></li>
+    </ul>
+  </div>
+
+  <!-- ==========================================================================
+       页面主体
+       ========================================================================== -->
+  <main class="site-main">
+
+    <!-- ===================== Hero 区 ===================== -->
+    <section class="home-hero">
+      <!-- 茶典格线竖线背景（上下淡出） -->
+      <div class="tea-grid-bg-fade" aria-hidden="true"></div>
+
+      <div class="home-hero-inner">
+        <div class="hero-content reveal">
+          <div class="hero-eyebrow">品牌全案策划提案 · 2026</div>
+
+          <h1 class="hero-title">云华录</h1>
+          <p class="hero-title-en">YUNHUA LU</p>
+
+          <p class="hero-slogan">云华一盏，尽录山河</p>
+          <p class="hero-positioning">记录中国山河风物的国风原叶茶集合品牌</p>
+
+          <div class="hero-actions">
+            <a href="pages/full-proposal.html" class="btn btn-primary btn-lg btn-arrow">阅读完整提案</a>
+            <a href="#chapters" class="btn btn-outline btn-lg">浏览各篇章</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <span class="hero-stat-value">8</span>
+              <span class="hero-stat-label">核心篇章</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-value">3</span>
+              <span class="hero-stat-label">产品线层级</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-value">6</span>
+              <span class="hero-stat-label">首发产地</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-value">14</span>
+              <span class="hero-stat-label">首发 SKU</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 滚动引导动画 -->
+      <div class="scroll-cue" aria-hidden="true">
+        <span class="scroll-cue-text">SCROLL</span>
+        <span class="scroll-cue-line"></span>
+      </div>
+    </section>
+
+    <!-- ===================== 品牌精髓区 ===================== -->
+    <section class="home-section home-essence" id="essence">
+      <!-- 茶典格线竖线背景 -->
+      <div class="tea-grid-bg" aria-hidden="true"></div>
+
+      <div class="container-wide" style="position: relative; z-index: 1;">
+        <div class="section-header reveal">
+          <div class="section-eyebrow">品牌心法 · 四字诀</div>
+          <h2 class="section-title">录山河，守本真，传雅韵，通四海</h2>
+          <p class="section-title-en">A Chronicle of Mountains, Rivers &amp; Tea</p>
+        </div>
+
+        <!-- 品牌故事引言（提取自主提案 1.1 品牌定位） -->
+        <blockquote class="essence-intro reveal">
+          云华录搜罗国内各地特色茶叶，以统一的视觉与品质标准分层包装，让散落在三十四个省山川里的好茶，被更多人看见、喝到、读懂。品牌不做单一山头的放大器，做整座山脉的编纂者——行走、甄选、记录、呈现，把山野之味带到杯中。
+        </blockquote>
+
+        <!-- 四字诀卡片 -->
+        <div class="essence-grid">
+          <div class="essence-card reveal reveal-delay-1">
+            <div class="essence-char">录</div>
+            <h3 class="essence-title">录山河</h3>
+            <p class="essence-desc">行走中国茶山，甄选每一片值得被记录的好茶，编纂成册——这是品牌的动作。</p>
+          </div>
+          <div class="essence-card reveal reveal-delay-2">
+            <div class="essence-char">守</div>
+            <h3 class="essence-title">守本真</h3>
+            <p class="essence-desc">守住原叶茶的本真品质，守住产地的真实风土，守住制茶人的本心——这是品牌的底线。</p>
+          </div>
+          <div class="essence-card reveal reveal-delay-3">
+            <div class="essence-char">传</div>
+            <h3 class="essence-title">传雅韵</h3>
+            <p class="essence-desc">承千年茶韵，以当代方式传递东方茶事的雅致——这是品牌的态度。</p>
+          </div>
+          <div class="essence-card reveal reveal-delay-4">
+            <div class="essence-char">通</div>
+            <h3 class="essence-title">通四海</h3>
+            <p class="essence-desc">让每一杯云华录，在四海之内找到它的知己——这是品牌的愿景。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 三层产品线展示 ===================== -->
+    <section class="home-section home-products" id="products">
+      <div class="container-wide">
+        <div class="section-header reveal">
+          <div class="section-eyebrow">产品体系 · 三层架构</div>
+          <h2 class="section-title">云 · 华 · 录</h2>
+          <p class="section-title-en">Explore · Tasting · Collection</p>
+          <p class="section-desc">
+            以「云 / 华 / 录」三字拆分产品线，融合「探索 / 品鉴 / 典藏」三层定位，形成「旅途 → 定居 → 收藏」的叙事递进。
+            六大首发产地，十四条入册 SKU，从日常一杯到限量典藏，总有一盏属于你的山河。
+          </p>
+        </div>
+
+        <div class="card-grid card-grid-3">
+          <!-- 云游录 · 探索线 -->
+          <div class="product-line product-line-explore reveal reveal-delay-1">
+            <div class="product-line-header">
+              <span class="product-line-name">云游录</span>
+              <span class="product-line-tier">EXPLORE</span>
+            </div>
+            <p class="product-line-slogan">日常好茶，自有一片云华</p>
+            <p class="product-line-desc">
+              大众入门，每日一杯的山水茶旅。三角袋泡与便携小罐，明信片式包装——每包茶是从茶山寄出的一张明信片。便捷优先，3 分钟泡好一杯好茶。
+            </p>
+            <p class="product-line-price">¥9.9 — 49.9</p>
+            <p class="product-line-target">20-30 岁 · 以茶代咖 · 日常入门</p>
+            <div class="product-line-meta">
+              <span class="tag tag-vermilion">袋泡</span>
+              <span class="tag tag-vermilion">便携小罐</span>
+              <span class="tag tag-outline">6 款 SKU</span>
+            </div>
+          </div>
+
+          <!-- 云华品鉴 · 品鉴线 -->
+          <div class="product-line product-line-tasting reveal reveal-delay-2">
+            <div class="product-line-header">
+              <span class="product-line-name">云华品鉴</span>
+              <span class="product-line-tier">TASTING</span>
+            </div>
+            <p class="product-line-slogan">以茶为礼，方见华彩</p>
+            <p class="product-line-desc">
+              进阶品鉴，产区风土的深度探索。精装书式罐装与礼盒，产地护照创意——每罐茶是护照上的一枚签证。品鉴越多，足迹越广。
+            </p>
+            <p class="product-line-price">¥128 — 898</p>
+            <p class="product-line-target">30-50 岁 · 以茶代酒 · 品质待客</p>
+            <div class="product-line-meta">
+              <span class="tag tag-pine">罐装 50g</span>
+              <span class="tag tag-pine">商务礼盒</span>
+              <span class="tag tag-outline">5 款 SKU</span>
+            </div>
+          </div>
+
+          <!-- 云华典藏 · 典藏线 -->
+          <div class="product-line product-line-collection reveal reveal-delay-3">
+            <div class="product-line-header">
+              <span class="product-line-name">云华典藏</span>
+              <span class="product-line-tier">COLLECTION</span>
+            </div>
+            <p class="product-line-slogan">一味一山头，尽录于此</p>
+            <p class="product-line-desc">
+              限量典藏，名山核心微区的珍稀之作。古籍函套式包装，附产地证书与制茶人亲笔签名——每罐茶是一份不可复制的产地入册证书。
+            </p>
+            <p class="product-line-price">¥398 — 2,998</p>
+            <p class="product-line-target">50+ · 正宗寻味 · 收藏传世</p>
+            <div class="product-line-meta">
+              <span class="tag tag-gold">散茶 100g</span>
+              <span class="tag tag-gold">饼茶 357g</span>
+              <span class="tag tag-outline">3 款 SKU</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 篇章导航区 ===================== -->
+    <section class="home-section home-chapters" id="chapters">
+      <div class="container-wide">
+        <div class="section-header reveal">
+          <div class="section-eyebrow">提案目录 · 八篇</div>
+          <h2 class="section-title">山河为卷，茶事为章</h2>
+          <p class="section-title-en">Eight Chapters of the Yunhua Lu Master Plan</p>
+          <p class="section-desc">
+            从市场洞察到品牌根基，从产品体系到视觉包装，从电商营销到国际拓展——八篇文档构成云华录品牌全案的完整骨架。
+            每一篇都是一次考据的旅行，每一章都指向一个可落地的决策。
+          </p>
+        </div>
+
+        <div class="chapter-grid">
+          <!-- 篇章 01 -->
+          <a href="pages/market-research.html" class="chapter-card reveal reveal-delay-1">
+            <div class="chapter-card-num">01<span class="chapter-card-num-cn">壹</span></div>
+            <h3 class="chapter-card-title">市场研究报告</h3>
+            <p class="chapter-card-desc">TAM/SAM/SOM 分析、消费趋势洞察、竞品图谱、波特五力模型与差异化机会点识别。</p>
+            <div class="chapter-card-footer">
+              <span class="chapter-card-tag">附件 01</span>
+              <span class="chapter-card-arrow">→</span>
+            </div>
+          </a>
+
+          <!-- 篇章 02 -->
+          <a href="pages/brand-foundation.html" class="chapter-card reveal reveal-delay-2">
+            <div class="chapter-card-num">02<span class="chapter-card-num-cn">贰</span></div>
+            <h3 class="chapter-card-title">品牌策略文档</h3>
+            <p class="chapter-card-desc">品牌定位与精神内核、Slogan 体系、品牌人设与语感、四大价值主张与品牌宣言。</p>
+            <div class="chapter-card-footer">
+              <span class="chapter-card-tag">附件 02</span>
+              <span class="chapter-card-arrow">→</span>
+            </div>
+          </a>
+
+          <!-- 篇章 03 -->
+          <a href="pages/product-supply.html" class="chapter-card reveal reveal-delay-3">
+            <div class="chapter-card-num">03<span class="chapter-card-num-cn">叁</span></div>
+            <h3 class="chapter-card-title">产品线与供应链</h3>
+            <p class="chapter-card-desc">三层产品线架构、命名体系、三层包装创意（明信片 / 护照 / 证书）、六维甄选标准与产地合作。</p>
+            <div class="chapter-card-footer">
+              <span class="chapter-card-tag">附件 03</span>
+              <span class="chapter-card-arrow">→</span>
+            </div>
+          </a>
+
+          <!-- 篇章 04 -->
+          <a href="pages/visual-packaging.html" class="chapter-card reveal reveal-delay-4">
+            <div class="chapter-card-num">04<span class="chapter-card-num-cn">肆</span></div>
+            <h3 class="chapter-card-title">品牌视觉与包装</h3>
+            <p class="chapter-card-desc">融合七色系统、字体规范、产地印章与山水线描核心视觉资产、考据的浪漫摄影风格。</p>
+            <div class="chapter-card-footer">
+              <span class="chapter-card-tag">附件 04</span>
+              <span class="chapter-card-arrow">→</span>
+            </div>
+          </a>
+
+          <!-- 篇章 05 -->
+          <a href="pages/ecommerce-marketing.html" class="chapter-card reveal reveal-delay-1">
+            <div class="chapter-card-num">05<span class="chapter-card-num-cn">伍</span></div>
+            <h3 class="chapter-card-title">电商与营销策略</h3>
+            <p class="chapter-card-desc">五大内容支柱、各平台内容矩阵、三段人群触达路径、品牌文案体系与详情页结构。</p>
+            <div class="chapter-card-footer">
+              <span class="chapter-card-tag">附件 05</span>
+              <span class="chapter-card-arrow">→</span>
+            </div>
+          </a>
+
+          <!-- 篇章 06 -->
+          <a href="pages/international.html" class="chapter-card reveal reveal-delay-2">
+            <div class="chapter-card-num">06<span class="chapter-card-num-cn">陆</span></div>
+            <h3 class="chapter-card-title">国际市场拓展</h3>
+            <p class="chapter-card-desc">北美 / 欧洲华人圈市场策略、海外 Slogan 体系、跨境渠道与合规、海外拓展三阶段节奏。</p>
+            <div class="chapter-card-footer">
+              <span class="chapter-card-tag">附件 06</span>
+              <span class="chapter-card-arrow">→</span>
+            </div>
+          </a>
+
+          <!-- 篇章 07 -->
+          <a href="pages/brand-culture.html" class="chapter-card reveal reveal-delay-3">
+            <div class="chapter-card-num">07<span class="chapter-card-num-cn">柒</span></div>
+            <h3 class="chapter-card-title">品牌文化精神内核</h3>
+            <p class="chapter-card-desc">一杯茶的地理志 Big Idea、考据的浪漫创意理念、三层叙事框架与内容操作系统。</p>
+            <div class="chapter-card-footer">
+              <span class="chapter-card-tag">附件 07</span>
+              <span class="chapter-card-arrow">→</span>
+            </div>
+          </a>
+
+          <!-- 篇章 08 -->
+          <a href="pages/full-proposal.html" class="chapter-card reveal reveal-delay-4">
+            <div class="chapter-card-num">08<span class="chapter-card-num-cn">捌</span></div>
+            <h3 class="chapter-card-title">完整策划提案</h3>
+            <p class="chapter-card-desc">七篇二十二章全文整合版。从品牌根基到创意引擎，从产品体系到上市 Campaign 的完整叙事。</p>
+            <div class="chapter-card-footer">
+              <span class="chapter-card-tag">主提案</span>
+              <span class="chapter-card-arrow">→</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       全局页脚（墨岩深底 · 暖宣白文字）
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <div class="footer-main">
+        <!-- 品牌信息 -->
+        <div class="footer-brand">
+          <div class="footer-logo">云华录</div>
+          <p class="footer-slogan">云华一盏，尽录山河</p>
+          <p class="footer-desc">记录中国山河风物的国风原叶茶集合品牌。行走、甄选、记录、呈现，把山野之味带到杯中。</p>
+        </div>
+
+        <!-- 篇章导航 -->
+        <div class="footer-nav-col">
+          <h4 class="footer-nav-title">篇章导航</h4>
+          <ul class="footer-nav-list">
+            <li><a href="pages/market-research.html" class="footer-nav-link">市场研究报告</a></li>
+            <li><a href="pages/brand-foundation.html" class="footer-nav-link">品牌策略文档</a></li>
+            <li><a href="pages/product-supply.html" class="footer-nav-link">产品线与供应链</a></li>
+            <li><a href="pages/visual-packaging.html" class="footer-nav-link">品牌视觉与包装</a></li>
+            <li><a href="pages/ecommerce-marketing.html" class="footer-nav-link">电商与营销策略</a></li>
+            <li><a href="pages/international.html" class="footer-nav-link">国际市场拓展</a></li>
+            <li><a href="pages/brand-culture.html" class="footer-nav-link">品牌文化精神内核</a></li>
+            <li><a href="pages/full-proposal.html" class="footer-nav-link">完整策划提案</a></li>
+          </ul>
+        </div>
+
+        <!-- 产品线 -->
+        <div class="footer-nav-col">
+          <h4 class="footer-nav-title">产品线</h4>
+          <ul class="footer-nav-list">
+            <li><span class="footer-nav-link">云游录 · 探索系列</span></li>
+            <li><span class="footer-nav-link">云华品鉴 · 品鉴系列</span></li>
+            <li><span class="footer-nav-link">云华典藏 · 典藏系列</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span class="footer-copyright">© 2026 云华录 YUNHUA LU · 记录中国山河风物</span>
+        <span class="footer-meta">品牌全案策划提案 · 内部文档</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 回到顶部按钮 -->
+  <button class="back-to-top" aria-label="回到顶部">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <!-- 脚本 -->
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/scroll.js" defer></script>
+</body>
+</html>

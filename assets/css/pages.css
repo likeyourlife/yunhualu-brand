@@ -1,0 +1,646 @@
+/* ==========================================================================
+   云华录品牌全案网站 · 补充样式（Pages Supplementary）
+   定义各页面 builder 创建但 CSS 基础文件未覆盖的结构类名
+   所有样式引用 var(--token-name)，保持设计系统一致性
+
+   引入顺序：在 components.css 之后
+   ========================================================================== */
+
+/* ==========================================================================
+   1. 首页专用类（Home Page）
+   ========================================================================== */
+
+/* --- Hero 区 --- */
+.home-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  background: var(--color-bg-primary);
+  padding: calc(var(--space-nav-height) + var(--space-20)) var(--space-6) var(--space-20);
+}
+
+.home-hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: var(--container-content);
+  margin: 0 auto;
+}
+
+.hero-slogan {
+  font-family: var(--font-cn-heading);
+  font-size: var(--text-3xl);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-accent-vermilion);
+  letter-spacing: 0.15em;
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-4);
+}
+
+.hero-positioning {
+  font-family: var(--font-cn-body);
+  font-size: var(--text-md);
+  color: var(--color-text-secondary);
+  letter-spacing: 0.08em;
+  margin-bottom: var(--space-12);
+}
+
+/* --- 首页通用 Section --- */
+.home-section {
+  padding: var(--space-20) var(--space-6);
+  max-width: var(--container-wide);
+  margin: 0 auto;
+}
+
+.home-essence,
+.home-products,
+.home-chapters {
+  padding-top: var(--space-20);
+  padding-bottom: var(--space-20);
+}
+
+.essence-intro {
+  max-width: var(--container-prose);
+  margin: 0 auto var(--space-12);
+  text-align: center;
+  font-family: var(--font-cn-heading);
+  font-size: var(--text-xl);
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+}
+
+/* --- 产品线补充 --- */
+.product-line-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.product-line-slogan {
+  font-family: var(--font-cn-heading);
+  font-size: var(--text-lg);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--space-2);
+}
+
+/* --- 滚动引导 --- */
+.scroll-cue {
+  position: absolute;
+  bottom: var(--space-8);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  opacity: 0.6;
+  transition: opacity var(--duration-normal) var(--ease-out);
+}
+
+.scroll-cue:hover {
+  opacity: 1;
+}
+
+.scroll-cue-text {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.2em;
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+}
+
+.scroll-cue-line {
+  width: 1px;
+  height: 40px;
+  background: var(--color-accent-brown);
+  animation: scrollLine 2s var(--ease-in-out) infinite;
+}
+
+@keyframes scrollLine {
+  0% { transform: scaleY(0); transform-origin: top; }
+  50% { transform: scaleY(1); transform-origin: top; }
+  51% { transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-cue-line { animation: none; }
+}
+
+/* ==========================================================================
+   2. 篇章页 Hero / 章节头部（Chapter Hero）
+   ========================================================================== */
+
+.chapter-hero {
+  position: relative;
+  padding: calc(var(--space-nav-height) + var(--space-16)) var(--space-6) var(--space-12);
+  background: var(--color-bg-primary);
+  border-bottom: 1px solid var(--color-border-default);
+  overflow: hidden;
+}
+
+.chapter-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--grid-line-vertical-bg, repeating-linear-gradient(
+    to right,
+    transparent,
+    transparent 47px,
+    rgba(139, 115, 85, 0.08) 47px,
+    rgba(139, 115, 85, 0.08) 48px
+  ));
+  pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  .chapter-hero::before { display: none; }
+}
+
+.chapter-hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: var(--container-content);
+  margin: 0 auto;
+}
+
+.chapter-hero-breadcrumb {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-tertiary);
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-6);
+  text-transform: uppercase;
+}
+
+.chapter-hero-breadcrumb a {
+  color: var(--color-text-tertiary);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.chapter-hero-breadcrumb a:hover {
+  color: var(--color-accent-vermilion);
+}
+
+.chapter-hero-title-wrap {
+  margin-bottom: var(--space-6);
+}
+
+.chapter-hero-title {
+  font-family: var(--font-cn-heading);
+  font-size: var(--text-4xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  line-height: 1.3;
+  margin: 0;
+}
+
+.chapter-hero-subtitle {
+  font-family: var(--font-cn-body);
+  font-size: var(--text-md);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  max-width: var(--container-prose);
+  margin-top: var(--space-4);
+}
+
+.chapter-hero-sep {
+  width: 48px;
+  height: 2px;
+  background: var(--color-accent-vermilion);
+  margin: var(--space-6) 0;
+}
+
+.chapter-hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  margin-top: var(--space-6);
+}
+
+.chapter-hero-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.chapter-hero-meta-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.chapter-hero-meta-value {
+  font-family: var(--font-cn-heading);
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+}
+
+/* ==========================================================================
+   3. 阅读布局（Reading Layout）— 篇章页双栏布局别名
+   ========================================================================== */
+
+.reading-layout {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: var(--space-16);
+  max-width: var(--container-wide);
+  margin: 0 auto;
+  padding: var(--space-12) var(--space-6) var(--space-20);
+  align-items: start;
+}
+
+.reading-content {
+  min-width: 0; /* prevent overflow */
+}
+
+.reading-sidebar {
+  position: sticky;
+  top: calc(var(--space-nav-height) + var(--space-8));
+  max-height: calc(100vh - var(--space-nav-height) - var(--space-8));
+  overflow-y: auto;
+  padding-left: var(--space-4);
+  border-left: 1px solid var(--color-border-default);
+}
+
+.reading-sidebar::-webkit-scrollbar {
+  width: 3px;
+}
+
+.reading-sidebar::-webkit-scrollbar-thumb {
+  background: rgba(139, 115, 85, 0.3);
+}
+
+@media (max-width: 1199px) {
+  .reading-layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+  
+  .reading-sidebar {
+    position: static;
+    max-height: none;
+    border-left: none;
+    border-bottom: 1px solid var(--color-border-default);
+    padding-left: 0;
+    padding-bottom: var(--space-6);
+  }
+}
+
+/* --- 页面主内容容器 --- */
+.page-main {
+  min-height: 60vh;
+}
+
+.page-content {
+  max-width: var(--container-content);
+  margin: 0 auto;
+  padding: var(--space-12) var(--space-6);
+}
+
+/* --- 正文排版别名 --- */
+.prose {
+  font-family: var(--font-cn-body);
+  font-size: var(--text-base);
+  line-height: 1.85;
+  color: var(--color-text-primary);
+}
+
+.prose p {
+  margin-bottom: var(--space-5);
+}
+
+.prose h2,
+.prose h3,
+.prose h4 {
+  font-family: var(--font-cn-heading);
+  color: var(--color-text-primary);
+  margin-top: var(--space-10);
+  margin-bottom: var(--space-4);
+}
+
+.prose h2 {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-weight-bold);
+}
+
+.prose h3 {
+  font-size: var(--text-xl);
+  font-weight: var(--font-weight-semibold);
+}
+
+.prose ul,
+.prose ol {
+  margin-bottom: var(--space-5);
+  padding-left: var(--space-6);
+}
+
+.prose li {
+  margin-bottom: var(--space-2);
+}
+
+/* --- TOC 标签 --- */
+.toc-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--color-border-default);
+}
+
+/* ==========================================================================
+   4. 篇章翻页导航（Chapter Nav）
+   ========================================================================== */
+
+.chapter-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  margin-top: var(--space-20);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--color-border-default);
+}
+
+.chapter-nav-link {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  padding: var(--space-5);
+  border: 1px solid var(--color-border-light);
+  background: var(--color-surface-card);
+  transition: all var(--duration-normal) var(--ease-out);
+}
+
+.chapter-nav-link:hover {
+  border-color: var(--color-accent-vermilion);
+  box-shadow: var(--shadow-sm);
+}
+
+.chapter-nav-link.prev {
+  text-align: left;
+}
+
+.chapter-nav-link.next {
+  text-align: right;
+  justify-self: end;
+}
+
+.chapter-nav-direction {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-2);
+}
+
+.chapter-nav-title {
+  font-family: var(--font-cn-heading);
+  font-size: var(--text-md);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.chapter-nav-link:hover .chapter-nav-title {
+  color: var(--color-accent-vermilion);
+}
+
+@media (max-width: 767px) {
+  .chapter-nav {
+    grid-template-columns: 1fr;
+  }
+  
+  .chapter-nav-link.next {
+    justify-self: stretch;
+    text-align: left;
+  }
+}
+
+/* ==========================================================================
+   5. 导航 Logo 补充
+   ========================================================================== */
+
+.nav-logo-cn {
+  font-family: var(--font-cn-heading);
+  font-size: var(--text-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  letter-spacing: 0.05em;
+}
+
+/* ==========================================================================
+   6. 通用辅助类
+   ========================================================================== */
+
+/* --- 副标题/附属文本 --- */
+.sub {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-regular);
+}
+
+/* --- 5 列网格 --- */
+.card-grid-5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-4);
+}
+
+@media (max-width: 1199px) {
+  .card-grid-5 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .card-grid-5 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   7. 文档列表组件（Doc List）
+   ========================================================================== */
+
+.doc-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.doc-list-item:last-child {
+  border-bottom: none;
+}
+
+.doc-list-num {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-accent-vermilion);
+  min-width: 32px;
+  padding-top: 2px;
+}
+
+.doc-list-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.doc-list-content h4,
+.doc-list-content h5 {
+  font-family: var(--font-cn-heading);
+  font-size: var(--text-md);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-2);
+  color: var(--color-text-primary);
+}
+
+.doc-list-content p {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+/* ==========================================================================
+   8. 时间线组件（Timeline）
+   ========================================================================== */
+
+.timeline-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-full);
+  background: var(--color-accent-vermilion);
+  border: 2px solid var(--color-bg-primary);
+  box-shadow: 0 0 0 2px var(--color-accent-vermilion);
+  flex-shrink: 0;
+}
+
+.timeline-date {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-tertiary);
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-2);
+}
+
+.timeline-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.timeline-content h4,
+.timeline-content h5 {
+  font-family: var(--font-cn-heading);
+  font-size: var(--text-md);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-2);
+  color: var(--color-text-primary);
+}
+
+.timeline-content p {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+/* ==========================================================================
+   9. 入场动画兼容（Reveal Animation）
+   JS 添加 .visible 类触发，CSS 已有 .reveal 基础样式（components.css）
+   pages.css 不再重复定义，以 components.css 版本为准
+   ========================================================================== */
+
+/* --- 回到顶部按钮兼容 --- */
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ========================================
+   P0-1 修复：双栏布局顺序（TOC 在后，正文在前）
+   4 个页面的 HTML 中 TOC 排在正文前面，但 CSS grid 是 1fr 280px
+   通过 grid-column 显式指定顺序
+   ======================================== */
+.page-layout > .toc-sidebar {
+  grid-column: 2;
+}
+
+.page-layout > .page-content,
+.page-layout > .article-prose,
+.page-layout > article {
+  grid-column: 1;
+}
+
+/* 移动端单栏时恢复文档流顺序（正文在前） */
+@media (max-width: 767px) {
+  .page-layout > .toc-sidebar {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .page-layout > .page-content,
+  .page-layout > .article-prose,
+  .page-layout > article {
+    grid-column: 1;
+    grid-row: 1;
+  }
+}
+
+/* ========================================
+   P1-5 修复：为缺少茶典格线的篇章页添加篇头格线装饰
+   ======================================== */
+.chapter-header {
+  position: relative;
+  overflow: hidden;
+}
+
+.chapter-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--grid-line-vertical-bg);
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.chapter-header > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* 移动端隐藏竖向格线 */
+@media (max-width: 767px) {
+  .chapter-header::before {
+    display: none;
+  }
+}
+
+/* ========================================
+   P1-7 修复：清理重复定义
+   ======================================== */
+
+/* 删除 components.css 中 .reading-progress 的冲突定义 */
+/* 保留 layout.css 版本（top: nav-height, height: 2px） */
+/* 通过提高 layout.css 版本的优先级来覆盖 */
+.reading-progress {
+  top: var(--nav-height, 64px) !important;
+  height: 2px !important;
+}
+
+/* 统一 .reveal 定义（仅保留 components.css 版本） */
+/* pages.css 中的 .reveal 重复定义已在上方删除 */
