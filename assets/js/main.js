@@ -186,11 +186,43 @@
 
 
   /* ========================================================================
+     5.5 表格横向滚动提示（Table Scroll Hint）
+     检测表格是否可横滑，添加 is-scrollable 类触发渐变阴影
+     ======================================================================== */
+
+  function initTableScrollHint() {
+    var tableWraps = document.querySelectorAll('.data-table-wrap');
+    if (tableWraps.length === 0) return;
+
+    var hintTimer = null;
+
+    function checkAll() {
+      tableWraps.forEach(function (wrap) {
+        if (wrap.scrollWidth > wrap.clientWidth + 2) {
+          wrap.classList.add('is-scrollable');
+        } else {
+          wrap.classList.remove('is-scrollable');
+        }
+      });
+    }
+
+    // 延迟检测确保布局完成
+    setTimeout(checkAll, 100);
+
+    window.addEventListener('resize', function () {
+      if (hintTimer) clearTimeout(hintTimer);
+      hintTimer = setTimeout(checkAll, 200);
+    });
+  }
+
+
+  /* ========================================================================
      6. 初始化——DOM 就绪后执行
      ======================================================================== */
 
   function init() {
     highlightCurrentNav();
+    initTableScrollHint();
   }
 
   if (document.readyState === 'loading') {

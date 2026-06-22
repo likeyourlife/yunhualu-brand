@@ -1,0 +1,414 @@
+/* ==========================================================================
+   mobile-fix.css — 云华录移动端响应式补丁
+   解决：代码块溢出 / chapter-header间距 / 横屏适配 / 表格滚动提示
+        / 中尺寸导航 / 页脚间距 / 抽屉滚动 / 字体微调
+   引用位置：在 pages.css 之后（确保优先级）
+   ========================================================================== */
+
+
+/* ==========================================================================
+   1. 代码块 & 预格式化文本 — 防止溢出（全尺寸生效）
+   ========================================================================== */
+
+pre,
+.code-block {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;  /* iOS 平滑滚动 */
+  max-width: 100%;
+  /* 滚动条样式 */
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border-default) transparent;
+}
+
+pre::-webkit-scrollbar,
+.code-block::-webkit-scrollbar {
+  height: 6px;
+}
+
+pre::-webkit-scrollbar-thumb,
+.code-block::-webkit-scrollbar-thumb {
+  background: var(--color-border-default);
+  border-radius: 3px;
+}
+
+pre::-webkit-scrollbar-track,
+.code-block::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* 行内代码不换行但可折行 */
+code {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+
+/* ==========================================================================
+   2. 表格 — 横向滚动渐变提示（全尺寸生效）
+   ========================================================================== */
+
+.data-table-wrap {
+  position: relative;
+}
+
+/* 可滚动时左右渐变阴影提示 */
+.data-table-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 24px;
+  background: linear-gradient(to left, var(--color-surface-base), transparent);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.data-table-wrap.is-scrollable::after {
+  opacity: 1;
+}
+
+/* 移动端表格字号微调 */
+@media (max-width: 767px) {
+  .data-table {
+    min-width: 360px;  /* 从480px降低，适配更多手机 */
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: var(--space-2) var(--space-3);  /* 压缩单元格内距 */
+  }
+}
+
+
+/* ==========================================================================
+   3. 移动端 (<768px) — 竖屏适配
+   ========================================================================== */
+
+@media (max-width: 767px) {
+
+  /* --- 3.1 chapter-header 间距压缩 --- */
+  .chapter-header {
+    padding: var(--space-12) var(--space-page-x) var(--space-8);
+  }
+
+  .chapter-header-number {
+    margin-bottom: var(--space-4);
+  }
+
+  .chapter-header-number::before,
+  .chapter-header-number::after {
+    width: 32px;  /* 装饰线缩短 */
+  }
+
+  .chapter-header-lead {
+    font-size: var(--text-base);  /* 导语从18px降到16px */
+    line-height: var(--leading-relaxed);
+  }
+
+  /* --- 3.2 page-layout 间距压缩 --- */
+  .page-layout {
+    padding-top: var(--space-8);
+    padding-bottom: var(--space-12);
+    gap: var(--space-6);
+  }
+
+  /* --- 3.3 页脚间距压缩 --- */
+  .site-footer {
+    padding: var(--space-12) var(--space-page-x) var(--space-4);
+    margin-top: var(--space-16);
+  }
+
+  .footer-main {
+    padding-bottom: var(--space-8);
+    gap: var(--space-8);
+  }
+
+  /* --- 3.4 抽屉导航可滚动 --- */
+  .nav-drawer {
+    max-height: calc(100vh - var(--space-nav-height-mobile));
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav-drawer-list {
+    padding: var(--space-4) var(--space-2);
+  }
+
+  .nav-drawer-link {
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--text-base);
+  }
+
+  /* --- 3.5 正文 prose 间距优化 --- */
+  .article-prose h2,
+  .prose h2 {
+    font-size: var(--text-xl);
+    margin-top: var(--space-10);
+    margin-bottom: var(--space-4);
+  }
+
+  .article-prose h3,
+  .prose h3 {
+    font-size: var(--text-lg);
+    margin-top: var(--space-8);
+    margin-bottom: var(--space-3);
+  }
+
+  .article-prose h4,
+  .prose h4 {
+    font-size: var(--text-base);
+    margin-top: var(--space-6);
+    margin-bottom: var(--space-2);
+  }
+
+  .article-prose p,
+  .prose p {
+    margin-bottom: var(--space-4);
+  }
+
+  /* --- 3.6 section 间距压缩 --- */
+  .article-prose section,
+  .page-content section {
+    margin-bottom: var(--space-10);
+  }
+
+  /* --- 3.7 blockquote / note 间距 --- */
+  .article-prose blockquote,
+  .prose blockquote,
+  .note {
+    margin: var(--space-4) 0;
+    padding: var(--space-4) var(--space-4);
+  }
+
+  /* --- 3.8 首页 hero 区域 --- */
+  .home-hero {
+    min-height: auto;
+    padding: var(--space-16) var(--space-page-x) var(--space-12);
+  }
+
+  .home-hero-title {
+    font-size: var(--text-3xl);
+  }
+
+  .home-hero-subtitle {
+    font-size: var(--text-base);
+  }
+
+  /* --- 3.9 首页篇章卡片网格 --- */
+  .chapter-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .chapter-card {
+    padding: var(--space-5);
+  }
+
+  /* --- 3.10 回到顶部按钮 --- */
+  .back-to-top {
+    bottom: var(--space-4);
+    right: var(--space-4);
+    width: 40px;
+    height: 40px;
+  }
+}
+
+
+/* ==========================================================================
+   4. 手机横屏 (orientation: landscape, max-height: 500px)
+   横屏高度矮，压缩首屏避免内容被挤出
+   ========================================================================== */
+
+@media (max-width: 900px) and (orientation: landscape) and (max-height: 500px) {
+
+  /* chapter-header 极度压缩 */
+  .chapter-header {
+    padding: var(--space-6) var(--space-page-x) var(--space-4);
+  }
+
+  .chapter-header-number {
+    margin-bottom: var(--space-2);
+  }
+
+  .chapter-header-num-cn {
+    font-size: var(--text-2xl);
+  }
+
+  .chapter-header-title {
+    font-size: var(--text-2xl);
+  }
+
+  .chapter-header-lead {
+    font-size: var(--text-sm);
+    margin-bottom: var(--space-2);
+  }
+
+  /* 首页 hero 压缩 */
+  .home-hero {
+    min-height: auto;
+    padding: var(--space-8) var(--space-page-x) var(--space-6);
+  }
+
+  .home-hero-title {
+    font-size: var(--text-2xl);
+  }
+
+  /* page-layout 压缩 */
+  .page-layout {
+    padding-top: var(--space-4);
+    padding-bottom: var(--space-8);
+  }
+
+  /* 导航栏高度压缩 */
+  :root {
+    --space-nav-height: 48px;
+    --space-nav-height-mobile: 48px;
+  }
+
+  .site-nav {
+    height: 48px;
+  }
+}
+
+
+/* ==========================================================================
+   5. 中尺寸 (768px–1199px) — 平板导航优化
+   13个导航链接在这个区间 flex 排列会挤压
+   ========================================================================== */
+
+@media (min-width: 768px) and (max-width: 1199px) {
+
+  /* nav-list 允许换行 + 缩小间距 */
+  .nav-list {
+    gap: var(--space-3);
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;  /* 隐藏滚动条 */
+  }
+
+  .nav-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-link {
+    font-size: var(--text-sm);
+    padding: var(--space-1) 0;
+    white-space: nowrap;
+  }
+
+  /* page-layout 平板仍用单栏但增加间距 */
+  .page-layout {
+    gap: var(--space-8);
+  }
+}
+
+
+/* ==========================================================================
+   6. 超小屏 (≤360px) — iPhone SE 等超窄屏
+   ========================================================================== */
+
+@media (max-width: 360px) {
+
+  :root {
+    --space-page-x: 12px;  /* 缩小页面边距 */
+  }
+
+  .chapter-header-num-cn {
+    font-size: var(--text-2xl);
+  }
+
+  .chapter-header-title {
+    font-size: var(--text-2xl);
+  }
+
+  .data-table {
+    min-width: 320px;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: var(--space-1) var(--space-2);
+    font-size: var(--text-xs);
+  }
+
+  .nav-drawer-link {
+    font-size: var(--text-sm);
+    padding: var(--space-2) var(--space-3);
+  }
+}
+
+
+/* ==========================================================================
+   7. 触摸优化 — 所有触屏设备
+   ========================================================================== */
+
+@media (hover: none) and (pointer: coarse) {
+
+  /* 增大触摸目标 */
+  .nav-link,
+  .nav-drawer-link,
+  .toc-link,
+  .footer-nav-link {
+    min-height: 44px;  /* iOS HIG 最小触摸目标 */
+    display: flex;
+    align-items: center;
+  }
+
+  .toc-link {
+    padding: var(--space-2) var(--space-3);
+  }
+
+  .footer-nav-link {
+    padding: var(--space-2) 0;
+  }
+
+  /* 禁用 hover 效果（触屏设备） */
+  .nav-link:hover::after,
+  .chapter-card:hover {
+    /* 保留 transition 但不触发视觉变化 */
+  }
+
+  /* 回到顶部按钮增大 */
+  .back-to-top {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+
+/* ==========================================================================
+   8. 图片 & 媒体 — 确保不溢出
+   ========================================================================== */
+
+img,
+video,
+svg,
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 防止 article 内任何元素溢出 */
+.article-prose,
+.page-content {
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/* 长URL/长单词自动折行 */
+.article-prose p,
+.prose p,
+.article-prose li,
+.prose li {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+
+/* ==========================================================================
+   文件结束 · mobile-fix.css
+   ==========================================================================
