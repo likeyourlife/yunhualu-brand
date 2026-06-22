@@ -44,11 +44,17 @@ code {
 
 
 /* ==========================================================================
-   2. 表格 — 横向滚动渐变提示（全尺寸生效）
+   2. 表格 — 横向滚动 + 渐变提示（全尺寸生效）
+   注意：必须保留 overflow-x: auto 以约束表格 min-width 不撑开父容器
    ========================================================================== */
 
 .data-table-wrap {
   position: relative;
+  overflow-x: auto;              /* 关键：约束表格不超出容器 */
+  -webkit-overflow-scrolling: touch;
+  margin: var(--space-8) 0;
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-none);
 }
 
 /* 可滚动时左右渐变阴影提示 */
@@ -88,9 +94,9 @@ code {
 
 @media (max-width: 767px) {
 
-  /* --- 3.1 chapter-header 间距压缩 --- */
+  /* --- 3.1 chapter-header 间距 + 导航避让 --- */
   .chapter-header {
-    padding: var(--space-12) var(--space-page-x) var(--space-8);
+    padding: calc(var(--space-nav-height-mobile) + var(--space-6)) var(--space-page-x) var(--space-8);
   }
 
   .chapter-header-number {
@@ -395,8 +401,10 @@ canvas {
 .article-prose,
 .page-content {
   min-width: 0;
+  max-width: 100%;           /* 强制不超出父容器 */
   overflow-wrap: break-word;
   word-wrap: break-word;
+  box-sizing: border-box;
 }
 
 /* 长URL/长单词自动折行 */
@@ -433,10 +441,21 @@ html {
   position: relative;
 }
 
-/* page-main 防溢出 */
+/* page-main 防溢出 + 导航偏移 */
 .page-main {
   overflow-x: hidden;
   width: 100%;
+  padding-top: var(--space-nav-height);  /* 为固定导航栏留出空间 */
+}
+
+/* page-layout 网格容器：防止子项撑开（全尺寸） */
+.page-layout {
+  overflow-x: hidden;
+}
+
+/* 网格子项强制收缩，不超出列宽 */
+.page-layout > * {
+  min-width: 0;
 }
 
 
