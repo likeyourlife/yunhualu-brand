@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>供应链管理细则与SOP · 云华录品牌全案</title>
+  <meta name="description" content="云华录供应链管理细则与标准作业程序——覆盖供应商管理、质量管理、采购、仓储、发货、售后全流程，以及8类突发状况处理预案，确保品质可溯、供应稳定、响应迅速、成本可控。">
+
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/pages.css">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><rect width='36' height='36' rx='2' fill='%23B84A3A'/><text x='18' y='26' font-size='20' font-family='serif' font-weight='bold' fill='%23F7F2EC' text-anchor='middle'>云</text></svg>">
+
+  <style>
+    /* 引用注释样式 */
+    .article-note {
+      margin: var(--space-6) 0;
+      padding: var(--space-4) var(--space-6);
+      border-left: 3px solid var(--color-accent-vermilion);
+      background: var(--color-surface-card);
+      font-family: var(--font-cn-body);
+      font-size: var(--text-sm);
+      color: var(--color-text-secondary);
+      line-height: 1.8;
+    }
+    .article-note p {
+      margin: 0;
+    }
+    /* 代码块（流程图/架构图） */
+    .code-block {
+      margin: var(--space-6) 0;
+      padding: var(--space-5) var(--space-6);
+      background: var(--color-surface-elevated, #EFE9E0);
+      border: 1px solid var(--color-border-default);
+      border-radius: var(--radius-md, 6px);
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      line-height: 1.6;
+      color: var(--color-text-primary);
+      overflow-x: auto;
+      white-space: pre;
+    }
+    /* Checkbox 列表 */
+    .checklist {
+      list-style: none;
+      padding-left: 0;
+      margin: var(--space-4) 0;
+    }
+    .checklist-item {
+      position: relative;
+      padding-left: var(--space-6);
+      margin-bottom: var(--space-2);
+      color: var(--color-text-secondary);
+      font-size: var(--text-sm);
+    }
+    .checklist-item::before {
+      content: '☐';
+      position: absolute;
+      left: 0;
+      color: var(--color-accent-vermilion);
+      font-size: var(--text-base);
+    }
+    /* 篇章分隔 */
+    .article-prose section {
+      margin-bottom: var(--space-12);
+    }
+    .article-prose section:last-child {
+      margin-bottom: 0;
+    }
+    /* h4 装饰 */
+    .article-prose h4 {
+      position: relative;
+      padding-left: var(--space-4);
+    }
+    .article-prose h4::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.3em;
+      width: 3px;
+      height: 1em;
+      background: var(--color-accent-vermilion);
+      opacity: 0.6;
+    }
+    /* 结尾品牌slogan */
+    .report-coda {
+      text-align: center;
+      margin-top: var(--space-16);
+      padding-top: var(--space-10);
+      border-top: 1px solid var(--color-border-default);
+      font-family: var(--font-cn-heading);
+      font-size: var(--text-lg);
+      color: var(--color-accent-vermilion);
+      line-height: 2;
+      letter-spacing: 0.05em;
+    }
+    .report-coda-en {
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      color: var(--color-text-tertiary);
+      letter-spacing: 0.1em;
+      margin-top: var(--space-3);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="reading-progress" aria-hidden="true"></div>
+
+  <!-- ==========================================================================
+       全局导航
+       ========================================================================== -->
+  <header class="site-nav">
+    <div class="site-nav-inner">
+      <a href="../index.html" class="nav-logo">
+        <span>云华录</span>
+        <span class="nav-logo-en">YUNHUA LU</span>
+      </a>
+
+      <ul class="nav-list">
+        <li><a href="../index.html" class="nav-link">首页</a></li>
+        <li><a href="market-research.html" class="nav-link">市场研究</a></li>
+        <li><a href="brand-foundation.html" class="nav-link">品牌策略</a></li>
+        <li><a href="product-supply.html" class="nav-link">产品供应链</a></li>
+        <li><a href="visual-packaging.html" class="nav-link">视觉包装</a></li>
+        <li><a href="ecommerce-marketing.html" class="nav-link">电商营销</a></li>
+        <li><a href="international.html" class="nav-link">国际拓展</a></li>
+        <li><a href="brand-culture.html" class="nav-link">品牌文化</a></li>
+        <li><a href="tea-trace-report.html" class="nav-link">茶叶溯源</a></li>
+        <li><a href="budget-execution.html" class="nav-link">预算方案</a></li>
+        <li><a href="supply-chain-sop.html" class="nav-link active">供应链SOP</a></li>
+        <li><a href="marketing-execution.html" class="nav-link">营销执行</a></li>
+        <li><a href="full-proposal.html" class="nav-link">完整提案</a></li>
+      </ul>
+
+      <button class="nav-toggle" aria-label="打开菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="nav-drawer">
+    <ul class="nav-drawer-list">
+      <li><a href="../index.html" class="nav-drawer-link">首页</a></li>
+      <li><a href="market-research.html" class="nav-drawer-link">市场研究</a></li>
+      <li><a href="brand-foundation.html" class="nav-drawer-link">品牌策略</a></li>
+      <li><a href="product-supply.html" class="nav-drawer-link">产品供应链</a></li>
+      <li><a href="visual-packaging.html" class="nav-drawer-link">视觉包装</a></li>
+      <li><a href="ecommerce-marketing.html" class="nav-drawer-link">电商营销</a></li>
+      <li><a href="international.html" class="nav-drawer-link">国际拓展</a></li>
+      <li><a href="brand-culture.html" class="nav-drawer-link">品牌文化</a></li>
+      <li><a href="tea-trace-report.html" class="nav-drawer-link">茶叶溯源</a></li>
+      <li><a href="budget-execution.html" class="nav-drawer-link">预算方案</a></li>
+      <li><a href="supply-chain-sop.html" class="nav-drawer-link active">供应链SOP</a></li>
+      <li><a href="marketing-execution.html" class="nav-drawer-link">营销执行</a></li>
+      <li><a href="full-proposal.html" class="nav-drawer-link">完整提案</a></li>
+    </ul>
+  </div>
+
+  <!-- ==========================================================================
+       页面主体
+       ========================================================================== -->
+  <main class="page-main">
+
+    <!-- ===================== 篇章首屏 ===================== -->
+    <header class="chapter-header">
+      <div class="tea-grid-bg-fade" aria-hidden="true"></div>
+      <div class="chapter-header-number">
+        <span class="chapter-header-num-cn">拾壹</span>
+        <span class="chapter-header-num-latin">11</span>
+      </div>
+      <h1 class="chapter-header-title">供应链管理细则与SOP</h1>
+      <p class="chapter-header-lead">
+        从茶园到茶杯的全链路品质管控——供应商六步准入、质量五因子评审、采购/仓储/发货/售后四大SOP标准作业程序，叠加8类突发状况应急预案。品质可溯、供应稳定、响应迅速、成本可控，是云华录的供应链承诺。
+      </p>
+    </header>
+
+    <!-- ===================== 阅读布局 ===================== -->
+    <div class="page-layout container-wide">
+      <!-- 侧边目录 -->
+      <aside class="toc-sidebar">
+        <button class="toc-toggle" aria-expanded="false">
+          本篇目录
+          <span class="toc-toggle-icon">▾</span>
+        </button>
+        <div class="toc-content">
+          <div class="toc-title">本篇目录</div>
+          <ul class="toc-list">
+            <li><a href="#sec-1" class="toc-link">1. 供应链管理总则</a></li>
+              <li><a href="#sec-1-1" class="toc-link toc-sub">1.1 管理目标</a></li>
+              <li><a href="#sec-1-2" class="toc-link toc-sub">1.2 管理架构与职责分工</a></li>
+              <li><a href="#sec-1-3" class="toc-link toc-sub">1.3 管理原则</a></li>
+            <li><a href="#sec-2" class="toc-link">2. 供应商管理细则</a></li>
+              <li><a href="#sec-2-1" class="toc-link toc-sub">2.1 供应商准入流程（六步法）</a></li>
+              <li><a href="#sec-2-2" class="toc-link toc-sub">2.2 供应商分级管理</a></li>
+              <li><a href="#sec-2-3" class="toc-link toc-sub">2.3 供应商考核机制（季度）</a></li>
+              <li><a href="#sec-2-4" class="toc-link toc-sub">2.4 供应商备份机制</a></li>
+              <li><a href="#sec-2-5" class="toc-link toc-sub">2.5 供应商退出机制</a></li>
+            <li><a href="#sec-3" class="toc-link">3. 质量管理细则</a></li>
+              <li><a href="#sec-3-1" class="toc-link toc-sub">3.1 质量标准体系</a></li>
+              <li><a href="#sec-3-2" class="toc-link toc-sub">3.2 质量检测流程</a></li>
+              <li><a href="#sec-3-3" class="toc-link toc-sub">3.3 不合格品处理流程</a></li>
+              <li><a href="#sec-3-4" class="toc-link toc-sub">3.4 质量追溯体系</a></li>
+            <li><a href="#sec-4" class="toc-link">4. 采购SOP标准作业程序</a></li>
+              <li><a href="#sec-4-1" class="toc-link toc-sub">4.1 采购计划制定</a></li>
+              <li><a href="#sec-4-2" class="toc-link toc-sub">4.2 采购执行流程SOP</a></li>
+              <li><a href="#sec-4-3" class="toc-link toc-sub">4.3 采购成本控制</a></li>
+            <li><a href="#sec-5" class="toc-link">5. 仓储SOP标准作业程序</a></li>
+              <li><a href="#sec-5-1" class="toc-link toc-sub">5.1 仓储环境标准</a></li>
+              <li><a href="#sec-5-2" class="toc-link toc-sub">5.2 入库SOP</a></li>
+              <li><a href="#sec-5-3" class="toc-link toc-sub">5.3 存储管理SOP</a></li>
+              <li><a href="#sec-5-4" class="toc-link toc-sub">5.4 盘点SOP</a></li>
+              <li><a href="#sec-5-5" class="toc-link toc-sub">5.5 效期管理</a></li>
+            <li><a href="#sec-6" class="toc-link">6. 发货SOP标准作业程序</a></li>
+              <li><a href="#sec-6-1" class="toc-link toc-sub">6.1 订单处理SOP</a></li>
+              <li><a href="#sec-6-2" class="toc-link toc-sub">6.2 打包规范</a></li>
+              <li><a href="#sec-6-3" class="toc-link toc-sub">6.3 物流时效标准</a></li>
+              <li><a href="#sec-6-4" class="toc-link toc-sub">6.4 发货异常处理</a></li>
+            <li><a href="#sec-7" class="toc-link">7. 售后质量SOP标准作业程序</a></li>
+              <li><a href="#sec-7-1" class="toc-link toc-sub">7.1 客诉接收与分类</a></li>
+              <li><a href="#sec-7-2" class="toc-link toc-sub">7.2 客诉处理流程</a></li>
+              <li><a href="#sec-7-3" class="toc-link toc-sub">7.3 退货处理SOP</a></li>
+              <li><a href="#sec-7-4" class="toc-link toc-sub">7.4 质量改进闭环</a></li>
+            <li><a href="#sec-8" class="toc-link">8. 突发状况处理预案</a></li>
+              <li><a href="#sec-8-1" class="toc-link toc-sub">8.1 预案总览</a></li>
+              <li><a href="#sec-8-2" class="toc-link toc-sub">8.2 质量安全事故应急预案</a></li>
+              <li><a href="#sec-8-3" class="toc-link toc-sub">8.3 供应商断供应急预案</a></li>
+              <li><a href="#sec-8-4" class="toc-link toc-sub">8.4 物流中断应急预案</a></li>
+              <li><a href="#sec-8-5" class="toc-link toc-sub">8.5 包装缺陷应急预案</a></li>
+              <li><a href="#sec-8-6" class="toc-link toc-sub">8.6 舆情危机应急预案</a></li>
+              <li><a href="#sec-8-7" class="toc-link toc-sub">8.7 季节性缺货应急预案</a></li>
+              <li><a href="#sec-8-8" class="toc-link toc-sub">8.8 价格异动应急预案</a></li>
+            <li><a href="#sec-9" class="toc-link">9. 供应链数据看板与预警机制</a></li>
+              <li><a href="#sec-9-1" class="toc-link toc-sub">9.1 核心指标看板</a></li>
+              <li><a href="#sec-9-2" class="toc-link toc-sub">9.2 预警响应机制</a></li>
+              <li><a href="#sec-9-3" class="toc-link toc-sub">9.3 数据汇报机制</a></li>
+            <li><a href="#sec-10" class="toc-link">10. 附表与记录模板</a></li>
+              <li><a href="#sec-10-1" class="toc-link toc-sub">10.1 供应商准入考察表</a></li>
+              <li><a href="#sec-10-2" class="toc-link toc-sub">10.2 批次质量检测记录表</a></li>
+              <li><a href="#sec-10-3" class="toc-link toc-sub">10.3 异常事件处理记录表</a></li>
+              <li><a href="#sec-10-4" class="toc-link toc-sub">10.4 供应商季度考核表</a></li>
+              <li><a href="#sec-10-5" class="toc-link toc-sub">10.5 库存盘点差异表</a></li>
+          </ul>
+        </div>
+      </aside>
+
+      <article class="page-content">
+
+      <!-- 正文内容 -->
+      <div class="article-prose">
+
+        <section id="sec-1">
+          <h2>1. 供应链管理总则</h2>
+          <h3 id="sec-1-1">1.1 管理目标</h3>
+          <p>云华录供应链管理的核心目标是<strong>"品质可溯、供应稳定、响应迅速、成本可控"</strong>，确保每一片茶叶从茶园到茶杯的全链路品质与安全。</p>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>目标维度</th><th>量化指标</th><th>考核周期</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>品质可溯</td><td>100%批次可追溯至产区茶园</td><td>每批次</td></tr>
+                <tr><td>供应稳定</td><td>准时交付率≥95%，断货率≤2%</td><td>月度</td></tr>
+                <tr><td>响应迅速</td><td>问题响应≤24h，整改≤72h</td><td>每次事件</td></tr>
+                <tr><td>成本可控</td><td>采购成本波动≤10%，物流成本占比≤15%</td><td>季度</td></tr>
+                <tr><td>质量合格</td><td>检测合格率100%，客诉率≤3%</td><td>月度</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-1-2">1.2 管理架构与职责分工</h3>
+          <pre class="code-block">                    ┌─────────────┐
+                    │  品牌创始人  │
+                    │  （决策层）  │
+                    └──────┬──────┘
+                           │
+              ┌────────────┼────────────┐
+              │            │            │
+       ┌──────▼──────┐ ┌──▼───┐ ┌──────▼──────┐
+       │ 供应链主管  │ │品控官│ │  运营主管   │
+       │（采购/供应商）│ │（质检）│ │（仓储/发货）│
+       └──────┬──────┘ └──┬───┘ └──────┬──────┘
+              │            │            │
+       ┌──────▼──────┐ ┌──▼───────┐ ┌──▼───────┐
+       │ 产区采购员  │ │第三方检测│ │ 云仓团队 │
+       │（驻产区）   │ │  机构    │ │（外包）  │
+       └─────────────┘ └──────────┘ └──────────┘</pre>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>角色</th><th>核心职责</th><th>汇报频率</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>品牌创始人</td><td>供应链战略决策，A级供应商签约审批，重大质量事故终裁</td><td>月度复盘</td></tr>
+                <tr><td>供应链主管</td><td>供应商开发与管理，采购计划制定与执行，成本控制</td><td>周报+月报</td></tr>
+                <tr><td>品控官</td><td>质量标准制定与执行，检测报告审核，不合格品处置</td><td>每批次报告</td></tr>
+                <tr><td>运营主管</td><td>仓储管理，发货执行，库存盘点，物流对接</td><td>日报+周报</td></tr>
+                <tr><td>产区采购员</td><td>产地实地考察，采购跟单，产区信息收集</td><td>采购周期报</td></tr>
+                <tr><td>第三方检测机构</td><td>独立检测，出具CMA/CNAS报告</td><td>每批次</td></tr>
+                <tr><td>云仓团队</td><td>入库验收，拣货打包，库存管理，退货处理</td><td>日报</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-1-3">1.3 管理原则</h3>
+          <p><strong>原则一：品质优先，一票否决</strong></p>
+          <p>任何批次检测不合格，一律拒收，不论成本影响。品质是品牌生命线，没有任何妥协空间。</p>
+          <p><strong>原则二：双源备份，降低依赖</strong></p>
+          <p>每个核心SKU至少培养2家合格供应商（主供+备供），主供占比≤70%，避免单点依赖风险。</p>
+          <p><strong>原则三：数据驱动，持续优化</strong></p>
+          <p>建立供应链数据看板，关键指标可视化，每周复盘，每月优化，用数据驱动决策。</p>
+          <p><strong>原则四：预防为主，应急有备</strong></p>
+          <p>建立预警机制和应急预案，将问题消灭在萌芽阶段；突发状况发生时，30分钟内启动响应。</p>
+        </section>
+        <section id="sec-2">
+          <h2>2. 供应商管理细则</h2>
+          <h3 id="sec-2-1">2.1 供应商准入流程（六步法）</h3>
+          <pre class="code-block">Step1 资质初审 → Step2 产地考察 → Step3 样品评审 → Step4 小批量试产 → Step5 第三方检测 → Step6 正式签约</pre>
+          <h4>Step1：资质初审（3个工作日）</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>审核项</th><th>要求</th><th>所需文件</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>营业执照</td><td>有效期内，经营范围含茶叶生产/加工</td><td>营业执照副本</td></tr>
+                <tr><td>食品生产许可证</td><td>SC认证有效，许可明细含对应茶类</td><td>SC证书</td></tr>
+                <tr><td>第三方检测报告</td><td>近6个月内，CMA/CNAS资质机构出具</td><td>检测报告原件</td></tr>
+                <tr><td>产区来源证明</td><td>产区村委会/合作社出具产地证明</td><td>产地证明</td></tr>
+                <tr><td>产能证明</td><td>L1≥500kg/月，L2≥200kg/月，L3≥50kg/月</td><td>产能声明</td></tr>
+                <tr><td>信用记录</td><td>无严重失信记录，无食品安全事故</td><td>信用查询截图</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>初审结论</strong>：6项全部通过→进入Step2；任一不通过→终止，归档备查。</p>
+          <h4>Step2：产地考察（5个工作日）</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>考察项</th><th>核验要点</th><th>评分（1-5分）</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>茶园环境</td><td>海拔、坡度、植被、周边污染源</td><td></td></tr>
+                <tr><td>茶园管理</td><td>施肥、病虫害防治、采摘标准</td><td></td></tr>
+                <tr><td>加工厂房</td><td>卫生条件、设备状况、工艺流程</td><td></td></tr>
+                <tr><td>仓储条件</td><td>温湿度控制、防潮防虫、分区管理</td><td></td></tr>
+                <tr><td>人员资质</td><td>制茶师资质、工人培训、健康证</td><td></td></tr>
+                <tr><td>溯源体系</td><td>溯源码、批次管理、记录完整性</td><td></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>考察结论</strong>：总分≥24分（满分30）→进入Step3；<24分→终止或限期整改。</p>
+          <h4>Step3：样品评审（3个工作日）</h4>
+          <p>由品控官组织<strong>三人盲评</strong>（品控官+供应链主管+外聘茶艺师），按五因子评审法评分：</p>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>评审因子</th><th>权重</th><th>评分标准（1-10分）</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>外形</td><td>20%</td><td>匀整度、色泽、毫尖、净度</td></tr>
+                <tr><td>汤色</td><td>15%</td><td>明亮度、清澈度、色调</td></tr>
+                <tr><td>香气</td><td>25%</td><td>香型、持久度、纯正度</td></tr>
+                <tr><td>滋味</td><td>30%</td><td>醇厚度、回甘、收敛度</td></tr>
+                <tr><td>叶底</td><td>10%</td><td>嫩度、匀齐度、色泽</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>评审结论</strong>：加权总分≥7.5分→进入Step4；6.0-7.5分→可考虑降级合作；<6.0分→终止。</p>
+          <h4>Step4：小批量试产（7-15个工作日）</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>项目</th><th>要求</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>试产数量</td><td>L1: 50kg / L2: 20kg / L3: 5kg</td></tr>
+                <tr><td>试产周期</td><td>从鲜叶采摘到成品出厂全流程</td></tr>
+                <tr><td>全程跟产</td><td>产区采购员驻厂监督，记录工艺参数</td></tr>
+                <tr><td>成品检测</td><td>送第三方机构全项检测（48项农残+重金属+微生物）</td></tr>
+                <tr><td>包装试装</td><td>用云华录包装实装，测试适配性</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h4>Step5：第三方检测（5个工作日）</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>检测类别</th><th>检测项目</th><th>判定标准</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>农药残留</td><td>48项农残</td><td>GB 2763，全部不得检出或低于限值</td></tr>
+                <tr><td>重金属</td><td>铅、镉、砷、汞</td><td>GB 2762</td></tr>
+                <tr><td>微生物</td><td>大肠菌群、霉菌、致病菌</td><td>GB 7101</td></tr>
+                <tr><td>感官品质</td><td>五因子评审</td><td>符合对应等级标准</td></tr>
+                <tr><td>水分灰分</td><td>含水量、总灰分</td><td>GB/T 8304、GB/T 8306</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>检测结论</strong>：全部合格→进入Step6；任一不合格→终止，不合格报告归档。</p>
+          <h4>Step6：正式签约</h4>
+          <p>签约文件清单：</p>
+          <ul>
+            <li>《云华录供应商合作协议》（主合同）</li>
+            <li>《质量保证协议》（品质标准+违约条款）</li>
+            <li>《价格协议》（基准价+调价机制）</li>
+            <li>《保密协议》（配方、工艺、价格信息）</li>
+            <li>《食品安全承诺书》</li>
+          </ul>
+          <p>合同关键条款：</p>
+          <ul>
+            <li>质量保证金：合同金额的5%，质保期12个月</li>
+            <li>违约赔偿：不合格批次全额退款+检测费用+物流费用</li>
+            <li>独家条款：L3典藏级供应商需承诺同类同级产品不供给竞品</li>
+            <li>调价机制：原料行情波动±15%以上可启动调价协商</li>
+          </ul>
+          <h3 id="sec-2-2">2.2 供应商分级管理</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>等级</th><th>对应产品线</th><th>合作模式</th><th>采购占比</th><th>管理重点</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>A级（战略）</strong></td><td>云华典藏</td><td>年度框架+批次议价</td><td>单家≤40%</td><td>深度绑定，产地直采</td></tr>
+                <tr><td><strong>B级（核心）</strong></td><td>云华品鉴</td><td>季度合同+品质优先</td><td>单家≤30%</td><td>品质稳定，备供培养</td></tr>
+                <tr><td><strong>C级（基础）</strong></td><td>云游录</td><td>长期合同+价格锁定</td><td>单家≤25%</td><td>成本控制，规模采购</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-2-3">2.3 供应商考核机制（季度）</h3>
+          <h4>考核维度与权重</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>维度</th><th>权重</th><th>核心指标</th><th>评分标准</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>品质稳定性</td><td>35%</td><td>批次合格率、感官评分偏差</td><td>合格率100%满分，每降1%扣5分</td></tr>
+                <tr><td>交期可靠性</td><td>20%</td><td>准时交付率</td><td>≥95%满分，每降1%扣3分</td></tr>
+                <tr><td>响应速度</td><td>15%</td><td>问题响应时间、整改周期</td><td>≤24h响应满分，超时扣分</td></tr>
+                <tr><td>价格合理性</td><td>15%</td><td>市场价格对标、波动幅度</td><td>波动≤10%满分，超10%扣分</td></tr>
+                <tr><td>溯源完整性</td><td>15%</td><td>溯源链完整度、记录规范</td><td>100%可溯满分，缺项扣分</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h4>考核结果应用</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>季度评分</th><th>等级</th><th>措施</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>90-100分</td><td>A级（优秀）</td><td>优先续约，增加份额5-10%，年底返点1-2%</td></tr>
+                <tr><td>80-89分</td><td>B级（良好）</td><td>正常合作，指出改进项，下季度复查</td></tr>
+                <tr><td>70-79分</td><td>C级（待改进）</td><td>减少10-20%份额，限期30天整改</td></tr>
+                <tr><td><70分</td><td>D级（不合格）</td><td>终止合作，启动备供替换，列入黑名单</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-2-4">2.4 供应商备份机制</h3>
+          <p><strong>双源备份规则</strong>：</p>
+          <ul>
+            <li>每个核心SKU至少2家合格供应商（主供+备供）</li>
+            <li>主供采购占比≤70%，备供≥30%</li>
+            <li>备供每季度至少采购1批次，保持合作关系活跃</li>
+            <li>主供出问题时，备供可在7天内承接100%订单</li>
+          </ul>
+          <p><strong>备供培养计划</strong>：</p>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>时间</th><th>动作</th><th>目标</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>首批上线后1月</td><td>启动备供寻源</td><td>每SKU至少1家备供候选</td></tr>
+                <tr><td>上线后3月</td><td>备供完成准入流程</td><td>至少50%SKU有合格备供</td></tr>
+                <tr><td>上线后6月</td><td>备供全覆盖</td><td>100%核心SKU双源备份</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-2-5">2.5 供应商退出机制</h3>
+          <p><strong>主动退出</strong>（云华录发起）：</p>
+          <ul>
+            <li>连续2个季度考核C级→启动退出</li>
+            <li>发生重大质量事故→立即终止</li>
+            <li>退出过渡期30天，期间保障供应不断</li>
+          </ul>
+          <p><strong>被动退出</strong>（供应商发起）：</p>
+          <ul>
+            <li>需提前60天书面通知</li>
+            <li>配合完成在途订单交付</li>
+            <li>移交全部质量记录与溯源数据</li>
+          </ul>
+        </section>
+        <section id="sec-3">
+          <h2>3. 质量管理细则</h2>
+          <h3 id="sec-3-1">3.1 质量标准体系</h3>
+          <h4>茶叶等级标准</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>等级</th><th>对应系列</th><th>采摘标准</th><th>外形要求</th><th>内质要求</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>S（特级）</td><td>云华典藏</td><td>明前/头春，单芽或一芽一叶初展</td><td>匀整、显毫、色泽油润</td><td>香气馥郁持久、滋味醇厚回甘、汤色明亮</td></tr>
+                <tr><td>A（一级）</td><td>云华品鉴</td><td>雨前/春茶，一芽一二叶</td><td>匀整、有毫、色泽尚润</td><td>香气纯正、滋味醇和、汤色清亮</td></tr>
+                <tr><td>B（日常级）</td><td>云游录</td><td>春夏茶，一芽二三叶</td><td>尚匀整、色泽正常</td><td>香气正常、滋味纯正、汤色正常</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h4>检测项目与标准</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>检测类别</th><th>检测项目</th><th>标准依据</th><th>频率</th><th>判定标准</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>农药残留</td><td>六六六、DDT等48项</td><td>GB 2763</td><td>每批次</td><td>全部低于限值</td></tr>
+                <tr><td>重金属</td><td>铅、镉、砷、汞</td><td>GB 2762</td><td>每批次</td><td>铅≤5.0mg/kg等</td></tr>
+                <tr><td>微生物</td><td>大肠菌群、霉菌、致病菌</td><td>GB 7101</td><td>每批次</td><td>大肠菌群≤300MPN/100g</td></tr>
+                <tr><td>水分</td><td>含水量</td><td>GB/T 8304</td><td>每批次</td><td>绿茶≤7%，其他≤9%</td></tr>
+                <tr><td>灰分</td><td>总灰分</td><td>GB/T 8306</td><td>每批次</td><td>≤6.5%</td></tr>
+                <tr><td>感官品质</td><td>五因子评审</td><td>GB/T 23776</td><td>每批次</td><td>符合对应等级</td></tr>
+                <tr><td>添加剂</td><td>人工色素、甜味剂</td><td>GB 2760</td><td>季度抽检</td><td>不得添加</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-3-2">3.2 质量检测流程</h3>
+          <pre class="code-block">原料到货 → 感官初筛（100%目检）→ 抽样送检（第三方）→ 报告审核 → 合格判定 → 入库
+                                    ↓
+                              不合格 → 隔离 → 退货/报废 → 记录归档 → 供应商追责</pre>
+          <h4>感官初筛标准（100%全检）</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>检查项</th><th>方法</th><th>合格标准</th><th>不合格处理</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>外形</td><td>目检+触摸</td><td>匀整、无杂质、色泽正常</td><td>整批退货</td></tr>
+                <tr><td>异物</td><td>过筛+目检</td><td>无金属、毛发、虫体等</td><td>整批退货</td></tr>
+                <tr><td>气味</td><td>闻嗅</td><td>无异味、无霉味</td><td>整批退货</td></tr>
+                <tr><td>水分感</td><td>手捏</td><td>酥脆不粘手</td><td>送检确认</td></tr>
+                <tr><td>包装</td><td>目检</td><td>密封完好、标签清晰</td><td>供应商更换</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h4>抽样规则</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>批次数量</th><th>抽样方法</th><th>抽样数量</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>≤50kg</td><td>随机多点取样</td><td>500g</td></tr>
+                <tr><td>50-200kg</td><td>分层随机取样</td><td>1000g</td></tr>
+                <tr><td>200-500kg</td><td>分层随机取样</td><td>2000g</td></tr>
+                <tr><td>>500kg</td><td>分层随机取样</td><td>每500kg取1000g</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-3-3">3.3 不合格品处理流程</h3>
+          <pre class="code-block">发现不合格 → 立即隔离（贴红色标识）→ 品控官判定 → 处理决策 → 执行 → 记录归档 → 供应商追责
+                                          ↓
+                               ┌──────────┼──────────┐
+                               │          │          │
+                           退货      报销毁     让步接收
+                        （主要问题）  （安全风险） （轻微偏差+风险评估）</pre>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>处理方式</th><th>适用情况</th><th>执行流程</th><th>责任人</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>退货</td><td>农残超标、重金属超标、微生物超标</td><td>24h内通知供应商→供应商7天内拉回→全额退款+检测费</td><td>品控官</td></tr>
+                <tr><td>报废销毁</td><td>变质、污染、无法退货的严重问题</td><td>拍照录像→填写报废单→销毁→供应商赔偿</td><td>品控官+运营</td></tr>
+                <tr><td>让步接收</td><td>水分略高（可烘干补救）、外形轻微偏差</td><td>风险评估→创始人审批→降级使用→记录</td><td>品控官+创始人</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-3-4">3.4 质量追溯体系</h3>
+          <h4>溯源码规则</h4>
+          <pre class="code-block">YHL-产区代码-茶类代码-批次号-包装日期
+例：YHL-ZJ-AJ-BC-20260715-001
+释义：云华录-浙江-安吉-白茶-2026年7月15日-第1批</pre>
+          <h4>溯源信息链</h4>
+          <pre class="code-block">茶园地块 → 采摘日期/采摘人 → 初制工艺/参数 → 精制日期 → 检测报告编号
+→ 包装日期/批次 → 入库日期 → 出库日期 → 物流单号 → 消费者签收</pre>
+          <p><strong>消费者扫码可见信息</strong>：产区介绍、采摘日期、检测报告、冲泡建议、产地风景。</p>
+        </section>
+        <section id="sec-4">
+          <h2>4. 采购SOP标准作业程序</h2>
+          <h3 id="sec-4-1">4.1 采购计划制定</h3>
+          <h4>年度采购计划（每年12月制定）</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>茶类</th><th>产区</th><th>采摘季节</th><th>预估采购量</th><th>预算</th><th>供应商</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>绿茶（安吉白茶）</td><td>浙江安吉</td><td>3-4月明前</td><td>400kg</td><td>14万</td><td>待定</td></tr>
+                <tr><td>乌龙茶（武夷肉桂）</td><td>福建武夷山</td><td>5月春茶</td><td>300kg</td><td>12万</td><td>待定</td></tr>
+                <tr><td>乌龙茶（凤凰单丛）</td><td>广东潮州</td><td>4月春茶</td><td>100kg</td><td>8.5万</td><td>待定</td></tr>
+                <tr><td>红茶（祁门红茶）</td><td>安徽祁门</td><td>4-5月春茶</td><td>80kg</td><td>6万</td><td>待定</td></tr>
+                <tr><td>普洱（老班章）</td><td>云南勐海</td><td>3-4月春茶</td><td>20kg</td><td>7.6万</td><td>待定</td></tr>
+                <tr><td>白茶（福鼎寿眉）</td><td>福建福鼎</td><td>4月春茶</td><td>250kg</td><td>7万</td><td>待定</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h4>月度采购计划（每月25日制定次月）</h4>
+          <p>基于销售预测+库存水位+季节性需求，制定月度采购计划：</p>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>库存水位</th><th>采购触发</th><th>采购量</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>≥45天销量</td><td>不采购</td><td>0</td></tr>
+                <tr><td>30-45天销量</td><td>正常补货</td><td>补至60天销量</td></tr>
+                <tr><td>15-30天销量</td><td>加急采购</td><td>补至60天销量+加急费</td></tr>
+                <tr><td><15天销量</td><td>紧急采购</td><td>紧急调货+空运+备供启动</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-4-2">4.2 采购执行流程SOP</h3>
+          <h4>Step1：采购需求确认（D-0）</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>动作</th><th>责任人</th><th>输出</th><th>时限</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>销售预测分析</td><td>运营主管</td><td>30天销售预测表</td><td>D-0上午</td></tr>
+                <tr><td>库存水位核查</td><td>运营主管</td><td>当前库存表</td><td>D-0上午</td></tr>
+                <tr><td>采购需求编制</td><td>供应链主管</td><td>采购需求单</td><td>D-0下午</td></tr>
+                <tr><td>采购需求审批</td><td>品牌创始人</td><td>审批通过</td><td>D-0下班前</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h4>Step2：供应商询价比价（D-1至D-3）</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>动作</th><th>责任人</th><th>输出</th><th>时限</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>向≥2家供应商询价</td><td>供应链主管</td><td>询价单</td><td>D-1</td></tr>
+                <tr><td>比价分析</td><td>供应链主管</td><td>比价表（价格/品质/交期）</td><td>D-2</td></tr>
+                <tr><td>议价谈判</td><td>供应链主管</td><td>最终报价</td><td>D-3</td></tr>
+                <tr><td>供应商选定</td><td>供应链主管</td><td>选定理由记录</td><td>D-3</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>比价规则</strong>：同等品质比价格，同等价格比服务，同等服务比交期。</p>
+          <h4>Step3：采购下单（D-4）</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>动作</th><th>责任人</th><th>输出</th><th>时限</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>签发采购订单</td><td>供应链主管</td><td>采购订单（PO）</td><td>D-4上午</td></tr>
+                <tr><td>供应商确认</td><td>供应商</td><td>订单确认回执</td><td>D-4下午</td></tr>
+                <tr><td>预付款安排</td><td>品牌创始人</td><td>打款凭证</td><td>D-5</td></tr>
+                <tr><td>交期确认</td><td>供应链主管</td><td>交期排程表</td><td>D-5</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h4>Step4：跟单催货（D-6至交货日）</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>动作</th><th>频率</th><th>责任人</th><th>关注点</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>电话/微信跟单</td><td>每3天1次</td><td>供应链主管</td><td>生产进度、品质情况</td></tr>
+                <tr><td>产区驻点跟产</td><td>L3批次必跟</td><td>产区采购员</td><td>工艺参数、鲜叶品质</td></tr>
+                <tr><td>异常预警</td><td>实时</td><td>供应链主管</td><td>交期风险、品质异常</td></tr>
+                <tr><td>交期确认</td><td>交货前3天</td><td>供应链主管</td><td>最终交货时间、物流方式</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h4>Step5：到货验收（交货日）</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>动作</th><th>责任人</th><th>标准</th><th>时限</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>外包装检查</td><td>云仓团队</td><td>无破损、无受潮、封条完好</td><td>到货当日</td></tr>
+                <tr><td>数量清点</td><td>云仓团队</td><td>与PO一致</td><td>到货当日</td></tr>
+                <tr><td>溯源码核对</td><td>品控官</td><td>溯源码完整可查</td><td>到货当日</td></tr>
+                <tr><td>感官初筛</td><td>品控官</td><td>100%目检通过</td><td>到货当日</td></tr>
+                <tr><td>抽样送检</td><td>品控官</td><td>按抽样规则取样</td><td>到货次日</td></tr>
+                <tr><td>入库暂存</td><td>云仓团队</td><td>隔离区存放，待检标识</td><td>到货当日</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>验收不合格处理</strong>：拒绝签收→拍照取证→通知供应商→物流退回或就地封存。</p>
+          <h4>Step6：检测合格入库（检测报告出具后）</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>动作</th><th>责任人</th><th>输出</th><th>时限</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>检测报告审核</td><td>品控官</td><td>审核结论</td><td>报告出具当日</td></tr>
+                <tr><td>合格判定</td><td>品控官</td><td>入库通知单</td><td>审核通过即发</td></tr>
+                <tr><td>系统入库</td><td>云仓团队</td><td>WMS入库记录</td><td>收到通知后4h内</td></tr>
+                <tr><td>库位分配</td><td>云仓团队</td><td>库位标签</td><td>入库时</td></tr>
+                <tr><td>尾款安排</td><td>品牌创始人</td><td>打款凭证</td><td>入库后3个工作日</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-4-3">4.3 采购成本控制</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>控制项</th><th>方法</th><th>目标</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>比价采购</td><td>每次采购≥2家比价</td><td>节省5-10%</td></tr>
+                <tr><td>产区直采</td><td>跳过中间商</td><td>节省20-30%</td></tr>
+                <tr><td>框架协议</td><td>年度框架锁定价格</td><td>规避涨价风险</td></tr>
+                <tr><td>季节采购</td><td>采摘季集中采购</td><td>获取产地价</td></tr>
+                <tr><td>尾款机制</td><td>验收合格后付尾款</td><td>品质保障杠杆</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section id="sec-5">
+          <h2>5. 仓储SOP标准作业程序</h2>
+          <h3 id="sec-5-1">5.1 仓储环境标准</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>参数</th><th>要求</th><th>监测频率</th><th>设备</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>温度</td><td>0-25°C（绿茶0-5°C冷藏）</td><td>每小时自动记录</td><td>温湿度记录仪</td></tr>
+                <tr><td>湿度</td><td>≤60% RH</td><td>每小时自动记录</td><td>温湿度记录仪</td></tr>
+                <tr><td>光照</td><td>避光存储，紫外线≤0</td><td>每日检查</td><td>遮光帘</td></tr>
+                <tr><td>通风</td><td>每日通风2次，每次30分钟</td><td>每日</td><td>排风扇</td></tr>
+                <tr><td>虫害</td><td>每月专业消杀1次</td><td>每月</td><td>灭虫公司</td></tr>
+                <tr><td>卫生</td><td>每日清洁，每周大扫除</td><td>每日/每周</td><td>清洁工具</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-5-2">5.2 入库SOP</h3>
+          <pre class="code-block">到货 → 卸货检查 → 待检区存放 → 验收（数量/外观/溯源）
+→ 检测合格 → 合格区入库 → WMS系统录入 → 库位标签张贴 → 入库完成</pre>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>步骤</th><th>动作</th><th>责任人</th><th>记录</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td>卸货，检查外包装</td><td>云仓团队</td><td>到货记录表</td></tr>
+                <tr><td>2</td><td>移至待检区（黄色标识区）</td><td>云仓团队</td><td>—</td></tr>
+                <tr><td>3</td><td>清点数量，核对PO</td><td>云仓团队</td><td>验收单</td></tr>
+                <tr><td>4</td><td>品控感官初筛</td><td>品控官</td><td>初筛记录</td></tr>
+                <tr><td>5</td><td>抽样送第三方检测</td><td>品控官</td><td>送检单</td></tr>
+                <tr><td>6</td><td>检测合格→移至合格区（绿色标识区）</td><td>云仓团队</td><td>移库单</td></tr>
+                <tr><td>7</td><td>WMS系统录入（批次/数量/库位/日期）</td><td>云仓团队</td><td>系统记录</td></tr>
+                <tr><td>8</td><td>张贴库位标签（含溯源码+入库日期）</td><td>云仓团队</td><td>—</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-5-3">5.3 存储管理SOP</h3>
+          <h4>分区存储</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>区域</th><th>标识颜色</th><th>存放内容</th><th>管理要求</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>合格区</td><td>绿色</td><td>检测合格的成品</td><td>按茶类分区，先进先出</td></tr>
+                <tr><td>待检区</td><td>黄色</td><td>待检测的到货</td><td>隔离存放，48h内完成检测</td></tr>
+                <tr><td>不合格区</td><td>红色</td><td>检测不合格品</td><td>严格隔离，7天内处理</td></tr>
+                <tr><td>退货区</td><td>橙色</td><td>客户退回商品</td><td>独立存放，24h内鉴定</td></tr>
+                <tr><td>包材区</td><td>蓝色</td><td>包装材料</td><td>与茶叶物理隔离</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h4>堆放标准</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>项目</th><th>标准</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>距墙</td><td>≥30cm</td></tr>
+                <tr><td>距地</td><td>≥15cm（使用托盘）</td></tr>
+                <tr><td>距顶</td><td>≥50cm</td></tr>
+                <tr><td>垛高</td><td>≤2m</td></tr>
+                <tr><td>垛间距</td><td>≥50cm（通风道）</td></tr>
+                <tr><td>不同批次</td><td>不同垛位，不混垛</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h4>先进先出（FIFO）执行</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>动作</th><th>频率</th><th>责任人</th><th>工具</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>库龄分析</td><td>每周</td><td>运营主管</td><td>WMS系统报表</td></tr>
+                <tr><td>临期预警</td><td>每日</td><td>WMS系统</td><td>自动预警（临期60天）</td></tr>
+                <tr><td>先进先出执行</td><td>每次出库</td><td>云仓团队</td><td>扫码出库，系统强制校验</td></tr>
+                <tr><td>盘点核对</td><td>每月</td><td>运营主管+云仓</td><td>实物盘点+系统核对</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-5-4">5.4 盘点SOP</h3>
+          <h4>盘点类型</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>类型</th><th>频率</th><th>范围</th><th>方法</th><th>差异处理</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>日盘</td><td>每日</td><td>高价值SKU（L3）</td><td>动态盘点（出入库即盘）</td><td>当日查明</td></tr>
+                <tr><td>周盘</td><td>每周</td><td>抽盘20%SKU</td><td>循环盘点</td><td>次日查明</td></tr>
+                <tr><td>月盘</td><td>每月末</td><td>全部SKU</td><td>全面静止盘点</td><td>3天内查明</td></tr>
+                <tr><td>年盘</td><td>年末</td><td>全部资产</td><td>第三方监盘</td><td>专项报告</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h4>盘点差异处理</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>差异率</th><th>等级</th><th>处理</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>≤0.5%</td><td>正常</td><td>调整账目，记录原因</td></tr>
+                <tr><td>0.5%-2%</td><td>异常</td><td>专项调查，3天内报告</td></tr>
+                <tr><td>>2%</td><td>严重</td><td>停止出库，全面彻查，创始人介入</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-5-5">5.5 效期管理</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>效期阶段</th><th>预警颜色</th><th>动作</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>>180天</td><td>绿色</td><td>正常销售</td></tr>
+                <tr><td>90-180天</td><td>黄色</td><td>重点推销，优先出库</td></tr>
+                <tr><td>60-90天</td><td>橙色</td><td>促销清仓，7折起</td></tr>
+                <tr><td>30-60天</td><td>红色</td><td>紧急清仓，5折起</td></tr>
+                <tr><td><30天</td><td>黑色</td><td>停止销售，内部消耗或报废</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section id="sec-6">
+          <h2>6. 发货SOP标准作业程序</h2>
+          <h3 id="sec-6-1">6.1 订单处理SOP</h3>
+          <pre class="code-block">订单接收 → 订单审核 → 库存确认 → 拣货 → 复核 → 打包 → 称重 → 贴单 → 发货 → 物流跟踪 → 签收确认</pre>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>步骤</th><th>动作</th><th>责任人</th><th>时限</th><th>系统</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td>订单自动同步至WMS</td><td>系统</td><td>实时</td><td>ERP/WMS</td></tr>
+                <tr><td>2</td><td>审核订单（地址/支付/风控）</td><td>系统+人工</td><td>10分钟内</td><td>ERP</td></tr>
+                <tr><td>3</td><td>库存确认，分配库位</td><td>系统</td><td>实时</td><td>WMS</td></tr>
+                <tr><td>4</td><td>拣货（按库位路径）</td><td>云仓团队</td><td>2小时内</td><td>PDA扫码</td></tr>
+                <tr><td>5</td><td>复核（SKU/数量/批次）</td><td>云仓团队</td><td>拣货后即做</td><td>扫码复核</td></tr>
+                <tr><td>6</td><td>打包（防潮+缓冲+外箱）</td><td>云仓团队</td><td>复核后即做</td><td>—</td></tr>
+                <tr><td>7</td><td>称重，计算运费</td><td>系统</td><td>实时</td><td>ERP</td></tr>
+                <tr><td>8</td><td>贴面单，附感谢卡/试饮装</td><td>云仓团队</td><td>打包后即做</td><td>—</td></tr>
+                <tr><td>9</td><td>交接物流，扫描出库</td><td>云仓团队</td><td>当日17:00前</td><td>WMS</td></tr>
+                <tr><td>10</td><td>物流跟踪，异常预警</td><td>系统</td><td>实时</td><td>物流API</td></tr>
+                <tr><td>11</td><td>签收确认，触发评价邀请</td><td>系统</td><td>签收后</td><td>ERP</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-6-2">6.2 打包规范</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>茶类</th><th>内包装</th><th>缓冲</th><th>外包装</th><th>特殊要求</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>绿茶/白茶</td><td>铝箔袋+脱氧剂</td><td>气泡柱</td><td>5层瓦楞纸箱</td><td>冷链运输（≤10°C）</td></tr>
+                <tr><td>乌龙茶/红茶</td><td>铝箔袋</td><td>气泡柱</td><td>5层瓦楞纸箱</td><td>常温避光</td></tr>
+                <tr><td>普洱饼</td><td>棉纸+竹篾+礼盒</td><td>珍珠棉</td><td>5层瓦楞纸箱</td><td>立放不压</td></tr>
+                <tr><td>试饮装</td><td>牛皮纸袋</td><td>无</td><td>快递袋</td><td>轻量件</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>随包附件清单</strong>：</p>
+          <ul>
+            <li>感谢卡（手写体印刷）×1</li>
+            <li>产品冲泡指南卡片 ×1</li>
+            <li>试饮装（首单赠送）×1</li>
+            <li>品牌封泥贴纸 ×1</li>
+            <li>会员入会邀请卡 ×1</li>
+          </ul>
+          <h3 id="sec-6-3">6.3 物流时效标准</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>区域</th><th>物流商</th><th>时效</th><th>费用</th><th>保价</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>江浙沪</td><td>顺丰经济/中通</td><td>次日达</td><td>8元/首重</td><td>L3必保</td></tr>
+                <tr><td>全国主要城市</td><td>顺丰经济</td><td>2-3天</td><td>10-12元</td><td>L3必保</td></tr>
+                <tr><td>偏远地区</td><td>顺丰标快</td><td>3-5天</td><td>15-20元</td><td>全部保价</td></tr>
+                <tr><td>海外华人圈</td><td>国际专线</td><td>7-15天</td><td>按重量</td><td>全额保价</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-6-4">6.4 发货异常处理</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>异常类型</th><th>处理流程</th><th>时限</th><th>责任人</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>库存不足</td><td>立即通知客户→协商换货或退款</td><td>下单后1h内</td><td>运营主管</td></tr>
+                <tr><td>包装破损</td><td>重新打包，加发缓冲</td><td>发货前</td><td>云仓团队</td></tr>
+                <tr><td>物流延误</td><td>联系物流催件→通知客户→补偿优惠券</td><td>超时即处理</td><td>运营主管</td></tr>
+                <tr><td>包裹丢失</td><td>物流理赔→重新发货→致歉补偿</td><td>确认丢失后24h内</td><td>运营主管</td></tr>
+                <tr><td>地址错误</td><td>联系客户确认→拦截重发</td><td>发货前发现</td><td>运营主管</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section id="sec-7">
+          <h2>7. 售后质量SOP标准作业程序</h2>
+          <h3 id="sec-7-1">7.1 客诉接收与分类</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>客诉级别</th><th>定义</th><th>响应时限</th><th>升级机制</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>P0（紧急）</td><td>食品安全问题（异物/变质/中毒）</td><td>30分钟内</td><td>创始人+品控官立即介入</td></tr>
+                <tr><td>P1（严重）</td><td>批量品质问题（同一批次多起客诉）</td><td>2小时内</td><td>品控官+供应链主管介入</td></tr>
+                <tr><td>P2（一般）</td><td>单次品质不满（口感/外观/分量）</td><td>4小时内</td><td>客服处理+品控记录</td></tr>
+                <tr><td>P3（轻微）</td><td>非品质问题（物流/包装/服务）</td><td>24小时内</td><td>客服处理</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-7-2">7.2 客诉处理流程</h3>
+          <pre class="code-block">客诉接收 → 登记建档（编号/级别/详情）→ 分级响应 → 原因调查
+→ 处理方案 → 客户沟通 → 执行补偿 → 归档分析 → 改进措施</pre>
+          <h4>P0级处理流程（食品安全）</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>步骤</th><th>动作</th><th>责任人</th><th>时限</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td>接收客诉，立即登记</td><td>客服</td><td>30分钟内</td></tr>
+                <tr><td>2</td><td>升级通知创始人+品控官</td><td>客服</td><td>立即</td></tr>
+                <tr><td>3</td><td>收集证据（照片/视频/实物寄回）</td><td>客服</td><td>4小时内</td></tr>
+                <tr><td>4</td><td>暂停同批次销售</td><td>运营主管</td><td>立即</td></tr>
+                <tr><td>5</td><td>送第三方检测</td><td>品控官</td><td>24小时内</td></tr>
+                <tr><td>6</td><td>客户安抚+先行赔付</td><td>创始人</td><td>24小时内</td></tr>
+                <tr><td>7</td><td>供应商追责</td><td>供应链主管</td><td>检测结果出具后</td></tr>
+                <tr><td>8</td><td>同批次召回（如确认问题）</td><td>运营主管</td><td>确认后48小时内</td></tr>
+                <tr><td>9</td><td>事故报告+改进措施</td><td>品控官</td><td>7天内</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-7-3">7.3 退货处理SOP</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>退货原因</th><th>处理方式</th><th>费用承担</th><th>时效</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>品质问题</td><td>全额退款+赔偿</td><td>云华录</td><td>收到退货3天内</td></tr>
+                <tr><td>客户偏好</td><td>全额退款（未拆封）</td><td>客户承担运费</td><td>收到退货3天内</td></tr>
+                <tr><td>物流损坏</td><td>重新发货</td><td>物流理赔</td><td>确认后24h内</td></tr>
+                <tr><td>错发漏发</td><td>重新发货+补偿</td><td>云华录</td><td>确认后24h内</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>退货验收</strong>：</p>
+          <ul>
+            <li>收到退货→拍照记录→开封检查→鉴定责任→入库退货区或报废→系统退款。</li>
+          </ul>
+          <h3 id="sec-7-4">7.4 质量改进闭环</h3>
+          <pre class="code-block">客诉/检测问题 → 根因分析（5Why） → 纠正措施 → 预防措施 → 验证有效 → 标准化更新</pre>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>环节</th><th>输出</th><th>责任人</th><th>周期</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>根因分析</td><td>根因分析报告</td><td>品控官</td><td>问题发生后3天内</td></tr>
+                <tr><td>纠正措施</td><td>纠正措施单</td><td>供应链主管</td><td>根因确认后2天内</td></tr>
+                <tr><td>预防措施</td><td>预防措施方案</td><td>品控官</td><td>纠正措施后5天内</td></tr>
+                <tr><td>验证有效</td><td>验证报告</td><td>品控官</td><td>措施执行后30天</td></tr>
+                <tr><td>标准化</td><td>SOP更新版</td><td>品控官</td><td>验证通过后即更新</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section id="sec-8">
+          <h2>8. 突发状况处理预案</h2>
+          <h3 id="sec-8-1">8.1 预案总览</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>突发类型</th><th>影响等级</th><th>响应级别</th><th>启动条件</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>质量安全事故</td><td>特大</td><td>一级响应</td><td>食品安全客诉/检测不合格</td></tr>
+                <tr><td>供应商断供</td><td>重大</td><td>一级响应</td><td>主供无法交货>7天</td></tr>
+                <tr><td>物流中断</td><td>重大</td><td>二级响应</td><td>物流瘫痪>48h</td></tr>
+                <tr><td>包装缺陷</td><td>较大</td><td>二级响应</td><td>批量包装质量问题</td></tr>
+                <tr><td>季节性缺货</td><td>一般</td><td>三级响应</td><td>采摘季减产/抢料失败</td></tr>
+                <tr><td>价格异动</td><td>一般</td><td>三级响应</td><td>原料价格波动>20%</td></tr>
+                <tr><td>舆情危机</td><td>重大</td><td>一级响应</td><td>媒体曝光/社交传播</td></tr>
+                <tr><td>系统故障</td><td>较大</td><td>二级响应</td><td>ERP/WMS宕机>4h</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-8-2">8.2 质量安全事故应急预案</h3>
+          <h4>启动条件</h4>
+          <ul>
+            <li>客户反馈食品安全问题（异物、变质、中毒症状）</li>
+            <li>第三方检测不合格</li>
+            <li>同批次3起以上客诉</li>
+          </ul>
+          <h4>一级响应流程</h4>
+          <pre class="code-block">T+0min    发现/接收 → 立即报告品控官+创始人
+T+30min   启动一级响应，成立应急小组
+T+1h      暂停同批次销售，下架相关商品
+T+2h      收集证据（产品/照片/检测报告）
+T+4h      初步原因判定，客户安抚+先行赔付
+T+24h     第三方复检，供应商现场调查
+T+48h     最终原因确认，启动召回（如需）
+T+72h     供应商追责，赔偿方案确定
+T+7d      事故报告+改进措施+SOP更新</pre>
+          <h4>召回流程</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>步骤</th><th>动作</th><th>责任人</th><th>时限</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td>确认召回范围（批次/SKU/数量）</td><td>品控官</td><td>决策后2h内</td></tr>
+                <tr><td>2</td><td>平台下架，停止销售</td><td>运营主管</td><td>决策后2h内</td></tr>
+                <tr><td>3</td><td>通知已购客户，提供退货方案</td><td>客服</td><td>决策后4h内</td></tr>
+                <tr><td>4</td><td>物流逆向调货</td><td>运营主管</td><td>决策后24h内</td></tr>
+                <tr><td>5</td><td>回收产品封存检测</td><td>品控官</td><td>回收后48h内</td></tr>
+                <tr><td>6</td><td>客户全额退款+补偿</td><td>财务</td><td>7个工作日内</td></tr>
+                <tr><td>7</td><td>召回报告+监管报备</td><td>品控官</td><td>15天内</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-8-3">8.3 供应商断供应急预案</h3>
+          <h4>启动条件</h4>
+          <ul>
+            <li>主供供应商无法按时交货，延迟>7天</li>
+            <li>主供供应商突然终止合作</li>
+            <li>主供供应商发生不可抗力（自然灾害/疫情）</li>
+          </ul>
+          <h4>响应流程</h4>
+          <pre class="code-block">发现断供风险 → 评估影响（SKU/数量/时效）→ 启动备供 → 调整采购计划
+→ 通知运营调整销售预期 → 跟踪备供交付 → 恢复正常</pre>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>步骤</th><th>动作</th><th>时限</th><th>关键点</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td>确认断供事实+影响范围</td><td>4h内</td><td>SKU/数量/影响销售天数</td></tr>
+                <tr><td>2</td><td>启动备供供应商</td><td>8h内</td><td>备供需7天内可交付</td></tr>
+                <tr><td>3</td><td>调整采购计划</td><td>12h内</td><td>临时加单+加急物流</td></tr>
+                <tr><td>4</td><td>通知运营调整销售</td><td>12h内</td><td>调整预期/预售/替代品推荐</td></tr>
+                <tr><td>5</td><td>启动紧急寻源（如备供不足）</td><td>24h内</td><td>产区采购员紧急联系</td></tr>
+                <tr><td>6</td><td>库存调配</td><td>24h内</td><td>优先保障核心SKU</td></tr>
+                <tr><td>7</td><td>恢复正常供应</td><td>备供交付后</td><td>重新评估主供/备供配置</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h4>断供期间的库存调配优先级</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>优先级</th><th>SKU</th><th>调配原则</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>P1</td><td>云华典藏（高毛利）</td><td>优先保障，库存优先供给</td></tr>
+                <tr><td>P2</td><td>云华品鉴（核心利润）</td><td>保障供给，适当控量</td></tr>
+                <tr><td>P3</td><td>云游录（引流款）</td><td>限量销售，引导替代品</td></tr>
+                <tr><td>P4</td><td>试饮装</td><td>暂停赠送，节省库存</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-8-4">8.4 物流中断应急预案</h3>
+          <h4>启动条件</h4>
+          <ul>
+            <li>快递公司瘫痪（罢工/系统故障/极端天气）</li>
+            <li>物流时效延迟>48h</li>
+            <li>包裹大面积丢失/损坏</li>
+          </ul>
+          <h4>响应措施</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>场景</th><th>应急方案</th><th>备用物流商</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>单一快递瘫痪</td><td>切换备用快递商</td><td>顺丰↔中通↔圆通</td></tr>
+                <tr><td>区域性中断</td><td>该区域暂停发货+预售</td><td>区域专线物流</td></tr>
+                <tr><td>极端天气</td><td>延迟发货+客户通知</td><td>天气恢复后优先发</td></tr>
+                <tr><td>大面积丢失</td><td>物流理赔+重新发货</td><td>启动保价理赔</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-8-5">8.5 包装缺陷应急预案</h3>
+          <h4>启动条件</h4>
+          <ul>
+            <li>批量包装质量问题（印刷错误/规格不符/密封不良）</li>
+            <li>客户反馈包装破损率>5%</li>
+          </ul>
+          <h4>响应流程</h4>
+          <pre class="code-block">发现缺陷 → 暂停使用缺陷包装 → 评估影响范围 → 联系包装厂紧急补货
+→ 临时使用通用包装（手写标签）→ 正常包装到货后恢复 → 供应商追责</pre>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>步骤</th><th>动作</th><th>时限</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td>暂停使用缺陷包装批次</td><td>立即</td></tr>
+                <tr><td>2</td><td>评估缺陷数量+影响订单</td><td>4h内</td></tr>
+                <tr><td>3</td><td>联系包装厂紧急补做</td><td>8h内</td></tr>
+                <tr><td>4</td><td>临时方案：通用包装+手写溯源码</td><td>24h内</td></tr>
+                <tr><td>5</td><td>缺陷包装退换/索赔</td><td>7天内</td></tr>
+                <tr><td>6</td><td>已发出缺陷包装订单客户沟通</td><td>48h内</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-8-6">8.6 舆情危机应急预案</h3>
+          <h4>启动条件</h4>
+          <ul>
+            <li>媒体曝光产品质量问题</li>
+            <li>社交媒体负面传播（微博/小红书/抖音热度上升）</li>
+            <li>监管部门介入调查</li>
+          </ul>
+          <h4>响应流程</h4>
+          <pre class="code-block">舆情监测发现 → 评估影响等级 → 成立危机小组 → 统一口径
+→ 官方声明发布 → 积极回应+处理 → 持续监测 → 复盘改进</pre>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>步骤</th><th>动作</th><th>责任人</th><th>时限</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td>舆情监测系统预警</td><td>运营</td><td>实时</td></tr>
+                <tr><td>2</td><td>评估影响等级（阅读量/传播速度）</td><td>创始人</td><td>2h内</td></tr>
+                <tr><td>3</td><td>成立危机小组，统一对外口径</td><td>创始人</td><td>2h内</td></tr>
+                <tr><td>4</td><td>发布官方声明（诚恳+事实+措施）</td><td>创始人</td><td>4h内</td></tr>
+                <tr><td>5</td><td>主动联系当事客户，妥善处理</td><td>客服</td><td>4h内</td></tr>
+                <tr><td>6</td><td>社交媒体正面回应，不删评不水军</td><td>运营</td><td>持续</td></tr>
+                <tr><td>7</td><td>邀请第三方权威背书（如需）</td><td>创始人</td><td>视情况</td></tr>
+                <tr><td>8</td><td>持续监测舆情走向</td><td>运营</td><td>每日</td></tr>
+                <tr><td>9</td><td>危机解除后复盘+改进</td><td>全员</td><td>7天内</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>舆情处理三原则</strong>：</p>
+          <p>1. <strong>速度优先</strong>：4小时内官方回应，不沉默</p>
+          <p>2. <strong>态度诚恳</strong>：承认问题+承担责任+给出方案，不狡辩</p>
+          <p>3. <strong>事实说话</strong>：用检测报告+溯源数据回应，不空谈</p>
+          <h3 id="sec-8-7">8.7 季节性缺货应急预案</h3>
+          <h4>启动条件</h4>
+          <ul>
+            <li>采摘季减产（天气/虫害）</li>
+            <li>产区抢料失败（竞品抬价）</li>
+            <li>库存消耗超预期</li>
+          </ul>
+          <h4>响应措施</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>措施</th><th>执行方式</th><th>启动条件</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>限量销售</td><td>核心SKU每人限购2件</td><td>库存<30天销量</td></tr>
+                <tr><td>预售模式</td><td>采摘季前预售，锁定需求</td><td>采摘季前2月</td></tr>
+                <tr><td>替代品推荐</td><td>推荐同系列其他SKU</td><td>核心SKU断货</td></tr>
+                <tr><td>跨产区寻源</td><td>同茶类其他产区采购</td><td>核心产区减产>30%</td></tr>
+                <tr><td>调整价格</td><td>适度提价抑制需求（典藏级）</td><td>严重缺货</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-8-8">8.8 价格异动应急预案</h3>
+          <h4>启动条件</h4>
+          <ul>
+            <li>原料市场价格波动>20%</li>
+            <li>供应商单方面要求涨价</li>
+          </ul>
+          <h4>响应措施</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>情况</th><th>处理</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>涨价≤15%</td><td>框架协议内消化，不转嫁消费者</td></tr>
+                <tr><td>涨价15-25%</td><td>启动备供比价，谈判压价</td></tr>
+                <tr><td>涨价>25%</td><td>启动调价机制，协商分摊</td></tr>
+                <tr><td>恶意涨价</td><td>切换供应商，启动法律维权</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section id="sec-9">
+          <h2>9. 供应链数据看板与预警机制</h2>
+          <h3 id="sec-9-1">9.1 核心指标看板</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>指标类别</th><th>具体指标</th><th>目标值</th><th>预警阈值</th><th>预警方式</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>质量</strong></td><td>检测合格率</td><td>100%</td><td><98%</td><td>红色弹窗</td></tr>
+                <tr><td><strong>质量</strong></td><td>客诉率</td><td>≤3%</td><td>>5%</td><td>黄色提醒</td></tr>
+                <tr><td><strong>供应</strong></td><td>准时交付率</td><td>≥95%</td><td><90%</td><td>黄色提醒</td></tr>
+                <tr><td><strong>供应</strong></td><td>断货SKU数</td><td>0</td><td>≥1</td><td>红色弹窗</td></tr>
+                <tr><td><strong>库存</strong></td><td>库存周转天数</td><td>30-45天</td><td>>60天或<15天</td><td>橙色提醒</td></tr>
+                <tr><td><strong>库存</strong></td><td>临期库存占比</td><td>≤5%</td><td>>10%</td><td>黄色提醒</td></tr>
+                <tr><td><strong>成本</strong></td><td>采购成本波动</td><td>≤10%</td><td>>15%</td><td>黄色提醒</td></tr>
+                <tr><td><strong>成本</strong></td><td>物流成本占比</td><td>≤15%</td><td>>20%</td><td>橙色提醒</td></tr>
+                <tr><td><strong>供应商</strong></td><td>A级供应商占比</td><td>≥60%</td><td><40%</td><td>黄色提醒</td></tr>
+                <tr><td><strong>供应商</strong></td><td>备供覆盖率</td><td>100%</td><td><80%</td><td>橙色提醒</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-9-2">9.2 预警响应机制</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>预警级别</th><th>触发条件</th><th>响应</th><th>升级</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>黄色</td><td>单项指标偏离目标</td><td>责任人关注+周报分析</td><td>连续2周→橙色</td></tr>
+                <tr><td>橙色</td><td>单项指标超预警阈值</td><td>责任人制定改进方案+日报</td><td>连续3天→红色</td></tr>
+                <tr><td>红色</td><td>关键指标严重偏离</td><td>创始人介入+应急小组</td><td>立即启动应急预案</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-9-3">9.3 数据汇报机制</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>报表类型</th><th>频率</th><th>内容</th><th>接收人</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>供应链日报</td><td>每日</td><td>发货量/库存/异常事件</td><td>运营主管</td></tr>
+                <tr><td>品控周报</td><td>每周</td><td>检测结果/客诉分析/改进进展</td><td>创始人</td></tr>
+                <tr><td>供应链月报</td><td>每月</td><td>全指标看板/供应商考核/成本分析</td><td>创始人</td></tr>
+                <tr><td>季度复盘报告</td><td>每季</td><td>趋势分析/优化建议/下季计划</td><td>创始人+全员</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section id="sec-10">
+          <h2>10. 附表与记录模板</h2>
+          <h3 id="sec-10-1">10.1 供应商准入考察表</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>考察项</th><th>核验要点</th><th>评分（1-5）</th><th>备注</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>茶园环境</td><td>海拔/坡度/植被/污染源</td><td></td><td></td></tr>
+                <tr><td>茶园管理</td><td>施肥/病虫害防治/采摘标准</td><td></td><td></td></tr>
+                <tr><td>加工厂房</td><td>卫生/设备/工艺流程</td><td></td><td></td></tr>
+                <tr><td>仓储条件</td><td>温湿度/防潮防虫/分区</td><td></td><td></td></tr>
+                <tr><td>人员资质</td><td>制茶师资质/培训/健康证</td><td></td><td></td></tr>
+                <tr><td>溯源体系</td><td>溯源码/批次管理/记录</td><td></td><td></td></tr>
+                <tr><td><strong>总分</strong></td><td>/30分</td><td></td><td></td></tr>
+                <tr><td><strong>结论</strong></td><td>□通过(≥24) □整改 □终止</td><td></td><td></td></tr>
+                <tr><td>考察人：</td><td>日期：</td><td></td><td></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-10-2">10.2 批次质量检测记录表</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>项目</th><th>内容</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>批次号</td><td></td></tr>
+                <tr><td>SKU</td><td></td></tr>
+                <tr><td>供应商</td><td></td></tr>
+                <tr><td>到货日期</td><td></td></tr>
+                <tr><td>到货数量</td><td></td></tr>
+                <tr><td>抽样数量</td><td></td></tr>
+                <tr><td>感官初筛</td><td>□通过 □不通过</td></tr>
+                <tr><td>农残检测</td><td>□合格 □不合格</td></tr>
+                <tr><td>重金属检测</td><td>□合格 □不合格</td></tr>
+                <tr><td>微生物检测</td><td>□合格 □不合格</td></tr>
+                <tr><td>水分检测</td><td>%（标准：≤7%/9%）</td></tr>
+                <tr><td>灰分检测</td><td>%（标准：≤6.5%）</td></tr>
+                <tr><td>检测结论</td><td>□合格入库 □不合格退货</td></tr>
+                <tr><td>品控官签字</td><td></td></tr>
+                <tr><td>日期</td><td></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-10-3">10.3 异常事件处理记录表</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>项目</th><th>内容</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>事件编号</td><td></td></tr>
+                <tr><td>事件类型</td><td>□质量 □供应 □物流 □包装 □舆情 □其他</td></tr>
+                <tr><td>发生时间</td><td></td></tr>
+                <tr><td>发现时间</td><td></td></tr>
+                <tr><td>事件描述</td><td></td></tr>
+                <tr><td>影响范围</td><td>SKU/数量/金额/客户数</td></tr>
+                <tr><td>影响等级</td><td>□P0 □P1 □P2 □P3</td></tr>
+                <tr><td>响应级别</td><td>□一级 □二级 □三级</td></tr>
+                <tr><td>处理措施</td><td></td></tr>
+                <tr><td>处理结果</td><td></td></tr>
+                <tr><td>根因分析</td><td></td></tr>
+                <tr><td>预防措施</td><td></td></tr>
+                <tr><td>责任人</td><td></td></tr>
+                <tr><td>关闭时间</td><td></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-10-4">10.4 供应商季度考核表</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>供应商名称</th><th></th><th>考核季度</th><th></th></tr>
+              </thead>
+              <tbody>
+                <tr><td>维度</td><td>权重</td><td>得分（0-100）</td><td>加权分</td></tr>
+                <tr><td>品质稳定性</td><td>35%</td><td></td><td></td></tr>
+                <tr><td>交期可靠性</td><td>20%</td><td></td><td></td></tr>
+                <tr><td>响应速度</td><td>15%</td><td></td><td></td></tr>
+                <tr><td>价格合理性</td><td>15%</td><td></td><td></td></tr>
+                <tr><td>溯源完整性</td><td>15%</td><td></td><td></td></tr>
+                <tr><td><strong>总分</strong></td><td>100%</td><td></td><td></td></tr>
+                <tr><td><strong>等级</strong></td><td></td><td>□A(≥90) □B(80-89) □C(70-79) □D(<70)</td><td></td></tr>
+                <tr><td><strong>措施</strong></td><td></td><td></td><td></td></tr>
+                <tr><td>考核人</td><td></td><td>日期</td><td></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-10-5">10.5 库存盘点差异表</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>SKU</th><th>溯源码</th><th>系统库存</th><th>实盘库存</th><th>差异</th><th>差异率</th><th>原因</th><th>处理</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>合计</strong></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td>盘点人</td><td></td><td>复核人</td><td></td><td>日期</td><td></td><td></td><td></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <blockquote class="article-note"><p><strong>文档结束</strong></p></blockquote>
+          <p>></p>
+          <blockquote class="article-note"><p>本供应链管理细则与SOP基于云华录品牌规划全案制定，覆盖供应商管理、质量管理、采购、仓储、发货、售后全流程，以及8类突发状况处理预案。所有流程需严格执行，定期复盘优化。建议每季度进行一次SOP执行审计，确保制度落地。供应链是品牌的生命线，品质可溯、供应稳定、响应迅速、成本可控是云华录的供应链承诺。</p></blockquote>
+        </section>
+
+      <!-- 结尾品牌slogan -->
+      <div class="report-coda">
+        云华录 — 录山河风土，守原叶本真，承千年茶韵，通四海知己。
+        <div class="report-coda-en">Proposal Planning | Y.T Full Brand Planning Team · 2026年6月</div>
+      </div>
+
+      </div>
+
+      </article>
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       页脚
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <div class="footer-main">
+        <!-- 品牌信息 -->
+        <div class="footer-brand">
+          <div class="footer-logo">云华录</div>
+          <p class="footer-slogan">云华一盏，尽录山河</p>
+          <p class="footer-desc">记录中国山河风物的国风原叶茶集合品牌。行走、甄选、记录、呈现，把山野之味带到杯中。</p>
+        </div>
+
+        <!-- 篇章导航 -->
+        <div class="footer-nav-col">
+          <h4 class="footer-nav-title">篇章导航</h4>
+          <ul class="footer-nav-list">
+            <li><a href="market-research.html" class="footer-nav-link">市场研究报告</a></li>
+            <li><a href="brand-foundation.html" class="footer-nav-link">品牌策略文档</a></li>
+            <li><a href="product-supply.html" class="footer-nav-link">产品线与供应链</a></li>
+            <li><a href="visual-packaging.html" class="footer-nav-link">品牌视觉与包装</a></li>
+            <li><a href="ecommerce-marketing.html" class="footer-nav-link">电商与营销策略</a></li>
+            <li><a href="international.html" class="footer-nav-link">国际市场拓展</a></li>
+            <li><a href="brand-culture.html" class="footer-nav-link">品牌文化精神内核</a></li>
+            <li><a href="tea-trace-report.html" class="footer-nav-link">全国茶叶溯源调研</a></li>
+            <li><a href="budget-execution.html" class="footer-nav-link">50万预算执行方案</a></li>
+            <li><a href="supply-chain-sop.html" class="footer-nav-link">供应链管理细则SOP</a></li>
+            <li><a href="marketing-execution.html" class="footer-nav-link">上市初期营销执行</a></li>
+            <li><a href="full-proposal.html" class="footer-nav-link">完整策划提案</a></li>
+          </ul>
+        </div>
+
+        <!-- 产品线 -->
+        <div class="footer-nav-col">
+          <h4 class="footer-nav-title">产品线</h4>
+          <ul class="footer-nav-list">
+            <li><span class="footer-nav-link">云游录 · 探索系列</span></li>
+            <li><span class="footer-nav-link">云华品鉴 · 品鉴系列</span></li>
+            <li><span class="footer-nav-link">云华典藏 · 典藏系列</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span class="footer-copyright">© 2026 云华录 YUNHUA LU · 记录中国山河风物</span>
+        <span class="footer-meta">品牌全案策划提案 · 内部文档</span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="回到顶部">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/scroll.js" defer></script>
+</body>
+</html>

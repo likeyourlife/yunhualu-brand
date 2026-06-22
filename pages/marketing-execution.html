@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>上市初期营销落地执行方案 · 云华录品牌全案</title>
+  <meta name="description" content="云华录上市初期120天营销落地执行手册——五阶段（筹备蓄水→预热种草→首发引爆→增长攻坚→复购经营）逐日推进，每一项动作明确时间节点、营销内容、执行要求、责任人、交付物、验收标准。">
+
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/pages.css">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><rect width='36' height='36' rx='2' fill='%23B84A3A'/><text x='18' y='26' font-size='20' font-family='serif' font-weight='bold' fill='%23F7F2EC' text-anchor='middle'>云</text></svg>">
+
+  <style>
+    /* 引用注释样式 */
+    .article-note {
+      margin: var(--space-6) 0;
+      padding: var(--space-4) var(--space-6);
+      border-left: 3px solid var(--color-accent-vermilion);
+      background: var(--color-surface-card);
+      font-family: var(--font-cn-body);
+      font-size: var(--text-sm);
+      color: var(--color-text-secondary);
+      line-height: 1.8;
+    }
+    .article-note p {
+      margin: 0;
+    }
+    /* 代码块（流程图/架构图） */
+    .code-block {
+      margin: var(--space-6) 0;
+      padding: var(--space-5) var(--space-6);
+      background: var(--color-surface-elevated, #EFE9E0);
+      border: 1px solid var(--color-border-default);
+      border-radius: var(--radius-md, 6px);
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      line-height: 1.6;
+      color: var(--color-text-primary);
+      overflow-x: auto;
+      white-space: pre;
+    }
+    /* Checkbox 列表 */
+    .checklist {
+      list-style: none;
+      padding-left: 0;
+      margin: var(--space-4) 0;
+    }
+    .checklist-item {
+      position: relative;
+      padding-left: var(--space-6);
+      margin-bottom: var(--space-2);
+      color: var(--color-text-secondary);
+      font-size: var(--text-sm);
+    }
+    .checklist-item::before {
+      content: '☐';
+      position: absolute;
+      left: 0;
+      color: var(--color-accent-vermilion);
+      font-size: var(--text-base);
+    }
+    /* 篇章分隔 */
+    .article-prose section {
+      margin-bottom: var(--space-12);
+    }
+    .article-prose section:last-child {
+      margin-bottom: 0;
+    }
+    /* h4 装饰 */
+    .article-prose h4 {
+      position: relative;
+      padding-left: var(--space-4);
+    }
+    .article-prose h4::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.3em;
+      width: 3px;
+      height: 1em;
+      background: var(--color-accent-vermilion);
+      opacity: 0.6;
+    }
+    /* 结尾品牌slogan */
+    .report-coda {
+      text-align: center;
+      margin-top: var(--space-16);
+      padding-top: var(--space-10);
+      border-top: 1px solid var(--color-border-default);
+      font-family: var(--font-cn-heading);
+      font-size: var(--text-lg);
+      color: var(--color-accent-vermilion);
+      line-height: 2;
+      letter-spacing: 0.05em;
+    }
+    .report-coda-en {
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      color: var(--color-text-tertiary);
+      letter-spacing: 0.1em;
+      margin-top: var(--space-3);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="reading-progress" aria-hidden="true"></div>
+
+  <!-- ==========================================================================
+       全局导航
+       ========================================================================== -->
+  <header class="site-nav">
+    <div class="site-nav-inner">
+      <a href="../index.html" class="nav-logo">
+        <span>云华录</span>
+        <span class="nav-logo-en">YUNHUA LU</span>
+      </a>
+
+      <ul class="nav-list">
+        <li><a href="../index.html" class="nav-link">首页</a></li>
+        <li><a href="market-research.html" class="nav-link">市场研究</a></li>
+        <li><a href="brand-foundation.html" class="nav-link">品牌策略</a></li>
+        <li><a href="product-supply.html" class="nav-link">产品供应链</a></li>
+        <li><a href="visual-packaging.html" class="nav-link">视觉包装</a></li>
+        <li><a href="ecommerce-marketing.html" class="nav-link">电商营销</a></li>
+        <li><a href="international.html" class="nav-link">国际拓展</a></li>
+        <li><a href="brand-culture.html" class="nav-link">品牌文化</a></li>
+        <li><a href="tea-trace-report.html" class="nav-link">茶叶溯源</a></li>
+        <li><a href="budget-execution.html" class="nav-link">预算方案</a></li>
+        <li><a href="supply-chain-sop.html" class="nav-link">供应链SOP</a></li>
+        <li><a href="marketing-execution.html" class="nav-link active">营销执行</a></li>
+        <li><a href="full-proposal.html" class="nav-link">完整提案</a></li>
+      </ul>
+
+      <button class="nav-toggle" aria-label="打开菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="nav-drawer">
+    <ul class="nav-drawer-list">
+      <li><a href="../index.html" class="nav-drawer-link">首页</a></li>
+      <li><a href="market-research.html" class="nav-drawer-link">市场研究</a></li>
+      <li><a href="brand-foundation.html" class="nav-drawer-link">品牌策略</a></li>
+      <li><a href="product-supply.html" class="nav-drawer-link">产品供应链</a></li>
+      <li><a href="visual-packaging.html" class="nav-drawer-link">视觉包装</a></li>
+      <li><a href="ecommerce-marketing.html" class="nav-drawer-link">电商营销</a></li>
+      <li><a href="international.html" class="nav-drawer-link">国际拓展</a></li>
+      <li><a href="brand-culture.html" class="nav-drawer-link">品牌文化</a></li>
+      <li><a href="tea-trace-report.html" class="nav-drawer-link">茶叶溯源</a></li>
+      <li><a href="budget-execution.html" class="nav-drawer-link">预算方案</a></li>
+      <li><a href="supply-chain-sop.html" class="nav-drawer-link">供应链SOP</a></li>
+      <li><a href="marketing-execution.html" class="nav-drawer-link active">营销执行</a></li>
+      <li><a href="full-proposal.html" class="nav-drawer-link">完整提案</a></li>
+    </ul>
+  </div>
+
+  <!-- ==========================================================================
+       页面主体
+       ========================================================================== -->
+  <main class="page-main">
+
+    <!-- ===================== 篇章首屏 ===================== -->
+    <header class="chapter-header">
+      <div class="tea-grid-bg-fade" aria-hidden="true"></div>
+      <div class="chapter-header-number">
+        <span class="chapter-header-num-cn">拾贰</span>
+        <span class="chapter-header-num-latin">12</span>
+      </div>
+      <h1 class="chapter-header-title">上市初期营销落地执行方案</h1>
+      <p class="chapter-header-lead">
+        120天营销落地执行手册——筹备蓄水→预热种草→首发引爆→增长攻坚→复购经营，五阶段逐日推进。日清日结、周复盘制、数据驱动、快速迭代，四项铁律确保50万预算下的营销投入精准高效。
+      </p>
+    </header>
+
+    <!-- ===================== 阅读布局 ===================== -->
+    <div class="page-layout container-wide">
+      <!-- 侧边目录 -->
+      <aside class="toc-sidebar">
+        <button class="toc-toggle" aria-expanded="false">
+          本篇目录
+          <span class="toc-toggle-icon">▾</span>
+        </button>
+        <div class="toc-content">
+          <div class="toc-title">本篇目录</div>
+          <ul class="toc-list">
+            <li><a href="#sec-1" class="toc-link">1. 执行总则与阶段划分</a></li>
+              <li><a href="#sec-1-1" class="toc-link toc-sub">1.1 执行总则</a></li>
+              <li><a href="#sec-1-2" class="toc-link toc-sub">1.2 五阶段划分总览</a></li>
+              <li><a href="#sec-1-3" class="toc-link toc-sub">1.3 五阶段目标总览</a></li>
+              <li><a href="#sec-1-4" class="toc-link toc-sub">1.4 团队分工与责任矩阵</a></li>
+            <li><a href="#sec-2" class="toc-link">2. 第一阶段：筹备蓄水期（D-30至D-15）</a></li>
+              <li><a href="#sec-2-1" class="toc-link toc-sub">2.1 阶段目标</a></li>
+              <li><a href="#sec-2-2" class="toc-link toc-sub">2.2 逐日执行清单</a></li>
+              <li><a href="#sec-2-3" class="toc-link toc-sub">2.3 阶段验收Checklist</a></li>
+            <li><a href="#sec-3" class="toc-link">3. 第二阶段：预热种草期（D-14至D-1）</a></li>
+              <li><a href="#sec-3-1" class="toc-link toc-sub">3.1 阶段目标</a></li>
+              <li><a href="#sec-3-2" class="toc-link toc-sub">3.2 逐日执行清单</a></li>
+              <li><a href="#sec-3-3" class="toc-link toc-sub">3.3 阶段KPI</a></li>
+            <li><a href="#sec-4" class="toc-link">4. 第三阶段：首发引爆期（D-Day至D+7）</a></li>
+              <li><a href="#sec-4-1" class="toc-link toc-sub">4.1 阶段目标</a></li>
+              <li><a href="#sec-4-2" class="toc-link toc-sub">4.2 D-Day首发日执行清单</a></li>
+              <li><a href="#sec-4-3" class="toc-link toc-sub">4.3 D+1至D+7执行清单</a></li>
+              <li><a href="#sec-4-4" class="toc-link toc-sub">4.4 阶段KPI</a></li>
+            <li><a href="#sec-5" class="toc-link">5. 第四阶段：增长攻坚期（D+8至D+30）</a></li>
+              <li><a href="#sec-5-1" class="toc-link toc-sub">5.1 阶段目标</a></li>
+              <li><a href="#sec-5-2" class="toc-link toc-sub">5.2 每周执行节奏</a></li>
+              <li><a href="#sec-5-3" class="toc-link toc-sub">5.3 投流优化策略</a></li>
+              <li><a href="#sec-5-4" class="toc-link toc-sub">5.4 内容生产计划</a></li>
+              <li><a href="#sec-5-5" class="toc-link toc-sub">5.5 阶段KPI</a></li>
+            <li><a href="#sec-6" class="toc-link">6. 第五阶段：复购经营期（D+31至D+90）</a></li>
+              <li><a href="#sec-6-1" class="toc-link toc-sub">6.1 阶段目标</a></li>
+              <li><a href="#sec-6-2" class="toc-link toc-sub">6.2 复购提升策略</a></li>
+              <li><a href="#sec-6-3" class="toc-link toc-sub">6.3 私域深耕计划</a></li>
+              <li><a href="#sec-6-4" class="toc-link toc-sub">6.4 阶段KPI</a></li>
+            <li><a href="#sec-7" class="toc-link">7. 内容生产日历与物料清单</a></li>
+              <li><a href="#sec-7-1" class="toc-link toc-sub">7.1 120天内容生产总表</a></li>
+              <li><a href="#sec-7-2" class="toc-link toc-sub">7.2 内容选题库</a></li>
+              <li><a href="#sec-7-3" class="toc-link toc-sub">7.3 物料清单</a></li>
+            <li><a href="#sec-8" class="toc-link">8. 达人合作执行细则</a></li>
+              <li><a href="#sec-8-1" class="toc-link toc-sub">8.1 达人合作全流程</a></li>
+              <li><a href="#sec-8-2" class="toc-link toc-sub">8.2 达人筛选标准</a></li>
+              <li><a href="#sec-8-3" class="toc-link toc-sub">8.3 达人Brief模板</a></li>
+              <li><a href="#sec-8-4" class="toc-link toc-sub">8.4 达人内容审核清单</a></li>
+              <li><a href="#sec-8-5" class="toc-link toc-sub">8.5 达人效果评估</a></li>
+            <li><a href="#sec-9" class="toc-link">9. 投流执行细则</a></li>
+              <li><a href="#sec-9-1" class="toc-link toc-sub">9.1 投流预算分配</a></li>
+              <li><a href="#sec-9-2" class="toc-link toc-sub">9.2 投流定向策略</a></li>
+              <li><a href="#sec-9-3" class="toc-link toc-sub">9.3 素材测试与优化</a></li>
+              <li><a href="#sec-9-4" class="toc-link toc-sub">9.4 投流数据日报模板</a></li>
+            <li><a href="#sec-10" class="toc-link">10. 私域运营执行细则</a></li>
+              <li><a href="#sec-10-1" class="toc-link toc-sub">10.1 私域流量漏斗</a></li>
+              <li><a href="#sec-10-2" class="toc-link toc-sub">10.2 引流策略</a></li>
+              <li><a href="#sec-10-3" class="toc-link toc-sub">10.3 社群运营SOP</a></li>
+              <li><a href="#sec-10-4" class="toc-link toc-sub">10.4 会员日运营</a></li>
+            <li><a href="#sec-11" class="toc-link">11. 直播执行细则</a></li>
+              <li><a href="#sec-11-1" class="toc-link toc-sub">11.1 直播排期表</a></li>
+              <li><a href="#sec-11-2" class="toc-link toc-sub">11.2 直播话术体系</a></li>
+              <li><a href="#sec-11-3" class="toc-link toc-sub">11.3 直播间布景规范</a></li>
+            <li><a href="#sec-12" class="toc-link">12. 数据复盘与KPI考核</a></li>
+              <li><a href="#sec-12-1" class="toc-link toc-sub">12.1 数据复盘机制</a></li>
+              <li><a href="#sec-12-2" class="toc-link toc-sub">12.2 核心KPI看板</a></li>
+              <li><a href="#sec-12-3" class="toc-link toc-sub">12.3 KPI考核与奖惩</a></li>
+          </ul>
+        </div>
+      </aside>
+
+      <article class="page-content">
+
+      <!-- 正文内容 -->
+      <div class="article-prose">
+
+        <section id="sec-1">
+          <h2>1. 执行总则与阶段划分</h2>
+          <h3 id="sec-1-1">1.1 执行总则</h3>
+          <p>本方案是云华录产品上市初期（D-30至D+90，共120天）的营销落地执行手册，将附件05电商营销策略细化为可逐日执行的动作清单。每一项动作明确<strong>时间节点、营销内容、执行要求、责任人、交付物、验收标准</strong>。</p>
+          <p><strong>四项执行铁律</strong>：</p>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>铁律</th><th>内容</th><th>违反后果</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>日清日结</td><td>每日18:00前提交当日数据日报</td><td>连续2次未提交→通报</td></tr>
+                <tr><td>周复盘制</td><td>每周一10:00召开周复盘会</td><td>缺席→补交复盘报告</td></tr>
+                <tr><td>数据驱动</td><td>所有决策基于数据，不凭感觉</td><td>主观决策导致损失→追责</td></tr>
+                <tr><td>快速迭代</td><td>投流素材3天一换，内容7天一优化</td><td>素材衰退未换→浪费预算</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-1-2">1.2 五阶段划分总览</h3>
+          <pre class="code-block">筹备蓄水 → 预热种草 → 首发引爆 → 增长攻坚 → 复购经营
+D-30~D-15  D-14~D-1   D-Day~D+7  D+8~D+30   D+31~D+90
+15天       14天        7天        22天        60天
+基建搭建   蓄水种草    集中引爆   持续优化    私域深耕</pre>
+          <h3 id="sec-1-3">1.3 五阶段目标总览</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>阶段</th><th>时间</th><th>核心目标</th><th>预算消耗</th><th>关键KPI</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>筹备蓄水</td><td>D-30~D-15</td><td>基建完成，弹药就位</td><td>11万（平台+视觉）</td><td>3店上线/素材库就绪</td></tr>
+                <tr><td>预热种草</td><td>D-14~D-1</td><td>蓄水种草，建立认知</td><td>3万（预热营销）</td><td>曝光100万+/私域2000+</td></tr>
+                <tr><td>首发引爆</td><td>D-Day~D+7</td><td>集中引爆，首战告捷</td><td>8万（首发营销）</td><td>首日2万+/7日5-8万</td></tr>
+                <tr><td>增长攻坚</td><td>D+8~D+30</td><td>持续优化，滚动增长</td><td>5万（成长营销）</td><td>月销10-15万/ROI≥1.5</td></tr>
+                <tr><td>复购经营</td><td>D+31~D+90</td><td>私域深耕，复购提升</td><td>6万/月</td><td>复购率≥20%/月销20万+</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-1-4">1.4 团队分工与责任矩阵</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>角色</th><th>核心职责</th><th>汇报频率</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>品牌创始人</td><td>战略决策/资源协调/达人头部对接/直播主讲</td><td>日报+周会</td></tr>
+                <tr><td>运营主管</td><td>平台运营/投流执行/数据复盘/社群管理</td><td>日报+周报</td></tr>
+                <tr><td>内容策划</td><td>内容生产/文案撰写/短视频拍摄剪辑</td><td>周报</td></tr>
+                <tr><td>供应链主管</td><td>产品备货/物流保障/库存监控</td><td>日报</td></tr>
+                <tr><td>兼职客服</td><td>客户咨询/售后处理/私域维护</td><td>日报</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>RACI责任矩阵</strong>（R=执行 A=审批 C=协商 I=知会）：</p>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>事项</th><th>创始人</th><th>运营主管</th><th>内容策划</th><th>供应链</th><th>客服</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>平台搭建</td><td>A</td><td>R</td><td>C</td><td>I</td><td>I</td></tr>
+                <tr><td>内容生产</td><td>A</td><td>C</td><td>R</td><td>I</td><td>I</td></tr>
+                <tr><td>达人合作</td><td>R/A</td><td>C</td><td>C</td><td>I</td><td>I</td></tr>
+                <tr><td>投流执行</td><td>A</td><td>R</td><td>C</td><td>I</td><td>I</td></tr>
+                <tr><td>直播执行</td><td>R</td><td>R</td><td>C</td><td>C</td><td>C</td></tr>
+                <tr><td>数据复盘</td><td>A</td><td>R</td><td>C</td><td>C</td><td>I</td></tr>
+                <tr><td>客户服务</td><td>I</td><td>C</td><td>I</td><td>C</td><td>R</td></tr>
+                <tr><td>库存保障</td><td>A</td><td>C</td><td>I</td><td>R</td><td>I</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section id="sec-2">
+          <h2>2. 第一阶段：筹备蓄水期（D-30至D-15）</h2>
+          <h3 id="sec-2-1">2.1 阶段目标</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>目标</th><th>验收标准</th><th>截止日</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>三店上线</td><td>抖音店+视频号店+小程序商城全部可下单</td><td>D-15</td></tr>
+                <tr><td>素材库就绪</td><td>产品图56张+视频15条+文案20篇</td><td>D-15</td></tr>
+                <tr><td>达人确认</td><td>39位达人合作协议签署，排期确定</td><td>D-15</td></tr>
+                <tr><td>私域基建</td><td>企微+社群+小程序会员体系搭建完成</td><td>D-15</td></tr>
+                <tr><td>资质就位</td><td>SC许可证/质检报告/商标/条形码全部就位</td><td>D-20</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-2-2">2.2 逐日执行清单</h3>
+          <h4>D-30至D-26：平台搭建周</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>日期</th><th>动作</th><th>责任人</th><th>交付物</th><th>验收标准</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>D-30</td><td>抖音小店入驻申请（茶叶类目）</td><td>运营主管</td><td>入驻申请提交</td><td>资料齐全无退回</td></tr>
+                <tr><td>D-30</td><td>视频号小店入驻申请</td><td>运营主管</td><td>入驻申请提交</td><td>资料齐全无退回</td></tr>
+                <tr><td>D-30</td><td>有赞/微盟小程序商城签约</td><td>运营主管</td><td>SaaS合同</td><td>品牌商城版年费0.98万</td></tr>
+                <tr><td>D-29</td><td>SC食品经营许可证提交代办</td><td>供应链主管</td><td>代办委托书</td><td>代办公司确认接单</td></tr>
+                <tr><td>D-29</td><td>7款茶质检报告送检</td><td>供应链主管</td><td>送检单</td><td>第三方CMA机构确认</td></tr>
+                <tr><td>D-28</td><td>抖音店装修：主图/详情页/店铺首页</td><td>运营+内容</td><td>店铺装修稿</td><td>品牌视觉规范审核通过</td></tr>
+                <tr><td>D-28</td><td>视频号店装修</td><td>运营+内容</td><td>店铺装修稿</td><td>品牌视觉规范审核通过</td></tr>
+                <tr><td>D-27</td><td>小程序商城装修：首页/分类/详情页</td><td>运营+内容</td><td>小程序上线</td><td>可正常浏览和下单</td></tr>
+                <tr><td>D-27</td><td>企微SCRM系统配置（微伴/尘锋）</td><td>运营主管</td><td>系统配置完成</td><td>可添加客户/打标签</td></tr>
+                <tr><td>D-26</td><td>三店联调测试（下单/支付/物流）</td><td>运营主管</td><td>测试报告</td><td>全流程跑通无报错</td></tr>
+                <tr><td>D-26</td><td>直播间搭建（设备+背景+灯光）</td><td>运营+内容</td><td>直播间就绪</td><td>可正常直播测试</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>验收标准</strong>：三店全部上线可接单，直播间可开播，SCRM系统可管客户。</p>
+          <h4>D-25至D-21：素材生产周</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>日期</th><th>动作</th><th>责任人</th><th>交付物</th><th>验收标准</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>D-25</td><td>产品拍摄Day1：7款茶主图+场景图</td><td>内容策划</td><td>照片56张</td><td>每款5主图+3场景图</td></tr>
+                <tr><td>D-24</td><td>产品拍摄Day2：包装实拍+茶汤特写</td><td>内容策划</td><td>照片40张</td><td>拆箱图+汤色+叶底</td></tr>
+                <tr><td>D-23</td><td>品牌故事短片拍摄（60s）</td><td>内容策划</td><td>短片1条</td><td>自然光纪实风格</td></tr>
+                <tr><td>D-23</td><td>7款茶展示短视频拍摄（各15s）</td><td>内容策划</td><td>短视频7条</td><td>符合品牌调性</td></tr>
+                <tr><td>D-22</td><td>短视频剪辑+后期</td><td>内容策划</td><td>成品视频8条</td><td>字幕/配乐/调色完成</td></tr>
+                <tr><td>D-22</td><td>产地素材图库采购（图虫/视觉中国）</td><td>内容策划</td><td>素材包</td><td>武夷山/安吉/云南等</td></tr>
+                <tr><td>D-21</td><td>产品文案撰写（7款详情页文案）</td><td>内容策划</td><td>文案7篇</td><td>含产品故事+冲泡指南</td></tr>
+                <tr><td>D-21</td><td>种草文案撰写（20篇小红书/抖音脚本）</td><td>内容策划</td><td>脚本20篇</td><td>含选题/脚本/拍摄建议</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>验收标准</strong>：素材库就绪——照片96张+视频8条+文案27篇，全部符合品牌视觉规范。</p>
+          <h4>D-20至D-16：达人确认周</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>日期</th><th>动作</th><th>责任人</th><th>交付物</th><th>验收标准</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>D-20</td><td>头部达人1位最终洽谈确认</td><td>创始人</td><td>合作协议</td><td>抖音30-50万粉/茶文化类</td></tr>
+                <tr><td>D-20</td><td>腰部达人8位洽谈确认（抖音3+小红书4+B站1）</td><td>运营主管</td><td>合作协议8份</td><td>粉丝量/调性/报价符合</td></tr>
+                <tr><td>D-19</td><td>KOC 30位招募确认（纯佣/置换模式）</td><td>运营主管</td><td>KOC名单30人</td><td>近30天有更新/调性符合</td></tr>
+                <tr><td>D-19</td><td>达人寄样安排（39位×7款试饮装）</td><td>供应链主管</td><td>寄样单</td><td>全部寄出/物流可查</td></tr>
+                <tr><td>D-18</td><td>达人内容Brief撰写（每位达人独立Brief）</td><td>内容策划</td><td>Brief 39份</td><td>含产品卖点/话题/发布要求</td></tr>
+                <tr><td>D-18</td><td>达人发布排期表制定</td><td>运营主管</td><td>排期表</td><td>预热期/引爆期分布合理</td></tr>
+                <tr><td>D-17</td><td>私域社群搭建（企微群+欢迎语+群规）</td><td>运营主管</td><td>社群就绪</td><td>群名/群规/自动欢迎语</td></tr>
+                <tr><td>D-17</td><td>小程序会员体系配置（积分/等级/储值）</td><td>运营主管</td><td>会员体系</td><td>积分规则/等级权益/储值</td></tr>
+                <tr><td>D-16</td><td>投流素材准备（信息流广告素材10组）</td><td>内容策划</td><td>广告素材10组</td><td>图文/视频/落地页</td></tr>
+                <tr><td>D-16</td><td>投流账户搭建（巨量千川/朋友圈/薯条）</td><td>运营主管</td><td>账户就绪</td><td>充值/定向/计划搭建</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>验收标准</strong>：39位达人全部确认并寄样，投流账户就绪，私域基建完成。</p>
+          <h4>D-15：阶段验收日</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>验收项</th><th>标准</th><th>责任人</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>三店上线</td><td>可正常下单</td><td>运营主管</td></tr>
+                <tr><td>素材库</td><td>照片96+视频8+文案27</td><td>内容策划</td></tr>
+                <tr><td>达人确认</td><td>39位协议签署</td><td>创始人+运营</td></tr>
+                <tr><td>私域基建</td><td>企微+社群+会员体系</td><td>运营主管</td></tr>
+                <tr><td>投流就绪</td><td>账户+素材+定向</td><td>运营主管</td></tr>
+                <tr><td>资质就位</td><td>SC/质检/商标/条形码</td><td>供应链主管</td></tr>
+                <tr><td>直播间</td><td>设备+背景+灯光</td><td>运营+内容</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-2-3">2.3 阶段验收Checklist</h3>
+          <ul class="checklist">
+            <li class="checklist-item">抖音小店上线，可正常下单</li>
+            <li class="checklist-item">视频号小店上线，可正常下单</li>
+            <li class="checklist-item">小程序商城上线，可正常下单</li>
+            <li class="checklist-item">产品主图56张+场景图40张拍摄完成</li>
+            <li class="checklist-item">品牌故事短片60s完成</li>
+            <li class="checklist-item">7款茶展示短视频15s各1条完成</li>
+            <li class="checklist-item">20篇种草文案撰写完成</li>
+            <li class="checklist-item">7篇产品详情页文案完成</li>
+            <li class="checklist-item">头部达人1位协议签署</li>
+            <li class="checklist-item">腰部达人8位协议签署</li>
+            <li class="checklist-item">KOC 30位确认</li>
+            <li class="checklist-item">39位达人寄样完成</li>
+            <li class="checklist-item">达人Brief 39份撰写完成</li>
+            <li class="checklist-item">达人发布排期表制定</li>
+            <li class="checklist-item">企微SCRM配置完成</li>
+            <li class="checklist-item">私域社群搭建完成</li>
+            <li class="checklist-item">小程序会员体系配置</li>
+            <li class="checklist-item">投流素材10组准备完成</li>
+            <li class="checklist-item">投流账户搭建完成</li>
+            <li class="checklist-item">直播间搭建完成</li>
+            <li class="checklist-item">SC许可证就位</li>
+            <li class="checklist-item">7款茶质检报告就位</li>
+            <li class="checklist-item">商标注册完成（核心类目）</li>
+            <li class="checklist-item">7个SKU条形码申请完成</li>
+          </ul>
+        </section>
+        <section id="sec-3">
+          <h2>3. 第二阶段：预热种草期（D-14至D-1）</h2>
+          <h3 id="sec-3-1">3.1 阶段目标</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>目标</th><th>验收标准</th><th>截止日</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>品牌曝光</td><td>种草内容总曝光≥100万</td><td>D-1</td></tr>
+                <tr><td>私域蓄水</td><td>企微社群人数≥2000</td><td>D-1</td></tr>
+                <tr><td>账号启动</td><td>抖音粉丝500+/小红书粉丝300+</td><td>D-1</td></tr>
+                <tr><td>预热转化</td><td>预售订单≥200单</td><td>D-1</td></tr>
+                <tr><td>搜索占位</td><td>品牌词搜索指数建立</td><td>D-1</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-3-2">3.2 逐日执行清单</h3>
+          <h4>D-14至D-10：内容启动周</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>日期</th><th>动作</th><th>平台</th><th>内容</th><th>要求</th><th>责任人</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>D-14</td><td>官方账号首发内容</td><td>抖音</td><td>品牌故事短片60s</td><td>带话题#云华录#一叶知中国</td><td>内容策划</td></tr>
+                <tr><td>D-14</td><td>官方账号首发内容</td><td>视频号</td><td>品牌故事短片60s</td><td>同步发布</td><td>内容策划</td></tr>
+                <tr><td>D-14</td><td>公众号首篇品牌故事</td><td>公众号</td><td>「云华录是谁」长文</td><td>3000字+品牌理念+产品预告</td><td>内容策划</td></tr>
+                <tr><td>D-13</td><td>小红书官方首篇</td><td>小红书</td><td>品牌视觉大片+产品预告</td><td>高质感图文/9图</td><td>内容策划</td></tr>
+                <tr><td>D-13</td><td>抖音短视频#1</td><td>抖音</td><td>「我们的第一款茶」产品介绍</td><td>15s/带话题/挂车预告</td><td>内容策划</td></tr>
+                <tr><td>D-12</td><td>抖音短视频#2</td><td>抖音</td><td>产地溯源·武夷山肉桂</td><td>30s/纪实风格</td><td>内容策划</td></tr>
+                <tr><td>D-12</td><td>小红书笔记#1</td><td>小红书</td><td>「茶小白入门指南」第1期</td><td>图文/干货向</td><td>内容策划</td></tr>
+                <tr><td>D-11</td><td>抖音短视频#3</td><td>抖音</td><td>产地溯源·安吉白茶</td><td>30s/纪实风格</td><td>内容策划</td></tr>
+                <tr><td>D-11</td><td>小红书笔记#2</td><td>小红书</td><td>「办公室喝茶指南」</td><td>图文/场景向</td><td>内容策划</td></tr>
+                <tr><td>D-10</td><td>抖音短视频#4</td><td>抖音</td><td>产地溯源·云南普洱</td><td>30s/纪实风格</td><td>内容策划</td></tr>
+                <tr><td>D-10</td><td>公众号第2篇</td><td>公众号</td><td>「寻茶记·武夷山」产地故事</td><td>2000字+实拍图</td><td>内容策划</td></tr>
+                <tr><td>D-10</td><td>KOC种草启动</td><td>小红书</td><td>首批10位KOC发布笔记</td><td>开箱/测评/冲泡</td><td>运营主管</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>内容要求</strong>：</p>
+          <ul>
+            <li>抖音短视频：竖屏9:16，前3秒抓眼球，带品牌话题，挂车预告</li>
+            <li>小红书笔记：9图+500字以上，标签含#云华录 #好茶推荐 #办公室喝茶</li>
+            <li>公众号：3000字深度长文，排版精美，含产品预告和首发优惠信息</li>
+          </ul>
+          <h4>D-9至D-5：达人种草周</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>日期</th><th>动作</th><th>平台</th><th>内容</th><th>要求</th><th>责任人</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>D-9</td><td>腰部达人发布#1</td><td>抖音</td><td>「我们找了遍中国最好喝的茶」</td><td>茶文化/生活方式类</td><td>运营主管</td></tr>
+                <tr><td>D-9</td><td>KOC种草第二批</td><td>小红书</td><td>10位KOC发布笔记</td><td>测评/口味/场景</td><td>运营主管</td></tr>
+                <tr><td>D-8</td><td>腰部达人发布#2</td><td>小红书</td><td>「办公室喝茶指南」</td><td>美食/生活美学类</td><td>运营主管</td></tr>
+                <tr><td>D-8</td><td>抖音短视频#5</td><td>抖音</td><td>「喝茶的100个理由」第1期</td><td>话题系列/互动向</td><td>内容策划</td></tr>
+                <tr><td>D-7</td><td>私域社群启动</td><td>企微</td><td>茶友体验群开放</td><td>200-500人入群</td><td>运营主管</td></tr>
+                <tr><td>D-7</td><td>腰部达人发布#3</td><td>抖音</td><td>「商务局不喝酒改喝茶了」</td><td>商务场景</td><td>运营主管</td></tr>
+                <tr><td>D-7</td><td>公众号第3篇</td><td>公众号</td><td>「如何挑选好茶」干货</td><td>2000字/教育向</td><td>内容策划</td></tr>
+                <tr><td>D-6</td><td>投流预热启动</td><td>抖音</td><td>巨量千川预热投放</td><td>日预算300元/品牌曝光</td><td>运营主管</td></tr>
+                <tr><td>D-6</td><td>腰部达人发布#4</td><td>B站</td><td>「中国茶文化深度解析」</td><td>知识区/15分钟</td><td>运营主管</td></tr>
+                <tr><td>D-5</td><td>KOC种草第三批</td><td>小红书</td><td>10位KOC发布笔记</td><td>日常饮茶/送礼场景</td><td>运营主管</td></tr>
+                <tr><td>D-5</td><td>抖音短视频#6</td><td>抖音</td><td>「茶小白避坑指南」第1期</td><td>教育向/干货</td><td>内容策划</td></tr>
+                <tr><td>D-5</td><td>小红书笔记#3</td><td>小红书</td><td>「我这辈子喝过最讲究的茶」</td><td>品质故事向</td><td>内容策划</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>达人内容要求</strong>：</p>
+          <ul>
+            <li>发布前提交内容预览给品牌方审核（内容方向/产品卖点/品牌调性）</li>
+            <li>必须带品牌话题#云华录 #一叶知中国</li>
+            <li>必须挂车/挂链接（可预约首发）</li>
+            <li>内容发布后24h内提供数据截图（曝光/互动/挂车点击）</li>
+          </ul>
+          <h4>D-4至D-1：倒计时引爆周</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>日期</th><th>动作</th><th>平台</th><th>内容</th><th>要求</th><th>责任人</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>D-4</td><td>悬念倒计时#1</td><td>全平台</td><td>「3天后，一叶知中国」</td><td>短视频+图文/悬念感</td><td>内容策划</td></tr>
+                <tr><td>D-4</td><td>预售开启</td><td>小程序</td><td>首发限定礼盒预售</td><td>100套限量/首发价</td><td>运营主管</td></tr>
+                <tr><td>D-3</td><td>悬念倒计时#2</td><td>全平台</td><td>「2天后，山河入杯」</td><td>产地实拍混剪</td><td>内容策划</td></tr>
+                <tr><td>D-3</td><td>头部达人预告</td><td>抖音</td><td>头部达人发布预告视频</td><td>「这个品牌我等了很久」</td><td>创始人</td></tr>
+                <tr><td>D-3</td><td>腰部达人集中预告</td><td>全平台</td><td>5位达人发布预告</td><td>统一话术/悬念感</td><td>运营主管</td></tr>
+                <tr><td>D-2</td><td>悬念倒计时#3</td><td>全平台</td><td>「明天，云华录开」</td><td>品牌故事高潮片段</td><td>内容策划</td></tr>
+                <tr><td>D-2</td><td>私域社群预告</td><td>企微</td><td>首发福利预告+入群有礼</td><td>限时盲盒/优惠券</td><td>运营主管</td></tr>
+                <tr><td>D-2</td><td>投流加码</td><td>抖音+微信</td><td>日预算500元/集中曝光</td><td>定向首发人群</td><td>运营主管</td></tr>
+                <tr><td>D-1</td><td>预热收官</td><td>全平台</td><td>「明天见」品牌海报</td><td>统一视觉/全平台分发</td><td>内容策划</td></tr>
+                <tr><td>D-1</td><td>直播彩排</td><td>抖音+视频号</td><td>首发直播全流程彩排</td><td>设备/流程/话术验证</td><td>创始人+运营</td></tr>
+                <tr><td>D-1</td><td>数据复盘</td><td>内部</td><td>预热期数据全面复盘</td><td>曝光/互动/私域/预售</td><td>运营主管</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-3-3">3.3 阶段KPI</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>指标</th><th>目标值</th><th>考核人</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>种草内容总曝光</td><td>≥100万</td><td>运营主管</td></tr>
+                <tr><td>抖音品牌号粉丝</td><td>≥500</td><td>运营主管</td></tr>
+                <tr><td>小红书品牌号粉丝</td><td>≥300</td><td>运营主管</td></tr>
+                <tr><td>公众号关注</td><td>≥300</td><td>运营主管</td></tr>
+                <tr><td>私域社群人数</td><td>≥2000</td><td>运营主管</td></tr>
+                <tr><td>预售订单</td><td>≥200单</td><td>运营主管</td></tr>
+                <tr><td>达人内容发布数</td><td>≥35篇</td><td>运营主管</td></tr>
+                <tr><td>KOC笔记发布数</td><td>≥30篇</td><td>运营主管</td></tr>
+                <tr><td>品牌话题阅读量</td><td>≥50万</td><td>运营主管</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section id="sec-4">
+          <h2>4. 第三阶段：首发引爆期（D-Day至D+7）</h2>
+          <h3 id="sec-4-1">4.1 阶段目标</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>目标</th><th>验收标准</th><th>截止日</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>首日销售</td><td>销售额≥2万</td><td>D-Day</td></tr>
+                <tr><td>首周销售</td><td>7日累计≥5-8万</td><td>D+7</td></tr>
+                <tr><td>品牌曝光</td><td>话题总阅读≥500万</td><td>D+7</td></tr>
+                <tr><td>达人发布</td><td>39位达人全部发布</td><td>D+3</td></tr>
+                <tr><td>私域新增</td><td>新增私域用户≥1000</td><td>D+7</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-4-2">4.2 D-Day首发日执行清单</h3>
+          <h4>D-Day时间轴</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>时间</th><th>动作</th><th>平台</th><th>内容</th><th>要求</th><th>责任人</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>08:00</td><td>品牌故事微电影发布</td><td>视频号+抖音</td><td>3分钟品牌片</td><td>全平台置顶</td><td>内容策划</td></tr>
+                <tr><td>09:00</td><td>全平台首发海报</td><td>全平台</td><td>「云华录，今日开」</td><td>统一视觉</td><td>内容策划</td></tr>
+                <tr><td>09:00</td><td>首发优惠上线</td><td>三店</td><td>首发价+限时优惠</td><td>全店同步</td><td>运营主管</td></tr>
+                <tr><td>10:00</td><td>创始人直播首秀启动</td><td>抖音+视频号</td><td>茶山连线×品鉴会×首发特惠</td><td>3小时直播</td><td>创始人+运营</td></tr>
+                <tr><td>10:00</td><td>头部达人发布</td><td>抖音</td><td>专场推荐视频+直播</td><td>带车/首发价</td><td>创始人</td></tr>
+                <tr><td>10:00</td><td>腰部达人集中发布</td><td>全平台</td><td>8位达人同步发布</td><td>统一时间点/刷屏效应</td><td>运营主管</td></tr>
+                <tr><td>12:00</td><td>KOC集中发布</td><td>小红书</td><td>30位KOC同步笔记</td><td>开箱/首发体验</td><td>运营主管</td></tr>
+                <tr><td>14:00</td><td>下午场直播</td><td>抖音</td><td>冲泡教学×茶友品鉴</td><td>2小时</td><td>运营主管</td></tr>
+                <tr><td>14:00</td><td>私域首发盲盒</td><td>企微社群</td><td>限量100份盲盒发售</td><td>限时1小时</td><td>运营主管</td></tr>
+                <tr><td>17:00</td><td>数据首报</td><td>内部</td><td>首日实时数据</td><td>销售/曝光/互动</td><td>运营主管</td></tr>
+                <tr><td>19:00</td><td>达人直播矩阵</td><td>抖音</td><td>3-5位达人同时开播</td><td>集中引流</td><td>运营主管</td></tr>
+                <tr><td>22:00</td><td>直播收官+日终复盘</td><td>内部</td><td>全天数据汇总</td><td>销售/ROI/问题</td><td>全员</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h4>D-Day直播执行细则</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>时段</th><th>主题</th><th>时长</th><th>内容要点</th><th>互动设计</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>10:00-11:00</td><td>茶山连线</td><td>60min</td><td>连线武夷山/安吉/云南茶农，实时采茶制茶</td><td>弹幕互动/截屏抽奖</td></tr>
+                <tr><td>11:00-12:00</td><td>创始人开讲</td><td>60min</td><td>品牌故事/产品理念/首发特惠公布</td><td>限时优惠券/福袋</td></tr>
+                <tr><td>14:00-15:00</td><td>冲泡教学</td><td>60min</td><td>7款茶冲泡方法/品鉴技巧</td><td>连麦品鉴/答疑</td></tr>
+                <tr><td>15:00-16:00</td><td>茶友品鉴</td><td>60min</td><td>首批用户连麦分享/口碑证言</td><td>用户连麦/好评展示</td></tr>
+                <tr><td>19:00-22:00</td><td>达人接力</td><td>180min</td><td>3-5位达人轮流直播带货</td><td>各达人独立福利</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>直播要求</strong>：</p>
+          <ul>
+            <li>提前30分钟设备调试（画面/声音/网络）</li>
+            <li>直播间布景：茶席+茶具+品牌背景板+灯光</li>
+            <li>创始人着装：中式简约/品牌色调</li>
+            <li>话术准备：开场/产品介绍/互动/逼单/结尾全流程话术</li>
+            <li>应急预案：断网切换备用网络/设备故障切换备用手机</li>
+          </ul>
+          <h3 id="sec-4-3">4.3 D+1至D+7执行清单</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>日期</th><th>动作</th><th>平台</th><th>内容</th><th>要求</th><th>责任人</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>D+1</td><td>每日直播#1</td><td>抖音</td><td>产地溯源主题</td><td>2小时/19:00-21:00</td><td>运营主管</td></tr>
+                <tr><td>D+1</td><td>首日战报发布</td><td>全平台</td><td>「云华录首日战报」海报</td><td>数据可视化/感恩向</td><td>内容策划</td></tr>
+                <tr><td>D+1</td><td>投流集中引爆</td><td>抖音+微信</td><td>日预算800元/ROI导向</td><td>精准定向25-45岁</td><td>运营主管</td></tr>
+                <tr><td>D+2</td><td>每日直播#2</td><td>抖音</td><td>冲泡教学主题</td><td>2小时/14:00-16:00</td><td>运营主管</td></tr>
+                <tr><td>D+2</td><td>用户开箱激励启动</td><td>小红书+抖音</td><td>开箱有奖活动</td><td>晒单返现/优质内容奖励</td><td>运营主管</td></tr>
+                <tr><td>D+3</td><td>每日直播#3</td><td>抖音</td><td>茶友品鉴主题</td><td>2小时/19:00-21:00</td><td>运营主管</td></tr>
+                <tr><td>D+3</td><td>达人内容全部发布完成</td><td>全平台</td><td>39位达人全部发布</td><td>截止日核查</td><td>运营主管</td></tr>
+                <tr><td>D+3</td><td>首波数据复盘</td><td>内部</td><td>3天数据全面分析</td><td>销售/ROI/达人效果</td><td>运营主管</td></tr>
+                <tr><td>D+4</td><td>每日直播#4</td><td>抖音</td><td>茶文化科普主题</td><td>2小时/19:00-21:00</td><td>运营主管</td></tr>
+                <tr><td>D+4</td><td>投流素材优化</td><td>抖音</td><td>更换衰退素材/新增3组</td><td>ROI低的停投/高的加码</td><td>运营主管</td></tr>
+                <tr><td>D+5</td><td>每日直播#5</td><td>视频号</td><td>品牌深度主题</td><td>2小时/14:00-16:00</td><td>创始人</td></tr>
+                <tr><td>D+5</td><td>私域社群活动</td><td>企微</td><td>限时折扣/买赠/老带新裂变</td><td>首发福利延续</td><td>运营主管</td></tr>
+                <tr><td>D+6</td><td>每日直播#6</td><td>抖音</td><td>用户共创主题</td><td>2小时/19:00-21:00</td><td>运营主管</td></tr>
+                <tr><td>D+6</td><td>公众号首发回顾</td><td>公众号</td><td>「云华录首发一周记」</td><td>2000字+数据+用户故事</td><td>内容策划</td></tr>
+                <tr><td>D+7</td><td>每日直播#7</td><td>抖音</td><td>首周收官主题</td><td>2小时/19:00-21:00</td><td>创始人</td></tr>
+                <tr><td>D+7</td><td>首周全面复盘</td><td>内部</td><td>7天数据全面复盘</td><td>销售/曝光/ROI/问题/优化</td><td>全员</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-4-4">4.4 阶段KPI</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>指标</th><th>目标值</th><th>考核人</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>首日销售额</td><td>≥2万</td><td>创始人</td></tr>
+                <tr><td>7日累计销售额</td><td>≥5-8万</td><td>创始人</td></tr>
+                <tr><td>品牌话题总阅读</td><td>≥500万</td><td>运营主管</td></tr>
+                <tr><td>达人内容发布</td><td>39位全部发布</td><td>运营主管</td></tr>
+                <tr><td>抖音直播总观看</td><td>≥5万</td><td>运营主管</td></tr>
+                <tr><td>新增私域用户</td><td>≥1000</td><td>运营主管</td></tr>
+                <tr><td>投流ROI</td><td>≥0.8（投入期）</td><td>运营主管</td></tr>
+                <tr><td>客诉率</td><td>≤5%</td><td>客服</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section id="sec-5">
+          <h2>5. 第四阶段：增长攻坚期（D+8至D+30）</h2>
+          <h3 id="sec-5-1">5.1 阶段目标</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>目标</th><th>验收标准</th><th>截止日</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>月度销售</td><td>累计销售额≥10-15万</td><td>D+30</td></tr>
+                <tr><td>投流ROI</td><td>≥1.5（成长期）</td><td>D+30</td></tr>
+                <tr><td>复购启动</td><td>复购率≥10%</td><td>D+30</td></tr>
+                <tr><td>私域活跃</td><td>社群日活≥30%</td><td>D+30</td></tr>
+                <tr><td>内容沉淀</td><td>累计发布内容≥100条</td><td>D+30</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-5-2">5.2 每周执行节奏</h3>
+          <h4>每日固定动作</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>时间</th><th>动作</th><th>要求</th><th>责任人</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>09:00</td><td>数据日报提交</td><td>前一日销售/曝光/互动数据</td><td>运营主管</td></tr>
+                <tr><td>10:00</td><td>投流数据检查</td><td>ROI/CPM/CPE/素材衰退</td><td>运营主管</td></tr>
+                <tr><td>12:00</td><td>短视频发布</td><td>1条/抖音+小红书同步</td><td>内容策划</td></tr>
+                <tr><td>14:00</td><td>直播准备</td><td>设备调试/话术更新/选品</td><td>运营主管</td></tr>
+                <tr><td>19:00</td><td>品牌自播</td><td>2小时/不同主题轮换</td><td>运营主管</td></tr>
+                <tr><td>20:00</td><td>私域社群互动</td><td>早晚问候+福利活动</td><td>客服</td></tr>
+                <tr><td>22:00</td><td>当日数据汇总</td><td>销售/直播/投流数据</td><td>运营主管</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h4>每周固定动作</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>星期</th><th>动作</th><th>要求</th><th>责任人</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>周一</td><td>周复盘会</td><td>10:00/上周数据全面复盘</td><td>全员</td></tr>
+                <tr><td>周二</td><td>投流素材更新</td><td>更换衰退素材/新增3-5组</td><td>运营+内容</td></tr>
+                <tr><td>周三</td><td>达人合作跟进</td><td>新增5-10位KOC合作</td><td>运营主管</td></tr>
+                <tr><td>周四</td><td>内容选题策划</td><td>下周内容选题+脚本</td><td>内容策划</td></tr>
+                <tr><td>周五</td><td>私域活动策划</td><td>周末社群活动方案</td><td>运营+客服</td></tr>
+                <tr><td>周六</td><td>直播特别场</td><td>周末长直播3-4小时</td><td>创始人+运营</td></tr>
+                <tr><td>周日</td><td>周报整理</td><td>本周数据+下周计划</td><td>运营主管</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-5-3">5.3 投流优化策略</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>渠道</th><th>日预算</th><th>优化方向</th><th>素材更新频率</th><th>ROI目标</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>抖音千川</td><td>600元</td><td>精准定向+ROI优化</td><td>3天一换</td><td>≥1.5</td></tr>
+                <tr><td>朋友圈广告</td><td>400元</td><td>LBS+兴趣标签</td><td>5天一换</td><td>≥1.2</td></tr>
+                <tr><td>小红书薯条</td><td>200元</td><td>种草笔记加热</td><td>7天一换</td><td>≥1.0</td></tr>
+                <tr><td>百度信息流</td><td>150元</td><td>品牌词+茶叶词</td><td>7天一换</td><td>≥1.0</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>投流优化规则</strong>：</p>
+          <ul>
+            <li>ROI<0.8的计划立即停投</li>
+            <li>ROI 0.8-1.2的计划降预算50%观察</li>
+            <li>ROI≥1.5的计划加预算30%</li>
+            <li>素材CPM上涨30%即判定衰退，立即更换</li>
+            <li>每周三全面复盘投流数据，调整预算分配</li>
+          </ul>
+          <h3 id="sec-5-4">5.4 内容生产计划</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>内容类型</th><th>频率</th><th>平台</th><th>选题方向</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>产地溯源</td><td>每周2条</td><td>抖音</td><td>7款茶产地深度故事</td></tr>
+                <tr><td>茶知识科普</td><td>每周3条</td><td>抖音+小红书</td><td>茶小白入门/冲泡技巧/品鉴方法</td></tr>
+                <tr><td>场景植入</td><td>每周2条</td><td>小红书</td><td>办公室喝茶/商务茶礼/居家茶时光</td></tr>
+                <tr><td>用户共创</td><td>每周1条</td><td>全平台</td><td>用户品鉴笔记精选/开箱合集</td></tr>
+                <tr><td>品牌故事</td><td>每周1篇</td><td>公众号</td><td>寻茶记系列/茶农故事/工艺解析</td></tr>
+                <tr><td>直播切片</td><td>每周3条</td><td>抖音</td><td>直播精彩片段二次剪辑</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-5-5">5.5 阶段KPI</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>指标</th><th>目标值</th><th>考核人</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>月累计销售额</td><td>≥10-15万</td><td>创始人</td></tr>
+                <tr><td>投流综合ROI</td><td>≥1.5</td><td>运营主管</td></tr>
+                <tr><td>复购率</td><td>≥10%</td><td>运营主管</td></tr>
+                <tr><td>私域社群日活</td><td>≥30%</td><td>运营主管</td></tr>
+                <tr><td>累计发布内容</td><td>≥100条</td><td>内容策划</td></tr>
+                <tr><td>直播场次</td><td>≥20场</td><td>运营主管</td></tr>
+                <tr><td>新增KOC合作</td><td>≥20位</td><td>运营主管</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section id="sec-6">
+          <h2>6. 第五阶段：复购经营期（D+31至D+90）</h2>
+          <h3 id="sec-6-1">6.1 阶段目标</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>目标</th><th>验收标准</th><th>截止日</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>月度销售</td><td>月销≥20万</td><td>D+90</td></tr>
+                <tr><td>复购率</td><td>≥20%</td><td>D+90</td></tr>
+                <tr><td>私域规模</td><td>企微用户≥5000</td><td>D+90</td></tr>
+                <tr><td>品牌资产</td><td>全网粉丝≥1万</td><td>D+90</td></tr>
+                <tr><td>用户口碑</td><td>好评率≥95%</td><td>D+90</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-6-2">6.2 复购提升策略</h3>
+          <h4>品鉴官计划</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>项目</th><th>内容</th><th>预算</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>招募规模</td><td>50名品鉴官</td><td>—</td></tr>
+                <tr><td>权益</td><td>每月免费茶样+专属优惠+新品优先体验</td><td>0.4万/月</td></tr>
+                <tr><td>义务</td><td>每月发布≥2篇品鉴笔记+参与产品反馈</td><td>—</td></tr>
+                <tr><td>选拔标准</td><td>首批购买用户/已发布过优质UGC/活跃私域</td><td>—</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h4>会员体系运营</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>等级</th><th>门槛</th><th>权益</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>茶友</td><td>注册即享</td><td>95折/生日礼/积分</td></tr>
+                <tr><td>知音</td><td>累计消费≥500元</td><td>9折/专属客服/新品试用</td></tr>
+                <tr><td>茶侣</td><td>累计消费≥2000元</td><td>85折/年度茶礼/线下品鉴会</td></tr>
+                <tr><td>知己</td><td>累计消费≥5000元</td><td>8折/定制茶礼/产地溯源之旅</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h4>复购触发机制</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>触发点</th><th>机制</th><th>执行方式</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>购后15天</td><td>复购优惠券推送</td><td>企微+短信/满200减30</td></tr>
+                <tr><td>茶叶将尽</td><td>补货提醒+优惠</td><td>企微推送/买二送一</td></tr>
+                <tr><td>节日节气</td><td>节气茶礼推荐</td><td>公众号+社群/限定款</td></tr>
+                <tr><td>会员日</td><td>每月1次会员专享</td><td>社群活动/秒杀/抽奖</td></tr>
+                <tr><td>老带新</td><td>推荐有礼</td><td>双方各得30元优惠券</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-6-3">6.3 私域深耕计划</h3>
+          <h4>社群运营日历</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>星期</th><th>主题</th><th>内容</th><th>时间</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>周一</td><td>茶知识日</td><td>茶文化科普/品鉴技巧</td><td>20:00</td></tr>
+                <tr><td>周二</td><td>福利日</td><td>限时秒杀/优惠券</td><td>12:00</td></tr>
+                <tr><td>周三</td><td>故事日</td><td>寻茶记/茶农故事</td><td>20:00</td></tr>
+                <tr><td>周四</td><td>互动日</td><td>茶友问答/投票</td><td>20:00</td></tr>
+                <tr><td>周五</td><td>福利日</td><td>周末特惠/买赠</td><td>18:00</td></tr>
+                <tr><td>周六</td><td>直播日</td><td>直播预告+观看福利</td><td>19:00</td></tr>
+                <tr><td>周日</td><td>品鉴日</td><td>品鉴官笔记分享</td><td>20:00</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h4>企微1V1运营</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>用户标签</th><th>运营策略</th><th>频率</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>高价值客户（累计≥2000元）</td><td>专属客服/新品优先/节日问候</td><td>每周1次</td></tr>
+                <tr><td>活跃客户（近30天有购买）</td><td>补货提醒/复购优惠</td><td>购后15天</td></tr>
+                <tr><td>沉默客户（90天未购买）</td><td>唤醒优惠/问卷调研</td><td>每月1次</td></tr>
+                <tr><td>新客户（首次购买）</td><td>欢迎引导/冲泡指导/入群邀请</td><td>购后3天</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-6-4">6.4 阶段KPI</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>指标</th><th>月度目标</th><th>累计目标</th><th>考核人</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>月销售额</td><td>≥20万</td><td>—</td><td>创始人</td></tr>
+                <tr><td>复购率</td><td>≥20%</td><td>—</td><td>运营主管</td></tr>
+                <tr><td>企微用户</td><td>+1500/月</td><td>≥5000</td><td>运营主管</td></tr>
+                <tr><td>品鉴官活跃数</td><td>—</td><td>≥40人</td><td>运营主管</td></tr>
+                <tr><td>好评率</td><td>≥95%</td><td>—</td><td>客服</td></tr>
+                <tr><td>全网粉丝</td><td>+3000/月</td><td>≥1万</td><td>内容策划</td></tr>
+                <tr><td>私域GMV占比</td><td>≥40%</td><td>—</td><td>运营主管</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section id="sec-7">
+          <h2>7. 内容生产日历与物料清单</h2>
+          <h3 id="sec-7-1">7.1 120天内容生产总表</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>阶段</th><th>时间</th><th>短视频</th><th>图文笔记</th><th>公众号</th><th>直播场次</th><th>合计</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>筹备蓄水</td><td>D-30~D-15</td><td>8条（素材库）</td><td>—</td><td>—</td><td>—</td><td>8</td></tr>
+                <tr><td>预热种草</td><td>D-14~D-1</td><td>15条</td><td>10篇</td><td>3篇</td><td>—</td><td>28</td></tr>
+                <tr><td>首发引爆</td><td>D-Day~D+7</td><td>10条</td><td>5篇</td><td>1篇</td><td>7场</td><td>23</td></tr>
+                <tr><td>增长攻坚</td><td>D+8~D+30</td><td>45条</td><td>30篇</td><td>4篇</td><td>20场</td><td>99</td></tr>
+                <tr><td>复购经营</td><td>D+31~D+90</td><td>120条</td><td>60篇</td><td>12篇</td><td>60场</td><td>252</td></tr>
+                <tr><td><strong>合计</strong></td><td><strong>120天</strong></td><td><strong>198条</strong></td><td><strong>105篇</strong></td><td><strong>20篇</strong></td><td><strong>87场</strong></td><td><strong>410</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-7-2">7.2 内容选题库</h3>
+          <h4>品牌故事类（20个选题）</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>序号</th><th>选题</th><th>形式</th><th>适用阶段</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td>云华录是谁：品牌起源故事</td><td>视频+图文</td><td>预热期</td></tr>
+                <tr><td>2</td><td>一叶知中国：品牌理念阐释</td><td>视频</td><td>预热期</td></tr>
+                <tr><td>3</td><td>寻茶记·武夷山：岩骨花香之源</td><td>视频+图文</td><td>预热+增长</td></tr>
+                <tr><td>4</td><td>寻茶记·安吉：白茶氨基酸的秘密</td><td>视频+图文</td><td>预热+增长</td></tr>
+                <tr><td>5</td><td>寻茶记·云南：古树普洱的厚度</td><td>视频+图文</td><td>预热+增长</td></tr>
+                <tr><td>6</td><td>寻茶记·潮州：凤凰单丛的蜜兰香</td><td>视频+图文</td><td>增长期</td></tr>
+                <tr><td>7</td><td>寻茶记·祁门：红茶的东方韵味</td><td>视频+图文</td><td>增长期</td></tr>
+                <tr><td>8</td><td>寻茶记·福鼎：白茶的自然之美</td><td>视频+图文</td><td>增长期</td></tr>
+                <tr><td>9</td><td>茶农故事：与茶为伴的四十年</td><td>图文</td><td>增长期</td></tr>
+                <tr><td>10</td><td>制茶工艺：从鲜叶到成品的72小时</td><td>视频</td><td>增长期</td></tr>
+                <tr><td>11-20</td><td>品牌价值观系列（10期）</td><td>图文</td><td>复购期</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h4>茶知识科普类（30个选题）</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>序号</th><th>选题</th><th>形式</th><th>适用阶段</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td>茶小白入门：6大茶类一键区分</td><td>短视频</td><td>预热+增长</td></tr>
+                <tr><td>2</td><td>办公室喝茶指南：3款最适合的茶</td><td>短视频</td><td>预热+增长</td></tr>
+                <tr><td>3</td><td>如何挑选好茶：5个核心标准</td><td>短视频+图文</td><td>预热+增长</td></tr>
+                <tr><td>4</td><td>冲泡技巧：水温/时间/茶量详解</td><td>短视频</td><td>增长+复购</td></tr>
+                <tr><td>5</td><td>茶具入门：盖碗/公道杯/品茗杯</td><td>短视频</td><td>增长期</td></tr>
+                <tr><td>6</td><td>喝茶的季节：春夏秋冬各喝什么</td><td>图文</td><td>增长期</td></tr>
+                <tr><td>7</td><td>茶的保存：防潮/避光/防异味</td><td>短视频</td><td>增长期</td></tr>
+                <tr><td>8</td><td>茶小白避坑指南：5个常见误区</td><td>短视频</td><td>增长期</td></tr>
+                <tr><td>9-30</td><td>品鉴方法/茶文化/茶礼仪等（22期）</td><td>短视频+图文</td><td>全阶段</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h4>场景植入类（20个选题）</h4>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>序号</th><th>选题</th><th>形式</th><th>平台</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td>办公室下午茶时光</td><td>短视频+图文</td><td>抖音+小红书</td></tr>
+                <tr><td>2</td><td>商务局以茶代酒</td><td>短视频+图文</td><td>抖音+小红书</td></tr>
+                <tr><td>3</td><td>居家周末茶时光</td><td>图文</td><td>小红书</td></tr>
+                <tr><td>4</td><td>送礼场景：送长辈/送客户/送朋友</td><td>图文</td><td>小红书</td></tr>
+                <tr><td>5</td><td>旅行喝茶：便携茶具推荐</td><td>短视频</td><td>抖音</td></tr>
+                <tr><td>6-20</td><td>节气茶事/茶食搭配/茶空间等（15期）</td><td>短视频+图文</td><td>全平台</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-7-3">7.3 物料清单</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>物料类别</th><th>物料项目</th><th>数量</th><th>用途</th><th>制作周期</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>视频素材</strong></td><td>品牌故事短片60s</td><td>1条</td><td>全平台首发</td><td>D-23前完成</td></tr>
+                <tr><td></td><td>产品展示短视频15s</td><td>7条</td><td>抖音/视频号</td><td>D-22前完成</td></tr>
+                <tr><td></td><td>产地溯源系列30s</td><td>7条</td><td>抖音</td><td>D-15前完成3条，后续滚动</td></tr>
+                <tr><td></td><td>直播切片素材</td><td>持续</td><td>抖音二次分发</td><td>每场直播后</td></tr>
+                <tr><td><strong>图文素材</strong></td><td>产品主图</td><td>56张</td><td>三店详情页</td><td>D-25前完成</td></tr>
+                <tr><td></td><td>场景图</td><td>40张</td><td>详情页+种草</td><td>D-24前完成</td></tr>
+                <tr><td></td><td>品牌海报</td><td>10张</td><td>活动宣传</td><td>按需制作</td></tr>
+                <tr><td></td><td>倒计时海报</td><td>3张</td><td>预热倒计时</td><td>D-5前完成</td></tr>
+                <tr><td><strong>文案素材</strong></td><td>产品详情页文案</td><td>7篇</td><td>三店</td><td>D-21前完成</td></tr>
+                <tr><td></td><td>种草文案</td><td>20篇</td><td>KOC/品牌号</td><td>D-21前完成</td></tr>
+                <tr><td></td><td>公众号长文</td><td>20篇</td><td>公众号</td><td>每周1篇</td></tr>
+                <tr><td></td><td>直播话术</td><td>5套</td><td>直播</td><td>D-1前完成</td></tr>
+                <tr><td></td><td>达人Brief</td><td>39份</td><td>达人合作</td><td>D-18前完成</td></tr>
+                <tr><td><strong>广告素材</strong></td><td>信息流广告素材</td><td>10组</td><td>投流</td><td>D-16前完成</td></tr>
+                <tr><td></td><td>落地页</td><td>3个</td><td>投流转化</td><td>D-16前完成</td></tr>
+                <tr><td></td><td>广告文案</td><td>20条</td><td>投流测试</td><td>持续更新</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section id="sec-8">
+          <h2>8. 达人合作执行细则</h2>
+          <h3 id="sec-8-1">8.1 达人合作全流程</h3>
+          <pre class="code-block">达人筛选 → 洽谈确认 → 寄样 → Brief沟通 → 内容审核 → 发布 → 数据回收 → 结算</pre>
+          <h3 id="sec-8-2">8.2 达人筛选标准</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>层级</th><th>粉丝量</th><th>调性要求</th><th>近30天更新</th><th>互动率</th><th>内容质量</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>头部</td><td>30-50万</td><td>茶文化/生活方式</td><td>≥4条</td><td>≥3%</td><td>优质/有调性</td></tr>
+                <tr><td>腰部</td><td>10-30万</td><td>美食/文化/生活美学</td><td>≥6条</td><td>≥4%</td><td>调性符合</td></tr>
+                <tr><td>KOC</td><td>500-5000</td><td>真实用户/有活跃度</td><td>≥8条</td><td>≥5%</td><td>真实自然</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-8-3">8.3 达人Brief模板</h3>
+          <p>每位达人需提供独立Brief，包含：</p>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>Brief项目</th><th>内容要求</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>品牌介绍</td><td>云华录品牌故事+定位+Slogan（100字内）</td></tr>
+                <tr><td>产品介绍</td><td>推荐SKU卖点+冲泡建议+价格（200字内）</td></tr>
+                <tr><td>内容方向</td><td>选题建议+角度+话术要点</td></tr>
+                <tr><td>话题要求</td><td>必带话题#云华录 #一叶知中国</td></tr>
+                <tr><td>挂车要求</td><td>必须挂车/挂链接（首发价）</td></tr>
+                <tr><td>发布时间</td><td>精确到日期和时段</td></tr>
+                <tr><td>内容审核</td><td>发布前24h提交预览审核</td></tr>
+                <tr><td>数据回收</td><td>发布后24h内提供数据截图</td></tr>
+                <tr><td>禁忌事项</td><td>不贬低竞品/不虚假宣传/不使用绝对化用语</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-8-4">8.4 达人内容审核清单</h3>
+          <ul class="checklist">
+            <li class="checklist-item">品牌名/产品名正确</li>
+            <li class="checklist-item">品牌Slogan正确（云华一盏，尽录山河）</li>
+            <li class="checklist-item">产品卖点准确（无夸大宣传）</li>
+            <li class="checklist-item">话题标签正确（#云华录 #一叶知中国）</li>
+            <li class="checklist-item">挂车/链接有效</li>
+            <li class="checklist-item">价格信息正确（首发价）</li>
+            <li class="checklist-item">视觉调性符合品牌规范</li>
+            <li class="checklist-item">无违禁词/绝对化用语</li>
+            <li class="checklist-item">无贬低竞品内容</li>
+            <li class="checklist-item">发布时间符合排期</li>
+          </ul>
+          <h3 id="sec-8-5">8.5 达人效果评估</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>评估维度</th><th>指标</th><th>权重</th><th>优秀标准</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>曝光效果</td><td>总曝光量</td><td>25%</td><td>超出承诺量20%+</td></tr>
+                <tr><td>互动效果</td><td>互动率（赞+评+收）</td><td>25%</td><td>≥5%</td></tr>
+                <tr><td>转化效果</td><td>挂车点击率+GMV</td><td>30%</td><td>ROI≥2</td></tr>
+                <tr><td>内容质量</td><td>内容调性+创意</td><td>10%</td><td>优质可二次使用</td></tr>
+                <tr><td>配合度</td><td>审核配合+数据回收</td><td>10%</td><td>及时响应</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>评估结果应用</strong>：</p>
+          <ul>
+            <li>优秀达人→续约+追加合作+推荐给行业</li>
+            <li>合格达人→正常续约</li>
+            <li>不合格达人→不续约+列入观察名单</li>
+          </ul>
+        </section>
+        <section id="sec-9">
+          <h2>9. 投流执行细则</h2>
+          <h3 id="sec-9-1">9.1 投流预算分配</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>阶段</th><th>抖音千川</th><th>朋友圈</th><th>小红书</th><th>百度</th><th>日预算</th><th>天数</th><th>小计</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>预热期(D-7~D-1)</td><td>300元</td><td>200元</td><td>100元</td><td>100元</td><td>700元</td><td>7天</td><td>0.49万</td></tr>
+                <tr><td>引爆期(D-Day~D+7)</td><td>800元</td><td>500元</td><td>200元</td><td>150元</td><td>1650元</td><td>7天</td><td>1.16万</td></tr>
+                <tr><td>增长期(D+8~D+30)</td><td>600元</td><td>400元</td><td>200元</td><td>150元</td><td>1350元</td><td>22天</td><td>2.97万</td></tr>
+                <tr><td><strong>合计</strong></td><td></td><td></td><td></td><td></td><td></td><td></td><td><strong>约4.5万</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-9-2">9.2 投流定向策略</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>渠道</th><th>定向维度</th><th>目标人群</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>抖音千川</td><td>行为兴趣+自定义人群</td><td>25-45岁/茶兴趣/美食/养生/文化</td></tr>
+                <tr><td>朋友圈</td><td>LBS+兴趣标签+人口属性</td><td>25-50岁/一二线城市/高消费力</td></tr>
+                <tr><td>小红书</td><td>兴趣标签+搜索词</td><td>20-40岁女性/茶/生活美学/送礼</td></tr>
+                <tr><td>百度</td><td>搜索词定向</td><td>品牌词+茶叶词+竞品词</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-9-3">9.3 素材测试与优化</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>测试维度</th><th>方法</th><th>周期</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>创意测试</td><td>同一定向下3-5组素材AB测试</td><td>3天一轮</td></tr>
+                <tr><td>定向测试</td><td>同一素材下3组定向AB测试</td><td>5天一轮</td></tr>
+                <tr><td>出价测试</td><td>ROI导向自动出价 vs 手动出价</td><td>持续</td></tr>
+                <tr><td>落地页测试</td><td>2个落地页AB测试</td><td>7天一轮</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>素材衰退判定</strong>：CPM上涨30%或ROI下降40%→立即更换。</p>
+          <h3 id="sec-9-4">9.4 投流数据日报模板</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>指标</th><th>昨日</th><th>本周累计</th><th>本月累计</th><th>目标</th><th>达成率</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>消耗（元）</td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td>曝光量</td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td>点击量</td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td>点击率</td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td>CPM</td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td>CPC</td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td>转化量</td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td>转化成本</td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td>GMV</td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td>ROI</td><td></td><td></td><td></td><td></td><td></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section id="sec-10">
+          <h2>10. 私域运营执行细则</h2>
+          <h3 id="sec-10-1">10.1 私域流量漏斗</h3>
+          <pre class="code-block">公域曝光 → 内容种草 → 引流企微 → 入群 → 活跃 → 转化 → 复购 → 裂变
+  ↓         ↓         ↓        ↓       ↓       ↓       ↓       ↓
+ 100万     10万      5000    2000    600     300     90     30</pre>
+          <h3 id="sec-10-2">10.2 引流策略</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>引流入口</th><th>引流方式</th><th>转化话术</th><th>日引流目标</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>抖音主页</td><td>简介留企微/公众号</td><td>「加V领50元新人券」</td><td>30人</td></tr>
+                <tr><td>小红书主页</td><td>简介留公众号</td><td>「关注领茶小白入门指南」</td><td>20人</td></tr>
+                <tr><td>包裹卡</td><td>随包附加入群邀请卡</td><td>「扫码入群领返现+试饮装」</td><td>50人</td></tr>
+                <tr><td>直播间</td><td>口播引导+福袋引导</td><td>「加企微领专属福利」</td><td>40人</td></tr>
+                <tr><td>公众号</td><td>底部菜单+文末引导</td><td>「扫码加入茶友群」</td><td>10人</td></tr>
+                <tr><td><strong>日合计</strong></td><td></td><td></td><td><strong>150人</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-10-3">10.3 社群运营SOP</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>时段</th><th>动作</th><th>内容</th><th>责任人</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>08:00</td><td>早安问候</td><td>茶语早安+今日茶推荐</td><td>客服</td></tr>
+                <tr><td>12:00</td><td>午间福利</td><td>限时秒杀/优惠券</td><td>客服</td></tr>
+                <tr><td>14:00</td><td>茶知识分享</td><td>科普短文/冲泡技巧</td><td>客服</td></tr>
+                <tr><td>18:00</td><td>互动话题</td><td>茶友问答/投票/UGC分享</td><td>客服</td></tr>
+                <tr><td>20:00</td><td>晚间活动</td><td>直播预告/主题讨论/品鉴</td><td>客服</td></tr>
+                <tr><td>22:00</td><td>晚安问候</td><td>明日预告+晚安茶语</td><td>客服</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-10-4">10.4 会员日运营</h3>
+          <p>每月1次会员日（每月15日），主题轮换：</p>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>月份</th><th>主题</th><th>活动内容</th><th>预算</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>第1月</td><td>新茶品鉴</td><td>新品免费试饮+品鉴官招募</td><td>0.3万</td></tr>
+                <tr><td>第2月</td><td>茶友故事</td><td>用户故事征集+精选奖励</td><td>0.2万</td></tr>
+                <tr><td>第3月</td><td>产地溯源</td><td>产区知识问答+限定茶礼</td><td>0.3万</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section id="sec-11">
+          <h2>11. 直播执行细则</h2>
+          <h3 id="sec-11-1">11.1 直播排期表</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>阶段</th><th>频率</th><th>时段</th><th>时长</th><th>主题轮换</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>首发周(D-Day~D+7)</td><td>每日1场</td><td>14:00或19:00</td><td>2小时</td><td>茶山/教学/品鉴/科普/共创/收官</td></tr>
+                <tr><td>增长期(D+8~D+30)</td><td>每周5场</td><td>19:00-21:00</td><td>2小时</td><td>产地/教学/品鉴/福利/周末长场</td></tr>
+                <tr><td>复购期(D+31~D+90)</td><td>每周3-4场</td><td>19:00-21:00</td><td>2小时</td><td>品鉴/会员/节气/新品</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-11-2">11.2 直播话术体系</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>环节</th><th>时长</th><th>话术要点</th><th>互动设计</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>开场暖场</td><td>5min</td><td>自我介绍+今日主题+福利预告</td><td>截屏抽奖/福袋</td></tr>
+                <tr><td>产品介绍</td><td>30min</td><td>卖点+产地故事+冲泡演示+价格</td><td>弹幕问答</td></tr>
+                <tr><td>互动答疑</td><td>15min</td><td>回答弹幕问题+用户连麦</td><td>连麦品鉴</td></tr>
+                <tr><td>限时秒杀</td><td>10min</td><td>限量优惠+逼单话术</td><td>倒计时/库存提示</td></tr>
+                <tr><td>品鉴演示</td><td>30min</td><td>现场冲泡+品鉴描述+对比</td><td>弹幕猜香</td></tr>
+                <tr><td>福利发放</td><td>10min</td><td>福袋/优惠券/抽奖</td><td>关注+分享触发</td></tr>
+                <tr><td>收尾预告</td><td>10min</td><td>感谢+下次预告+加企微引导</td><td>关注引导</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-11-3">11.3 直播间布景规范</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>元素</th><th>要求</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>背景</td><td>品牌背景板（KT板）/茶典格线元素</td></tr>
+                <tr><td>茶席</td><td>盖碗+公道杯+品茗杯+茶荷+茶巾</td></tr>
+                <tr><td>茶具</td><td>品牌色调/简约中式</td></tr>
+                <tr><td>灯光</td><td>主灯+补光灯+背景灯/暖色调</td></tr>
+                <tr><td>产品展示</td><td>产品陈列架/7款茶整齐摆放</td></tr>
+                <tr><td>品牌元素</td><td>LOGO露出/Slogan展示/溯源码可见</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section id="sec-12">
+          <h2>12. 数据复盘与KPI考核</h2>
+          <h3 id="sec-12-1">12.1 数据复盘机制</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>复盘类型</th><th>频率</th><th>参与人</th><th>内容</th><th>输出</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>日复盘</td><td>每日18:00</td><td>运营+客服</td><td>当日销售/曝光/互动/问题</td><td>数据日报</td></tr>
+                <tr><td>周复盘</td><td>每周一10:00</td><td>全员</td><td>上周全数据+问题分析+下周计划</td><td>周报</td></tr>
+                <tr><td>阶段复盘</td><td>每阶段结束</td><td>全员</td><td>阶段目标达成+经验总结+下阶段优化</td><td>阶段报告</td></tr>
+                <tr><td>月度复盘</td><td>每月1日</td><td>全员</td><td>月度全数据+ROI分析+预算调整</td><td>月报</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-12-2">12.2 核心KPI看板</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>指标类别</th><th>指标</th><th>预热期目标</th><th>引爆期目标</th><th>增长期目标</th><th>复购期目标</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>销售</strong></td><td>GMV</td><td>预售200单</td><td>5-8万</td><td>10-15万</td><td>20万/月</td></tr>
+                <tr><td><strong>曝光</strong></td><td>总曝光</td><td>100万</td><td>500万</td><td>800万</td><td>1000万/月</td></tr>
+                <tr><td><strong>互动</strong></td><td>总互动</td><td>5万</td><td>20万</td><td>30万</td><td>50万/月</td></tr>
+                <tr><td><strong>私域</strong></td><td>新增用户</td><td>2000</td><td>1000</td><td>1500</td><td>1500/月</td></tr>
+                <tr><td><strong>投流</strong></td><td>ROI</td><td>—</td><td>≥0.8</td><td>≥1.5</td><td>≥2.0</td></tr>
+                <tr><td><strong>复购</strong></td><td>复购率</td><td>—</td><td>—</td><td>≥10%</td><td>≥20%</td></tr>
+                <tr><td><strong>内容</strong></td><td>发布量</td><td>28条</td><td>23条</td><td>99条</td><td>252条</td></tr>
+                <tr><td><strong>直播</strong></td><td>场次</td><td>—</td><td>7场</td><td>20场</td><td>60场</td></tr>
+                <tr><td><strong>达人</strong></td><td>发布数</td><td>35篇</td><td>39位全发</td><td>+20位KOC</td><td>—</td></tr>
+                <tr><td><strong>口碑</strong></td><td>好评率</td><td>—</td><td>≥90%</td><td>≥95%</td><td>≥95%</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-12-3">12.3 KPI考核与奖惩</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>角色</th><th>核心KPI</th><th>权重</th><th>达成奖励</th><th>未达成</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>创始人</td><td>总GMV+ROI</td><td>40%</td><td>阶段奖金</td><td>复盘追责</td></tr>
+                <tr><td>运营主管</td><td>投流ROI+私域规模</td><td>30%</td><td>阶段奖金</td><td>限期改进</td></tr>
+                <tr><td>内容策划</td><td>内容产量+互动量</td><td>20%</td><td>阶段奖金</td><td>加班补产</td></tr>
+                <tr><td>客服</td><td>客诉率+好评率</td><td>10%</td><td>阶段奖金</td><td>培训提升</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <blockquote class="article-note"><p><strong>文档结束</strong></p></blockquote>
+          <p>></p>
+          <blockquote class="article-note"><p>本方案是云华录产品上市初期（D-30至D+90，共120天）的营销落地执行手册，将营销策略细化为可逐日执行的动作清单。五阶段（筹备蓄水→预热种草→首发引爆→增长攻坚→复购经营）逐日推进，每一项动作明确时间节点、营销内容、执行要求、责任人、交付物、验收标准。严格执行四项铁律（日清日结/周复盘制/数据驱动/快速迭代），确保50万预算下的营销投入精准高效。建议每日18:00提交数据日报，每周一10:00召开周复盘会，用数据驱动每一个决策。</p></blockquote>
+        </section>
+
+      <!-- 结尾品牌slogan -->
+      <div class="report-coda">
+        云华录 — 录山河风土，守原叶本真，承千年茶韵，通四海知己。
+        <div class="report-coda-en">Proposal Planning | Y.T Full Brand Planning Team · 2026年6月</div>
+      </div>
+
+      </div>
+
+      </article>
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       页脚
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <div class="footer-main">
+        <!-- 品牌信息 -->
+        <div class="footer-brand">
+          <div class="footer-logo">云华录</div>
+          <p class="footer-slogan">云华一盏，尽录山河</p>
+          <p class="footer-desc">记录中国山河风物的国风原叶茶集合品牌。行走、甄选、记录、呈现，把山野之味带到杯中。</p>
+        </div>
+
+        <!-- 篇章导航 -->
+        <div class="footer-nav-col">
+          <h4 class="footer-nav-title">篇章导航</h4>
+          <ul class="footer-nav-list">
+            <li><a href="market-research.html" class="footer-nav-link">市场研究报告</a></li>
+            <li><a href="brand-foundation.html" class="footer-nav-link">品牌策略文档</a></li>
+            <li><a href="product-supply.html" class="footer-nav-link">产品线与供应链</a></li>
+            <li><a href="visual-packaging.html" class="footer-nav-link">品牌视觉与包装</a></li>
+            <li><a href="ecommerce-marketing.html" class="footer-nav-link">电商与营销策略</a></li>
+            <li><a href="international.html" class="footer-nav-link">国际市场拓展</a></li>
+            <li><a href="brand-culture.html" class="footer-nav-link">品牌文化精神内核</a></li>
+            <li><a href="tea-trace-report.html" class="footer-nav-link">全国茶叶溯源调研</a></li>
+            <li><a href="budget-execution.html" class="footer-nav-link">50万预算执行方案</a></li>
+            <li><a href="supply-chain-sop.html" class="footer-nav-link">供应链管理细则SOP</a></li>
+            <li><a href="marketing-execution.html" class="footer-nav-link">上市初期营销执行</a></li>
+            <li><a href="full-proposal.html" class="footer-nav-link">完整策划提案</a></li>
+          </ul>
+        </div>
+
+        <!-- 产品线 -->
+        <div class="footer-nav-col">
+          <h4 class="footer-nav-title">产品线</h4>
+          <ul class="footer-nav-list">
+            <li><span class="footer-nav-link">云游录 · 探索系列</span></li>
+            <li><span class="footer-nav-link">云华品鉴 · 品鉴系列</span></li>
+            <li><span class="footer-nav-link">云华典藏 · 典藏系列</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span class="footer-copyright">© 2026 云华录 YUNHUA LU · 记录中国山河风物</span>
+        <span class="footer-meta">品牌全案策划提案 · 内部文档</span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="回到顶部">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/scroll.js" defer></script>
+</body>
+</html>

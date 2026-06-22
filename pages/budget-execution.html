@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>50万预算落地执行方案 · 云华录品牌全案</title>
+  <meta name="description" content="云华录50万预算落地执行方案——产品供应链18万、品牌视觉6万、电商平台5万、营销推广16万、团队运营3万、机动预留2万，6大板块精打细算，45天上线，6个月实现3-5倍ROI。">
+
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/pages.css">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><rect width='36' height='36' rx='2' fill='%23B84A3A'/><text x='18' y='26' font-size='20' font-family='serif' font-weight='bold' fill='%23F7F2EC' text-anchor='middle'>云</text></svg>">
+
+  <style>
+    /* 引用注释样式 */
+    .article-note {
+      margin: var(--space-6) 0;
+      padding: var(--space-4) var(--space-6);
+      border-left: 3px solid var(--color-accent-vermilion);
+      background: var(--color-surface-card);
+      font-family: var(--font-cn-body);
+      font-size: var(--text-sm);
+      color: var(--color-text-secondary);
+      line-height: 1.8;
+    }
+    .article-note p {
+      margin: 0;
+    }
+    /* 代码块（流程图/架构图） */
+    .code-block {
+      margin: var(--space-6) 0;
+      padding: var(--space-5) var(--space-6);
+      background: var(--color-surface-elevated, #EFE9E0);
+      border: 1px solid var(--color-border-default);
+      border-radius: var(--radius-md, 6px);
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      line-height: 1.6;
+      color: var(--color-text-primary);
+      overflow-x: auto;
+      white-space: pre;
+    }
+    /* Checkbox 列表 */
+    .checklist {
+      list-style: none;
+      padding-left: 0;
+      margin: var(--space-4) 0;
+    }
+    .checklist-item {
+      position: relative;
+      padding-left: var(--space-6);
+      margin-bottom: var(--space-2);
+      color: var(--color-text-secondary);
+      font-size: var(--text-sm);
+    }
+    .checklist-item::before {
+      content: '☐';
+      position: absolute;
+      left: 0;
+      color: var(--color-accent-vermilion);
+      font-size: var(--text-base);
+    }
+    /* 篇章分隔 */
+    .article-prose section {
+      margin-bottom: var(--space-12);
+    }
+    .article-prose section:last-child {
+      margin-bottom: 0;
+    }
+    /* h4 装饰 */
+    .article-prose h4 {
+      position: relative;
+      padding-left: var(--space-4);
+    }
+    .article-prose h4::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.3em;
+      width: 3px;
+      height: 1em;
+      background: var(--color-accent-vermilion);
+      opacity: 0.6;
+    }
+    /* 结尾品牌slogan */
+    .report-coda {
+      text-align: center;
+      margin-top: var(--space-16);
+      padding-top: var(--space-10);
+      border-top: 1px solid var(--color-border-default);
+      font-family: var(--font-cn-heading);
+      font-size: var(--text-lg);
+      color: var(--color-accent-vermilion);
+      line-height: 2;
+      letter-spacing: 0.05em;
+    }
+    .report-coda-en {
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      color: var(--color-text-tertiary);
+      letter-spacing: 0.1em;
+      margin-top: var(--space-3);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="reading-progress" aria-hidden="true"></div>
+
+  <!-- ==========================================================================
+       全局导航
+       ========================================================================== -->
+  <header class="site-nav">
+    <div class="site-nav-inner">
+      <a href="../index.html" class="nav-logo">
+        <span>云华录</span>
+        <span class="nav-logo-en">YUNHUA LU</span>
+      </a>
+
+      <ul class="nav-list">
+        <li><a href="../index.html" class="nav-link">首页</a></li>
+        <li><a href="market-research.html" class="nav-link">市场研究</a></li>
+        <li><a href="brand-foundation.html" class="nav-link">品牌策略</a></li>
+        <li><a href="product-supply.html" class="nav-link">产品供应链</a></li>
+        <li><a href="visual-packaging.html" class="nav-link">视觉包装</a></li>
+        <li><a href="ecommerce-marketing.html" class="nav-link">电商营销</a></li>
+        <li><a href="international.html" class="nav-link">国际拓展</a></li>
+        <li><a href="brand-culture.html" class="nav-link">品牌文化</a></li>
+        <li><a href="tea-trace-report.html" class="nav-link">茶叶溯源</a></li>
+        <li><a href="budget-execution.html" class="nav-link active">预算方案</a></li>
+        <li><a href="supply-chain-sop.html" class="nav-link">供应链SOP</a></li>
+        <li><a href="marketing-execution.html" class="nav-link">营销执行</a></li>
+        <li><a href="full-proposal.html" class="nav-link">完整提案</a></li>
+      </ul>
+
+      <button class="nav-toggle" aria-label="打开菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="nav-drawer">
+    <ul class="nav-drawer-list">
+      <li><a href="../index.html" class="nav-drawer-link">首页</a></li>
+      <li><a href="market-research.html" class="nav-drawer-link">市场研究</a></li>
+      <li><a href="brand-foundation.html" class="nav-drawer-link">品牌策略</a></li>
+      <li><a href="product-supply.html" class="nav-drawer-link">产品供应链</a></li>
+      <li><a href="visual-packaging.html" class="nav-drawer-link">视觉包装</a></li>
+      <li><a href="ecommerce-marketing.html" class="nav-drawer-link">电商营销</a></li>
+      <li><a href="international.html" class="nav-drawer-link">国际拓展</a></li>
+      <li><a href="brand-culture.html" class="nav-drawer-link">品牌文化</a></li>
+      <li><a href="tea-trace-report.html" class="nav-drawer-link">茶叶溯源</a></li>
+      <li><a href="budget-execution.html" class="nav-drawer-link active">预算方案</a></li>
+      <li><a href="supply-chain-sop.html" class="nav-drawer-link">供应链SOP</a></li>
+      <li><a href="marketing-execution.html" class="nav-drawer-link">营销执行</a></li>
+      <li><a href="full-proposal.html" class="nav-drawer-link">完整提案</a></li>
+    </ul>
+  </div>
+
+  <!-- ==========================================================================
+       页面主体
+       ========================================================================== -->
+  <main class="page-main">
+
+    <!-- ===================== 篇章首屏 ===================== -->
+    <header class="chapter-header">
+      <div class="tea-grid-bg-fade" aria-hidden="true"></div>
+      <div class="chapter-header-number">
+        <span class="chapter-header-num-cn">拾</span>
+        <span class="chapter-header-num-latin">10</span>
+      </div>
+      <h1 class="chapter-header-title">50万预算落地执行方案</h1>
+      <p class="chapter-header-lead">
+        50万预算硬约束下的精打细算——产品供应链18万保命脉，营销推广16万引爆首发，SaaS轻资产运营省2-5万。6大板块每一笔支出具体到SKU、单价、数量，45天完成品牌上线，6个月实现3-5倍综合ROI。
+      </p>
+    </header>
+
+    <!-- ===================== 阅读布局 ===================== -->
+    <div class="page-layout container-wide">
+      <!-- 侧边目录 -->
+      <aside class="toc-sidebar">
+        <button class="toc-toggle" aria-expanded="false">
+          本篇目录
+          <span class="toc-toggle-icon">▾</span>
+        </button>
+        <div class="toc-content">
+          <div class="toc-title">本篇目录</div>
+          <ul class="toc-list">
+            <li><a href="#sec-1" class="toc-link">1. 预算总览与分配原则</a></li>
+              <li><a href="#sec-1-1" class="toc-link toc-sub">1.1 总预算50万整体分配</a></li>
+              <li><a href="#sec-1-2" class="toc-link toc-sub">1.2 三大分配原则</a></li>
+            <li><a href="#sec-2" class="toc-link">2. 产品与供应链 · 18万</a></li>
+              <li><a href="#sec-2-1" class="toc-link toc-sub">2.1 首批茶叶采购 · 9万</a></li>
+              <li><a href="#sec-2-2" class="toc-link toc-sub">2.2 包装制作 · 5.5万</a></li>
+              <li><a href="#sec-2-3" class="toc-link toc-sub">2.3 仓储物流 · 2.5万</a></li>
+              <li><a href="#sec-2-4" class="toc-link toc-sub">2.4 质检与资质 · 1万</a></li>
+            <li><a href="#sec-3" class="toc-link">3. 品牌与视觉 · 6万</a></li>
+              <li><a href="#sec-3-1" class="toc-link toc-sub">3.1 产品拍摄 · 2.5万</a></li>
+              <li><a href="#sec-3-2" class="toc-link toc-sub">3.2 视频素材库 · 1.5万</a></li>
+              <li><a href="#sec-3-3" class="toc-link toc-sub">3.3 印刷物料 · 1.2万</a></li>
+              <li><a href="#sec-3-4" class="toc-link toc-sub">3.4 VI执行补充 · 0.8万</a></li>
+            <li><a href="#sec-4" class="toc-link">4. 电商平台建设 · 5万</a></li>
+              <li><a href="#sec-4-1" class="toc-link toc-sub">4.1 小程序商城 · 2万</a></li>
+              <li><a href="#sec-4-2" class="toc-link toc-sub">4.2 抖音店+视频号店 · 0.8万</a></li>
+              <li><a href="#sec-4-3" class="toc-link toc-sub">4.3 SaaS工具订阅 · 0.8万</a></li>
+              <li><a href="#sec-4-4" class="toc-link toc-sub">4.4 直播设备 · 1.4万</a></li>
+            <li><a href="#sec-5" class="toc-link">5. 营销推广 · 16万</a></li>
+              <li><a href="#sec-5-1" class="toc-link toc-sub">5.1 达人合作 · 8万</a></li>
+              <li><a href="#sec-5-2" class="toc-link toc-sub">5.2 信息流投流 · 4.5万</a></li>
+              <li><a href="#sec-5-3" class="toc-link toc-sub">5.3 首发事件 · 1.5万</a></li>
+              <li><a href="#sec-5-4" class="toc-link toc-sub">5.4 内容创作 · 1万</a></li>
+              <li><a href="#sec-5-5" class="toc-link toc-sub">5.5 私域运营 · 1万</a></li>
+            <li><a href="#sec-6" class="toc-link">6. 团队与运营 · 3万</a></li>
+              <li><a href="#sec-6-1" class="toc-link toc-sub">6.1 兼职客服 · 1.2万</a></li>
+              <li><a href="#sec-6-2" class="toc-link toc-sub">6.2 仓储操作 · 0.8万</a></li>
+              <li><a href="#sec-6-3" class="toc-link toc-sub">6.3 设计外包 · 1万</a></li>
+            <li><a href="#sec-7" class="toc-link">7. 机动预留 · 2万</a></li>
+            <li><a href="#sec-8" class="toc-link">8. 6个月现金流与ROI预期</a></li>
+              <li><a href="#sec-8-1" class="toc-link toc-sub">8.1 现金流预警线</a></li>
+            <li><a href="#sec-9" class="toc-link">9. 关键成本控制策略</a></li>
+            <li><a href="#sec-10" class="toc-link">10. 执行节奏与里程碑</a></li>
+              <li><a href="#sec-10-1" class="toc-link toc-sub">10.1 45天上线节奏</a></li>
+              <li><a href="#sec-10-2" class="toc-link toc-sub">10.2 关键里程碑</a></li>
+          </ul>
+        </div>
+      </aside>
+
+      <article class="page-content">
+
+      <!-- 正文内容 -->
+      <div class="article-prose">
+
+        <section id="sec-1">
+          <h2>1. 预算总览与分配原则</h2>
+          <h3 id="sec-1-1">1.1 总预算50万整体分配</h3>
+          <p>50万预算是硬约束，必须精打细算、聚焦出击。团子将50万拆解为6大板块，每一笔支出具体到SKU、单价、数量、供应商方向。</p>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>板块</th><th>预算占比</th><th>预算金额</th><th>核心定位</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>产品与供应链</strong></td><td>36%</td><td>18万</td><td>品牌命脉，保命脉</td></tr>
+                <tr><td><strong>品牌与视觉</strong></td><td>12%</td><td>6万</td><td>视觉执行落地</td></tr>
+                <tr><td><strong>电商平台建设</strong></td><td>10%</td><td>5万</td><td>轻资产启动</td></tr>
+                <tr><td><strong>营销推广</strong></td><td>32%</td><td>16万</td><td>引爆首发</td></tr>
+                <tr><td><strong>团队与运营</strong></td><td>6%</td><td>3万</td><td>人力补充</td></tr>
+                <tr><td><strong>机动预留</strong></td><td>4%</td><td>2万</td><td>动态调配</td></tr>
+                <tr><td><strong>合计</strong></td><td><strong>100%</strong></td><td><strong>50万</strong></td><td></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-1-2">1.2 三大分配原则</h3>
+          <p><strong>原则一：产品保命脉，营销引爆首发</strong></p>
+          <p>产品供应链占36%（18万）是最重板块，茶叶品质是品牌根基；营销推广占32%（16万）是首发引爆关键，新品牌必须在线上建立主场。</p>
+          <p><strong>原则二：轻资产运营，SaaS模板为主</strong></p>
+          <p>不自建开发（省2-5万），用有赞/微盟SaaS年费制；团队核心自驱，仅补充兼职客服和外包设计；线上发布会替代线下（省15-30万）。</p>
+          <p><strong>原则三：首单量保守，避免库存滞销</strong></p>
+          <p>茶叶有保质期，库存周转是生死线。首单量偏保守——宁缺勿压，日均单量稳定后与快递签月结协议价，议价空间随单量增长。</p>
+        </section>
+        <section id="sec-2">
+          <h2>2. 产品与供应链 · 18万</h2>
+          <p>这是最重的板块，也是云华录的命脉。凭产区资源直采，跳过中间商，采购成本可控。</p>
+          <h3 id="sec-2-1">2.1 首批茶叶采购 · 9万</h3>
+          <p>按「云游录/云华品鉴/云华典藏」三层产品线，首批7款茶：</p>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>产品线</th><th>SKU</th><th>产区</th><th>规格</th><th>采购价</th><th>采购量</th><th>小计</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>云游录（日常）</td><td>安吉白茶</td><td>浙江安吉</td><td>50g罐装</td><td>35元/罐</td><td>800罐</td><td>2.8万</td></tr>
+                <tr><td>云游录（日常）</td><td>武夷肉桂</td><td>福建武夷山</td><td>50g罐装</td><td>40元/罐</td><td>600罐</td><td>2.4万</td></tr>
+                <tr><td>云华品鉴（进阶）</td><td>凤凰单丛·蜜兰香</td><td>广东潮州</td><td>80g礼罐</td><td>85元/罐</td><td>250罐</td><td>2.1万</td></tr>
+                <tr><td>云华品鉴（进阶）</td><td>祁门红茶</td><td>安徽祁门</td><td>80g礼罐</td><td>75元/罐</td><td>200罐</td><td>1.5万</td></tr>
+                <tr><td>云华典藏（高端）</td><td>老班章生普</td><td>云南勐海</td><td>357g饼+证书</td><td>380元/饼</td><td>40饼</td><td>1.5万</td></tr>
+                <tr><td>云游录（日常）</td><td>福鼎白茶·寿眉</td><td>福建福鼎</td><td>100g罐装</td><td>28元/罐</td><td>500罐</td><td>1.4万</td></tr>
+                <tr><td>赠品试饮装</td><td>7款合集试饮</td><td>多产区</td><td>3g×7包</td><td>8元/套</td><td>250套</td><td>0.2万</td></tr>
+                <tr><td><strong>合计</strong></td><td></td><td></td><td></td><td></td><td></td><td><strong>约9.2万</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>采购策略</strong>：凭产区资源直采，跳过中间商（市价低20-30%）。首单量偏保守——宁缺勿压，茶叶有保质期，库存周转是生死线。试饮装用于引流+复购触发，成本计入营销获客。</p>
+          <h3 id="sec-2-2">2.2 包装制作 · 5.5万</h3>
+          <p>严格依附件04视觉规范，三家供应商比价：</p>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>项目</th><th>规格</th><th>单价</th><th>数量</th><th>小计</th><th>供应商方向</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>云游录罐装（50g）</td><td>马口铁罐+贴标</td><td>4.5元/套</td><td>1400套</td><td>0.63万</td><td>阿里1688定制</td></tr>
+                <tr><td>云华品鉴礼罐（80g）</td><td>纸礼罐+烫金</td><td>9元/套</td><td>450套</td><td>0.41万</td><td>义乌包装厂</td></tr>
+                <tr><td>云华典藏礼盒（357g饼）</td><td>木盒+证书+棉纸</td><td>45元/套</td><td>40套</td><td>0.18万</td><td>茶具包装厂</td></tr>
+                <tr><td>试饮装包装</td><td>牛皮纸袋+贴标</td><td>1.2元/套</td><td>250套</td><td>0.03万</td><td>1688</td></tr>
+                <tr><td>外包装纸箱</td><td>5层瓦楞+logo印</td><td>1.8元/个</td><td>2000个</td><td>0.36万</td><td>本地纸箱厂</td></tr>
+                <tr><td>缓冲填充</td><td>气泡柱/珍珠棉</td><td>0.3元/单</td><td>2000单</td><td>0.06万</td><td>1688</td></tr>
+                <tr><td>封箱胶带+感谢卡</td><td>定制logo</td><td>0.4元/单</td><td>2000单</td><td>0.08万</td><td>1688</td></tr>
+                <tr><td>首版开模费</td><td>罐体模具+刀模</td><td>一次性</td><td>1批</td><td>0.5万</td><td>包装厂</td></tr>
+                <tr><td>logo贴标印刷</td><td>卷装不干胶</td><td>0.15元/张</td><td>5000张</td><td>0.08万</td><td>印刷厂</td></tr>
+                <tr><td><strong>首批小计</strong></td><td></td><td></td><td></td><td><strong>2.33万</strong></td><td></td></tr>
+                <tr><td>第二轮补货包装</td><td>同上2倍量</td><td></td><td></td><td>2.2万</td><td></td></tr>
+                <tr><td>仓储耗材</td><td>电子秤/打包台/面单</td><td></td><td></td><td>0.5万</td><td></td></tr>
+                <tr><td>打样损耗+加急</td><td></td><td></td><td></td><td>0.47万</td><td></td></tr>
+                <tr><td><strong>合计</strong></td><td></td><td></td><td></td><td><strong>约5.5万</strong></td><td></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-2-3">2.3 仓储物流 · 2.5万</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>项目</th><th>说明</th><th>金额</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>云仓服务费（3个月）</td><td>仓租+拣货+打包，约3元/单×2000单</td><td>0.6万</td></tr>
+                <tr><td>快递物流</td><td>月结协议价8元/单×2000单</td><td>1.6万</td></tr>
+                <tr><td>退换货预备金</td><td>茶叶退货率约3-5%</td><td>0.3万</td></tr>
+                <tr><td>包材补货</td><td>胶带/填充物补充</td><td>0.2万</td></tr>
+                <tr><td><strong>合计</strong></td><td></td><td><strong>约2.5万</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>关键省法</strong>：日均单量稳定后与快递公司签月结协议价（首重8元/单，比零售价12元省33%）。前2周转运期可先用零售价，议价空间随单量增长。</p>
+          <h3 id="sec-2-4">2.4 质检与资质 · 1万</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>项目</th><th>说明</th><th>金额</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>SC食品经营许可证代办</td><td>找代办公司</td><td>0.3万</td></tr>
+                <tr><td>7款茶质检报告</td><td>每款农残+理化检测，约1200元/款</td><td>0.84万</td></tr>
+                <tr><td>商标注册（核心类目）</td><td>云华录+图形标，第30类茶叶</td><td>0.3万</td></tr>
+                <tr><td>条形码申请</td><td>7个SKU</td><td>0.05万</td></tr>
+                <tr><td><strong>调整</strong></td><td>商标首期仅核心类目，其他后续补</td><td>-0.49万</td></tr>
+                <tr><td><strong>合计</strong></td><td></td><td><strong>约1万</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>商标注册周期长（6-12个月），首期只注册核心类目（第30类茶叶），其他类目第二轮融资后补全。质检报告必须有，电商平台硬性要求。</p>
+        </section>
+        <section id="sec-3">
+          <h2>3. 品牌与视觉 · 6万</h2>
+          <p>VI设计已在品牌规划阶段完成，这6万是执行落地——把视觉规范变成可用的素材资产。</p>
+          <h3 id="sec-3-1">3.1 产品拍摄 · 2.5万</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>项目</th><th>说明</th><th>金额</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>7款茶产品主图</td><td>每款5张主图+3张场景图=56张</td><td>1.2万</td></tr>
+                <tr><td>包装实拍</td><td>礼盒/罐装/试饮装拆箱图</td><td>0.5万</td></tr>
+                <tr><td>茶汤/茶底特写</td><td>冲泡过程+汤色+叶底</td><td>0.4万</td></tr>
+                <tr><td>产地场景图（图库采购）</td><td>武夷山/安吉/云南等素材</td><td>0.4万</td></tr>
+                <tr><td><strong>合计</strong></td><td></td><td><strong>2.5万</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>省法</strong>：找独立摄影师包天拍摄（1500元/天×2天），比广告公司便宜60%。产地素材用图虫/视觉中国授权（单张30-80元），比实地拍摄省差旅。</p>
+          <h3 id="sec-3-2">3.2 视频素材库 · 1.5万</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>项目</th><th>说明</th><th>金额</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>产品展示短视频</td><td>7款茶各1条15s展示视频</td><td>0.7万</td></tr>
+                <tr><td>品牌故事短片（60s）</td><td>实拍+简约后期，自然光纪实手法</td><td>0.6万</td></tr>
+                <tr><td>直播切片素材</td><td>预录10条种草短视频</td><td>0.2万</td></tr>
+                <tr><td><strong>合计</strong></td><td></td><td><strong>1.5万</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>这是主册TVC方案C的务实版——与KOL共创产地纪录短片太贵，改为团队自拍+简约后期。60s品牌片用手机+稳定器即可，靠创意和内容取胜。</p>
+          <h3 id="sec-3-3">3.3 印刷物料 · 1.2万</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>项目</th><th>规格</th><th>单价</th><th>数量</th><th>小计</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>产品手册</td><td>16页彩色胶装</td><td>3元/本</td><td>500本</td><td>0.15万</td></tr>
+                <tr><td>品牌介绍折页</td><td>三折页双面彩印</td><td>0.8元/张</td><td>1000张</td><td>0.08万</td></tr>
+                <tr><td>试饮装随附卡</td><td>明信片式感谢卡</td><td>0.5元/张</td><td>2500张</td><td>0.13万</td></tr>
+                <tr><td>礼品手提袋</td><td>牛皮纸+logo烫印</td><td>2.5元/个</td><td>300个</td><td>0.08万</td></tr>
+                <tr><td>封泥印章贴纸</td><td>品牌特色贴纸</td><td>0.3元/张</td><td>3000张</td><td>0.09万</td></tr>
+                <tr><td>茶典明信片（赠品）</td><td>产地明信片套装</td><td>1.5元/套</td><td>500套</td><td>0.08万</td></tr>
+                <tr><td>礼盒内衬卡</td><td>品牌故事卡</td><td>0.6元/张</td><td>800张</td><td>0.05万</td></tr>
+                <tr><td>名片/工牌</td><td>团队名片</td><td>0.3元/盒</td><td>10盒</td><td>0.03万</td></tr>
+                <tr><td><strong>小计</strong></td><td></td><td></td><td></td><td><strong>0.69万</strong></td></tr>
+                <tr><td>加急/打样/损耗预备</td><td></td><td></td><td></td><td><strong>0.51万</strong></td></tr>
+                <tr><td><strong>合计</strong></td><td></td><td></td><td></td><td><strong>1.2万</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-3-4">3.4 VI执行补充 · 0.8万</h3>
+          <p>品牌规划阶段VI已定稿，这0.8万是落地执行补充：</p>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>项目</th><th>说明</th><th>金额</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>店铺装修图</td><td>抖音店+视频号店+小程序首页设计</td><td>0.4万</td></tr>
+                <tr><td>直播间背景板</td><td>KT板+灯箱布置</td><td>0.2万</td></tr>
+                <tr><td>二次设计调整</td><td>首批物料打样后的微调</td><td>0.2万</td></tr>
+                <tr><td><strong>合计</strong></td><td></td><td><strong>0.8万</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section id="sec-4">
+          <h2>4. 电商平台建设 · 5万</h2>
+          <p>轻资产启动，SaaS模板为主，不自建开发。</p>
+          <h3 id="sec-4-1">4.1 小程序商城 · 2万</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>项目</th><th>说明</th><th>金额</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>有赞/微盟模板年费</td><td>品牌商城版</td><td>0.98万</td></tr>
+                <tr><td>会员体系配置</td><td>积分+等级+储值</td><td>含在年费</td></tr>
+                <tr><td>页面装修定制</td><td>模板基础上换肤</td><td>0.3万</td></tr>
+                <tr><td>支付接口配置</td><td>微信支付</td><td>0</td></tr>
+                <tr><td>域名+SSL证书</td><td>1年</td><td>0.05万</td></tr>
+                <tr><td>首年服务器</td><td>云函数/轻量服务器</td><td>0.15万</td></tr>
+                <tr><td>会员储值预备金</td><td>储值功能备付金</td><td>0.52万</td></tr>
+                <tr><td><strong>合计</strong></td><td></td><td><strong>2万</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>关键决策</strong>：不自建开发（定制开发2-5万），用有赞/微盟SaaS年费制，省2-3万。会员储值预备金是合规要求——用户储值金额需有备付金，首期保守预留。</p>
+          <h3 id="sec-4-2">4.2 抖音店+视频号店 · 0.8万</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>项目</th><th>说明</th><th>金额</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>抖音小店保证金</td><td>茶叶类目</td><td>0.5万</td></tr>
+                <tr><td>视频号小店保证金</td><td>茶叶类目</td><td>0.5万</td></tr>
+                <tr><td>平台技术服务费预留</td><td>3-5%抽佣预备</td><td>0.3万</td></tr>
+                <tr><td>店铺装修定制</td><td>主图/详情页模板</td><td>0.5万</td></tr>
+                <tr><td><strong>合计</strong></td><td></td><td><strong>0.8万</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>保证金是押金可退，但占现金流，必须预留。京东/拼多多暂不入驻（保证金5万+，预算压力太大），首月观察抖音+视频号数据，月销稳定3-5万后再开。</p>
+          <h3 id="sec-4-3">4.3 SaaS工具订阅 · 0.8万</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>工具</th><th>用途</th><th>年费</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>企微SCRM（微伴/尘锋）</td><td>私域客户管理</td><td>0.3万</td></tr>
+                <tr><td>数据分析（生意参谋等）</td><td>抖音+淘宝数据</td><td>0.15万</td></tr>
+                <tr><td>设计工具（稿定/Canva企业版）</td><td>日常物料设计</td><td>0.15万</td></tr>
+                <tr><td>客服系统（网易七鱼/智齿）</td><td>多渠道客服</td><td>0.1万</td></tr>
+                <tr><td>短链/活码工具</td><td>营销链路追踪</td><td>0.05万</td></tr>
+                <tr><td>企业邮箱</td><td>品牌邮箱</td><td>0.05万</td></tr>
+                <tr><td><strong>合计</strong></td><td></td><td><strong>0.8万</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-4-4">4.4 直播设备 · 1.4万</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>设备</th><th>说明</th><th>金额</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>主播用手机</td><td>iPhone 13/14二手</td><td>0.35万</td></tr>
+                <tr><td>环形补光灯</td><td>18寸双色温</td><td>0.08万</td></tr>
+                <tr><td>三脚架+手机夹</td><td>稳定拍摄</td><td>0.05万</td></tr>
+                <tr><td>领夹麦克风</td><td>无线降噪</td><td>0.12万</td></tr>
+                <tr><td>直播背景布置</td><td>茶席+茶具+绿植</td><td>0.3万</td></tr>
+                <tr><td>桌面直播灯</td><td>辅助补光</td><td>0.06万</td></tr>
+                <tr><td>茶具套装</td><td>盖碗/公道杯/品茗杯</td><td>0.25万</td></tr>
+                <tr><td>提词器</td><td>手机提词器支架</td><td>0.04万</td></tr>
+                <tr><td>备用电源/排插</td><td>直播稳定性</td><td>0.05万</td></tr>
+                <tr><td>含运费/配件</td><td></td><td>0.1万</td></tr>
+                <tr><td><strong>合计</strong></td><td></td><td><strong>约1.4万</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section id="sec-5">
+          <h2>5. 营销推广 · 16万</h2>
+          <p>融合主册Campaign务实版与附件05电商营销，这是引爆首发的关键。</p>
+          <h3 id="sec-5-1">5.1 达人合作 · 8万</h3>
+          <p>按「核心1+腰部8+KOC 30」三层架构：</p>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>层级</th><th>平台</th><th>数量</th><th>单价</th><th>小计</th><th>策略</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>头部</td><td>抖音</td><td>1位</td><td>2万</td><td>2万</td><td>茶文化/生活方式类，30-50万粉</td></tr>
+                <tr><td>腰部</td><td>抖音</td><td>3位</td><td>0.6万</td><td>1.8万</td><td>茶饮/养生类，10-30万粉</td></tr>
+                <tr><td>腰部</td><td>小红书</td><td>4位</td><td>0.5万</td><td>2万</td><td>生活美学/茶席类，5-20万粉</td></tr>
+                <tr><td>腰部</td><td>B站</td><td>1位</td><td>0.8万</td><td>0.8万</td><td>知识区/纪录片类，深度内容</td></tr>
+                <tr><td>KOC</td><td>抖音+小红书</td><td>30位</td><td>300元</td><td>0.9万</td><td>纯佣/置换+小佣金</td></tr>
+                <tr><td><strong>合计</strong></td><td></td><td>39位</td><td></td><td><strong>7.5万</strong></td><td></td></tr>
+                <tr><td>达人寄样+物流</td><td></td><td></td><td></td><td>0.3万</td><td></td></tr>
+                <tr><td>机动追加</td><td>表现好的追投</td><td></td><td></td><td>0.2万</td><td></td></tr>
+                <tr><td><strong>总计</strong></td><td></td><td></td><td></td><td><strong>8万</strong></td><td></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>省法</strong>：头部只投1位（性价比最高的曝光杠杆），KOC用「产品置换+小额佣金」模式，30位实际现金支出仅0.9万。优先找纯佣/低坑位+高佣金组合，省30-50%。</p>
+          <h3 id="sec-5-2">5.2 信息流投流 · 4.5万</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>渠道</th><th>工具</th><th>预算</th><th>日预算</th><th>天数</th><th>策略</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>抖音</td><td>巨量千川</td><td>2.5万</td><td>600元</td><td>42天</td><td>精准定向25-45岁茶兴趣人群</td></tr>
+                <tr><td>微信</td><td>朋友圈广告</td><td>1万</td><td>400元</td><td>25天</td><td>LBS定向+兴趣标签</td></tr>
+                <tr><td>小红书</td><td>薯条/聚光</td><td>0.6万</td><td>200元</td><td>30天</td><td>种草笔记加热</td></tr>
+                <tr><td>百度</td><td>信息流</td><td>0.4万</td><td>150元</td><td>27天</td><td>品牌词+茶叶词拦截</td></tr>
+                <tr><td><strong>合计</strong></td><td></td><td><strong>4.5万</strong></td><td></td><td></td><td></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>节奏</strong>：D-7至D-Day预热期投0.5万造势；D-Day至D+7首发期投1.5万集中引爆；D+7至D+30成长期投1.5万持续优化ROI；D+30后稳定期投1万以ROI为核心迭代。</p>
+          <h3 id="sec-5-3">5.3 首发事件 · 1.5万</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>项目</th><th>说明</th><th>金额</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>线上发布会（直播）</td><td>抖音直播+连麦茶人，替代线下发布会</td><td>0.3万</td></tr>
+                <tr><td>「云华寻茶记」H5互动</td><td>小程序内互动游戏，集齐7款茶产地解锁优惠</td><td>0.4万</td></tr>
+                <tr><td>首发限定礼盒</td><td>100套限量编号礼盒，赠达人+老客</td><td>0.5万</td></tr>
+                <tr><td>开业优惠券/红包</td><td>满减券+新人券预算</td><td>0.3万</td></tr>
+                <tr><td><strong>合计</strong></td><td></td><td><strong>1.5万</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>线下发布会（西岸艺术中心）太贵，改线上直播发布会——连麦产区茶人+限时福利+达人引流，成本仅0.3万。</p>
+          <h3 id="sec-5-4">5.4 内容创作 · 1万</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>项目</th><th>说明</th><th>金额</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>短视频拍摄</td><td>团队自拍，手机为主</td><td>0.3万</td></tr>
+                <tr><td>素材制作</td><td>剪辑/字幕/配乐外包</td><td>0.3万</td></tr>
+                <tr><td>文案撰写</td><td>产品文案+种草文案</td><td>0.2万</td></tr>
+                <tr><td>直播脚本</td><td>首月直播脚本体系</td><td>0.1万</td></tr>
+                <tr><td>内容数据复盘工具</td><td>蝉妈妈/飞瓜数据</td><td>0.1万</td></tr>
+                <tr><td><strong>合计</strong></td><td></td><td><strong>1万</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-5-5">5.5 私域运营 · 1万</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>项目</th><th>说明</th><th>金额</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>企微社群运营</td><td>社群活动+福利+内容</td><td>0.3万</td></tr>
+                <tr><td>品鉴官计划</td><td>招募50名品鉴官，赠茶换评测</td><td>0.4万</td></tr>
+                <tr><td>UGC奖励</td><td>用户晒单/晒茶返现</td><td>0.2万</td></tr>
+                <tr><td>会员日活动</td><td>每月1次会员专享福利</td><td>0.1万</td></tr>
+                <tr><td><strong>合计</strong></td><td></td><td><strong>1万</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section id="sec-6">
+          <h2>6. 团队与运营 · 3万</h2>
+          <p>创始团队有电商/互联网经验，核心自驱，这3万是6个月的人力补充。</p>
+          <h3 id="sec-6-1">6.1 兼职客服 · 1.2万</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>配置</th><th>说明</th><th>月薪</th><th>6个月</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>兼职客服1名</td><td>早晚班轮值，8小时在线</td><td>0.2万</td><td>1.2万</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>招1名兼职客服（大学生/宝妈），用网易七鱼客服系统多渠道接入。创始人亲自处理售后+大客户，省1名全职客服（月薪0.5万×6=3万）。</p>
+          <h3 id="sec-6-2">6.2 仓储操作 · 0.8万</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>配置</th><th>说明</th><th>金额</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>云仓打包兼职</td><td>按单计费，旺季临时加人</td><td>0.5万</td></tr>
+                <tr><td>仓储盘点/理货</td><td>月度盘点+效期管理</td><td>0.3万</td></tr>
+                <tr><td><strong>合计</strong></td><td></td><td><strong>0.8万</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>仓储外包给云仓（3元/单含拣货打包），理货盘点自己每周1次，临时工按需补位。</p>
+          <h3 id="sec-6-3">6.3 设计外包 · 1万</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>项目</th><th>说明</th><th>金额</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>日常物料设计</td><td>活动海报/详情页更新</td><td>0.6万</td></tr>
+                <tr><td>视频剪辑外包</td><td>优质素材专业剪辑</td><td>0.4万</td></tr>
+                <tr><td><strong>合计</strong></td><td></td><td><strong>1万</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>核心设计用稿定/Canva自助，复杂物料外包给独立设计师（按件计费，比设计公司省60%）。</p>
+        </section>
+        <section id="sec-7">
+          <h2>7. 机动预留 · 2万</h2>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>用途</th><th>预留</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>爆款追加生产</td><td>0.8万</td></tr>
+                <tr><td>投流爆款追加</td><td>0.6万</td></tr>
+                <tr><td>紧急补货/加急</td><td>0.3万</td></tr>
+                <tr><td>测试新渠道/新玩法</td><td>0.3万</td></tr>
+                <tr><td><strong>合计</strong></td><td><strong>2万</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>这2万不预设用途，按数据反馈动态调配。哪个渠道ROI高就追投哪个，哪款茶卖爆就补货。</p>
+        </section>
+        <section id="sec-8">
+          <h2>8. 6个月现金流与ROI预期</h2>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>阶段</th><th>时间</th><th>投入</th><th>预期销售</th><th>ROI</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>启动期</strong></td><td>D-Day~D+30</td><td>25万（产品+平台+首发营销）</td><td>10-15万</td><td>0.5x（投入期）</td></tr>
+                <tr><td><strong>成长期</strong></td><td>第2-3月</td><td>8万/月（补货+营销）</td><td>15-25万/月</td><td>1.5-2x</td></tr>
+                <tr><td><strong>稳定期</strong></td><td>第4-6月</td><td>6万/月</td><td>20-40万/月</td><td>2-3x</td></tr>
+                <tr><td><strong>6个月累计</strong></td><td></td><td><strong>总投入约50万</strong></td><td><strong>累计80-120万</strong></td><td><strong>综合3-5x</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>茶叶复购周期1-2月，前期ROI偏低正常。私域复购率提升后ROI显著改善——成熟茶叶品牌私域渠道ROI可达10x+。</p>
+          <h3 id="sec-8-1">8.1 现金流预警线</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>指标</th><th>预警值</th><th>应对动作</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>月销售额</td><td><5万</td><td>暂停投流，聚焦私域复购</td></tr>
+                <tr><td>库存周转天数</td><td>>60天</td><td>启动清仓促销，停止补货</td></tr>
+                <tr><td>退货率</td><td>>8%</td><td>排查品控，暂停问题SKU</td></tr>
+                <tr><td>现金余额</td><td><8万</td><td>启动B轮追加预算</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section id="sec-9">
+          <h2>9. 关键成本控制策略</h2>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>策略</th><th>节省幅度</th><th>执行要点</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>产区直采跳中间商</td><td>采购省20-30%</td><td>凭现有产区资源，跳过一批二批</td></tr>
+                <tr><td>SaaS模板不自建开发</td><td>省2-5万</td><td>有赞/微盟年费制，vs 定制开发</td></tr>
+                <tr><td>KOC纯佣/置换模式</td><td>达人省30-50%</td><td>30位KOC用产品置换+小额佣金</td></tr>
+                <tr><td>快递月结协议价</td><td>物流省33%</td><td>日均单量稳定后签月结，8元/单</td></tr>
+                <tr><td>团队自拍+手机为主</td><td>内容省50%+</td><td>手机+稳定器，关键素材才外包</td></tr>
+                <tr><td>线上发布会替代线下</td><td>省15-30万</td><td>抖音直播+连麦茶人，vs 西岸艺术中心</td></tr>
+                <tr><td>首单量保守避免库存</td><td>降低滞销风险</td><td>宁缺勿压，按销售数据滚动补货</td></tr>
+                <tr><td>独立设计师按件计费</td><td>设计省60%</td><td>vs 设计公司月费制</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section id="sec-10">
+          <h2>10. 执行节奏与里程碑</h2>
+          <h3 id="sec-10-1">10.1 45天上线节奏</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>阶段</th><th>时间</th><th>核心动作</th><th>预算消耗</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>筹备期</strong></td><td>D-45~D-31</td><td>产品采购+包装定制+资质办理</td><td>18万（供应链）+6万（视觉）</td></tr>
+                <tr><td><strong>搭建期</strong></td><td>D-30~D-15</td><td>3店搭建+小程序+直播设备+SaaS配置</td><td>5万（平台）</td></tr>
+                <tr><td><strong>预热期</strong></td><td>D-14~D-1</td><td>达人种草启动+投流测试+私域蓄水</td><td>3万（预热营销）</td></tr>
+                <tr><td><strong>首发期</strong></td><td>D-Day~D+7</td><td>线上发布会+集中投流+达人集中发布</td><td>8万（首发营销）</td></tr>
+                <tr><td><strong>成长期</strong></td><td>D+8~D+30</td><td>投流优化+补货+私域转化</td><td>5万（成长营销）</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="sec-10-2">10.2 关键里程碑</h3>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>里程碑</th><th>时间点</th><th>验收标准</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>产品就位</td><td>D-20</td><td>7款茶入库+质检报告完成</td></tr>
+                <tr><td>平台就位</td><td>D-10</td><td>3店上线+小程序可下单+直播间可直播</td></tr>
+                <tr><td>预热达标</td><td>D-1</td><td>种草内容曝光≥50万+私域蓄水≥2000人</td></tr>
+                <tr><td>首发引爆</td><td>D-Day</td><td>首日销售额≥2万+话题阅读≥100万</td></tr>
+                <tr><td>首周达标</td><td>D+7</td><td>7日累计销售5-8万+抖音直播观看5万+</td></tr>
+                <tr><td>首月达标</td><td>D+30</td><td>月累计销售10-15万+复购率≥15%</td></tr>
+                <tr><td>6个月目标</td><td>D+180</td><td>累计销售80-120万+综合ROI 3-5x</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <blockquote class="article-note"><p><strong>文档结束</strong></p></blockquote>
+          <p>></p>
+          <blockquote class="article-note"><p>本预算方案基于云华录品牌规划全案制定，所有预算数字为估算，实际执行中需根据阶段性数据反馈动态调整。建议每两周进行一次预算复盘，根据实际表现优化板块配比和投放策略。50万预算是硬约束，但通过精打细算、聚焦出击，完全可以在45天内完成品牌上线，并在6个月内实现3-5倍的综合ROI。</p></blockquote>
+        </section>
+
+      <!-- 结尾品牌slogan -->
+      <div class="report-coda">
+        云华录 — 录山河风土，守原叶本真，承千年茶韵，通四海知己。
+        <div class="report-coda-en">Proposal Planning | Y.T Full Brand Planning Team · 2026年6月</div>
+      </div>
+
+      </div>
+
+      </article>
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       页脚
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <div class="footer-main">
+        <!-- 品牌信息 -->
+        <div class="footer-brand">
+          <div class="footer-logo">云华录</div>
+          <p class="footer-slogan">云华一盏，尽录山河</p>
+          <p class="footer-desc">记录中国山河风物的国风原叶茶集合品牌。行走、甄选、记录、呈现，把山野之味带到杯中。</p>
+        </div>
+
+        <!-- 篇章导航 -->
+        <div class="footer-nav-col">
+          <h4 class="footer-nav-title">篇章导航</h4>
+          <ul class="footer-nav-list">
+            <li><a href="market-research.html" class="footer-nav-link">市场研究报告</a></li>
+            <li><a href="brand-foundation.html" class="footer-nav-link">品牌策略文档</a></li>
+            <li><a href="product-supply.html" class="footer-nav-link">产品线与供应链</a></li>
+            <li><a href="visual-packaging.html" class="footer-nav-link">品牌视觉与包装</a></li>
+            <li><a href="ecommerce-marketing.html" class="footer-nav-link">电商与营销策略</a></li>
+            <li><a href="international.html" class="footer-nav-link">国际市场拓展</a></li>
+            <li><a href="brand-culture.html" class="footer-nav-link">品牌文化精神内核</a></li>
+            <li><a href="tea-trace-report.html" class="footer-nav-link">全国茶叶溯源调研</a></li>
+            <li><a href="budget-execution.html" class="footer-nav-link">50万预算执行方案</a></li>
+            <li><a href="supply-chain-sop.html" class="footer-nav-link">供应链管理细则SOP</a></li>
+            <li><a href="marketing-execution.html" class="footer-nav-link">上市初期营销执行</a></li>
+            <li><a href="full-proposal.html" class="footer-nav-link">完整策划提案</a></li>
+          </ul>
+        </div>
+
+        <!-- 产品线 -->
+        <div class="footer-nav-col">
+          <h4 class="footer-nav-title">产品线</h4>
+          <ul class="footer-nav-list">
+            <li><span class="footer-nav-link">云游录 · 探索系列</span></li>
+            <li><span class="footer-nav-link">云华品鉴 · 品鉴系列</span></li>
+            <li><span class="footer-nav-link">云华典藏 · 典藏系列</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span class="footer-copyright">© 2026 云华录 YUNHUA LU · 记录中国山河风物</span>
+        <span class="footer-meta">品牌全案策划提案 · 内部文档</span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="回到顶部">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/scroll.js" defer></script>
+</body>
+</html>
